@@ -1,0 +1,7 @@
+<view class="coupon">
+  <view class="coupon-box">
+    <image src="../../images/user_page/23.png" style="width: 36rpx;height: 36rpx;"></image>
+    <input type="text" placeholder="请输入优惠码" />
+  </view>
+  <view class="coupon-btn">兑换优惠券</view>
+</view>

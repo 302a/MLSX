@@ -1,0 +1,18 @@
+<view class="after-navber">
+    <view class="find-box">
+      <form>
+        <view class="search-block">
+            <view id='tip'>
+              <form>
+                <view id='img_box'>
+                  <image src="../../images/kind_page/fangdajing.png" style="width:24rpx;height: 24rpx;margin-right:10rpx "></image>
+                </view>
+                <view class='input-box'>
+                  <input type='text' class='search-text'></input>
+                </view>
+              </form>
+            </view>
+        </view>
+      </form>
+    </view>
+</view>

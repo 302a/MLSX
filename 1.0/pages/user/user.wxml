@@ -1,0 +1,61 @@
+<view class="user">
+  <view class="user-top">
+  </view>
+
+  <view class="msg-warp">
+    <view class="msg">
+      <view class="msg-top">
+        <image src="../../images/user_page/1.png"></image>
+        <text>11111</text>
+        <view class="msg-right">
+        	<image src="../../images/user_page/10.png"></image>
+        	<image src="../../images/user_page/9.png"></image>
+        </view>
+      </view>
+      <view class="msg-center">
+        <view class="msg-box">
+          <text>1</text>
+          <text>优惠券</text>
+        </view>
+        <view class="msg-box">
+        	<text>0.00</text>
+        	<text>礼品卡/提货券</text>
+        </view>
+        <view class="msg-box">
+        	<text>5</text>
+        	<text>电子券</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="dingdan-box">
+    <navigator class="topic" url="/pages/orders/orders?status=0" hover-class="none">
+      <text>我的订单</text>
+      <text>查看更多订单></text>
+    </navigator>
+    <view class="dingdai-type">
+      <navigator class="dingdan" wx:for="{{list1}}" wx:key = "{{index}}"  url="{{item.path}}" hover-class="none">
+        <image src="{{item.img}}" style="width: 80rpx; height: 80rpx;"></image>
+        <view style="font-size: 24rpx; color: #515151;">{{item.type}}</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="gongju-box">
+    <view class="topic">常用工具</view>
+    <view class="gongju-type">
+      <navigator class="gongju" wx:for="{{list2}}" wx:key = "{{index}}" url="{{item.path}}" hover-class="none">
+        <image src="{{item.img}}" style="width: 80rpx;height: 80rpx;"></image>
+        <view style="font-size: 24rpx; color: #515151;">{{item.type}}</view>
+      </navigator>
+    </view>
+    <view class="gongju-type">
+    	<navigator class="gongju" wx:for="{{list3}}" wx:key = "{{index}}" url="{{item.path}}" hover-class="none">
+    		<image src="{{item.img}}" style="width: 80rpx;height: 80rpx;"></image>
+    		<view style="font-size: 24rpx; color: #515151;">{{item.type}}</view>
+    	</navigator>
+    </view>
+  </view>
+  
+
+</view>
