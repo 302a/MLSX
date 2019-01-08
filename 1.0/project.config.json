@@ -39,6 +39,7 @@
 		},
 		"miniprogram": {
 			"current": 6,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -81,6 +82,11 @@
 					"name": "mycount",
 					"pathName": "pages/mycount/mycount",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "a",
+					"pathName": "pages/zaoshi/zaoshi"
 				}
 			]
 		}

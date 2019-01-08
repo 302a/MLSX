@@ -353,7 +353,7 @@
 
 .scroll-view-x .scroll-view-item {
     display: inline-block;
-    margin: 5rpx 0 0 20rpx;
+    margin: 5rpx 10rpx 0 10rpx;
     font-size: 27rpx;
     color: #666666;
     height: 270rpx;
@@ -442,6 +442,3 @@ navigator {
   box-shadow: 4rpx 4rpx 2rpx 2rpx #F5F2F1
 }
 
-.goods > .flex-grow-1 {
-  margin-right: 20rpx
-}
