@@ -1,7 +1,7 @@
 <view class='find-sort'>
   <view class="after-navber">
     <view class="find-box">
-      <navigator class="flex-y-center flex-x-center search-block" url="/pages/search/search">
+      <navigator class="search-block" url="/pages/search/search">
         <view id='tip'>
           <view id='img_box'>
             <image src="../../images/kind_page/fangdajing.png" style="width:24rpx;height: 24rpx;margin-right:10rpx "></image>
@@ -12,7 +12,7 @@
     </view>
   </view>
   <!-- 排序 -->
-  <view class='sort_box'>
+  <!-- <view class='sort_box'>
     <view class='sort_classify show_all' bindtap='allgoods'>全部</view>
     <view class='sort_classify'>
       <view class='small_classify composite'>
@@ -30,7 +30,56 @@
         <image src='../../images/kind_page/06.png' class='filter_img'></image>
       </view>
     </view>
-  </view>
+  </view> -->
+
+  <view class="top-bar">
+        <view wx:if="{{false}}">
+            <view class="cat-list">
+                <scroll-view scrollX="true">
+                    <view class="list-content">
+                        <view bindtap="allClick" class="cat-item">
+                            <text class="flex-y-center">全部</text>
+                        </view>
+                        <view bindtap="catClick" class="cat-item {{item.checked?'active':''}}" data-index="{{index}}" wx:for="{{cat_list}}">
+                            <text class="flex-y-center">{{item.name}}</text>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="sub-cat-list" wx:if="{{item.checked&&item.list.length>0}}" wx:for="{{cat_list}}" wx:for-index="parentIndex">
+                <scroll-view scrollX="true">
+                    <view class="list-content">
+                        <view bindtap="subCatClick" class="cat-item {{item.checked?'active':''}}" data-index="{{index}}" data-parent-index="{{parentIndex}}" wx:for="{{item.list}}">
+                            <text class="flex-y-center">{{item.name}}</text>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+        <view class="flex-row sort-bar" style='font-size:33rpx;'>
+            <view bindtap="sortClick" class="flex-grow-1 flex-x-center flex-y-center sort-item {{sort==0?'active':''}}" data-sort="0">综合
+            </view>
+            <view bindtap="sortClick" class="flex-grow-1 flex-x-center flex-y-center sort-item {{sort==1?'active':''}}" data-sort="1">最新
+            </view>
+            <view bindtap="sortClick" class="flex-grow-1 flex-x-center flex-row sort-item {{sort==2?'active':''}}" data-default_sort_type="0" data-sort="2">
+                <view class="flex-y-center">价格</view>
+                <view class="flex-y-center sort-icon-box">
+                    <view>
+                        <view>
+                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-up-active.png" wx:if="{{sort==2&&sort_type==0}}"></image>
+                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-up.png" wx:else></image>
+                        </view>
+                        <view>
+                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-down-active.png" wx:if="{{sort==2&&sort_type==1}}"></image>
+                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-down.png" wx:else></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="sortClick" class="flex-grow-1 flex-x-center flex-y-center sort-item {{sort==3?'active':''}}" data-sort="3">销量
+            </view>
+        </view>
+    </view>
 </view>
 
 <view style='height:161.9rpx;'></view>
