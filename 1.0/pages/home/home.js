@@ -5,7 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
+    shop_arr: [0],
+    shop: "郑州丰产路店"
+  },
 
+  showShops: function () {
+    var temp = this.data.shop_arr;
+    temp.push(this.data.shop_arr.length);
+    this.setData({
+      shop_arr: temp
+    })
+  },
+
+  chooseShop: function (e) {
+    var temp = this.data.shop_arr;
+    console.log(e)
+    const shop = e.currentTarget.dataset.title
+    temp.pop(this.data.shop_arr.length);
+    this.setData({
+      shop_arr: temp,
+      shop: shop
+    })
   },
 
   /**
