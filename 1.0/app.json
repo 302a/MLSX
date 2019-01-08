@@ -18,7 +18,9 @@
     "pages/emptycart/emptycart",
     "pages/goods_detail/goods_detail",
     "pages/pintuan_details/pintuan_details",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/zaoshi/zaoshi"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
