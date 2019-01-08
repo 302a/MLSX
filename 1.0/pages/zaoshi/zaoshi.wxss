@@ -1,3 +1,11 @@
+page {
+  background-color: #F5F5F5
+}
+
+.swiper_block {
+  margin: 15rpx
+}
+
 .banner navigator {
   font-size: 0;
   position: relative;
@@ -43,6 +51,7 @@
 .goods-list .flex-grow-0 {
   width: 45%;
   margin: 19rpx;
+  background-color: #fff
 }
 
 .flex-grow-0 {
@@ -67,9 +76,11 @@ image {
 }
 
 .good-title {
-  width: 70%;
+  width: 60%;
   height: 100rpx;
   padding-top: 15rpx;
+  padding-left: 10rpx;
+  margin-bottom: 10rpx;
   float: left;
 }
 
@@ -89,8 +100,8 @@ image {
 }
 
 .good-pic image {
-  padding-top: 60rpx;
-  padding-left: 10rpx;
+  padding-top: 50rpx;
+  padding-left: 20rpx;
   width: 60rpx;
   height: 60rpx;
 }
