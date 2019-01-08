@@ -4,7 +4,7 @@
       <navigator class="search-block" url="/pages/search/search">
         <view id='tip'>
           <view id='img_box'>
-            <image src="../../images/kind_page/fangdajing.png" style="width:24rpx;height: 24rpx;margin-right:10rpx "></image>
+            <image src="http://59.110.218.60/kind_page/fangdajing.png" style="width:24rpx;height: 24rpx;margin-right:10rpx "></image>
           </view>
           <text>搜索</text>
         </view>
@@ -66,12 +66,12 @@
                 <view class="flex-y-center sort-icon-box">
                     <view>
                         <view>
-                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-up-active.png" wx:if="{{sort==2&&sort_type==0}}"></image>
-                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-up.png" wx:else></image>
+                            <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-up-active.png" wx:if="{{sort==2&&sort_type==0}}"></image>
+                            <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-up.png" wx:else></image>
                         </view>
                         <view>
-                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-down-active.png" wx:if="{{sort==2&&sort_type==1}}"></image>
-                            <image class="sort-icon-up" src="/images/kind_page/icon-sort-down.png" wx:else></image>
+                            <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-down-active.png" wx:if="{{sort==2&&sort_type==1}}"></image>
+                            <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-down.png" wx:else></image>
                         </view>
                     </view>
                 </view>
@@ -112,7 +112,7 @@
               <view class='price'>
                 <text class='price_left'>￥{{item.price}}</text>
                 <text class='price_right'>/个</text>
-                <image src='../../images/kind_page/55.png' style='width:65rpx;height:65rpx;' class='market'></image>
+                <image src='http://59.110.218.60/kind_page/55.png' style='width:65rpx;height:65rpx;' class='market'></image>
 
               </view>
             </view>

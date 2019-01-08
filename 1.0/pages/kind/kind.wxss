@@ -22,9 +22,9 @@
 
 .flex-grow-0{
   display: inline-block;
-  margin-left: 40rpx;
+  margin-left: 70rpx;
   margin-right: 80rpx;
-  margin-top: 81rpx;
+  margin-top: 41rpx;
   text-align: center;
 }
 

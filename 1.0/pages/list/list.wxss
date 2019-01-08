@@ -30,10 +30,10 @@
   font-size: 30rpx; 
 }  
 /*左侧栏list的item被选中时*/  
-.nav_left .nav_left_items.active{  
+.nav_left .nav_left_items.active{
   background: #fff;  
-  color: #3385ff; 
-  border-left: 7rpx solid #3385ff;
+  color: #ff7307; 
+  border-left: 7rpx solid #ff7307;
 }  
 /*右侧栏主盒子*/  
 .nav_right{   

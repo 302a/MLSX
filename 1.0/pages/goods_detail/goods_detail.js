@@ -32,8 +32,8 @@ Page({
       }]
     }],
     imgArr: [
-      'http://img95.699pic.com/photo/40007/7982.jpg_wh300.jpg',
-      'http://img3.imgtn.bdimg.com/it/u=2098796076,1810711773&fm=26&gp=0.jpg'
+      'http://img.ivsky.com/img/tupian/t/201107/23/baicai-001.jpg',
+      'http://img.ivsky.com/img/tupian/t/201107/23/baicai-001.jpg'
     ]
   },
   // 购买弹出
@@ -253,21 +253,21 @@ Page({
     u && (wx.showLoading({
       title: "正在加载",
       mask: !0
-    }), o.request({
-      url: t.default.goods_attr_info,
-      data: {
-        goods_id: e.data.goods.id,
-        attr_list: JSON.stringify(c)
-      },
-      success: function (t) {
-        if (wx.hideLoading(), 0 == t.code) {
-          var a = e.data.goods;
-          a.price = t.data.price, a.num = t.data.num, a.attr_pic = t.data.pic, e.setData({
-            goods: a,
-            miaosha_data: t.data.miaosha
-          });
-        }
-      }
+    // }), o.request({
+    //   url: t.default.goods_attr_info,
+    //   data: {
+    //     goods_id: e.data.goods.id,
+    //     attr_list: JSON.stringify(c)
+    //   },
+    //   success: function (t) {
+    //     if (wx.hideLoading(), 0 == t.code) {
+    //       var a = e.data.goods;
+    //       a.price = t.data.price, a.num = t.data.num, a.attr_pic = t.data.pic, e.setData({
+    //         goods: a,
+    //         miaosha_data: t.data.miaosha
+    //       });
+    //     }
+    //   }
     }));
   },
 

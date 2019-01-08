@@ -5,11 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classify_array: [{ type: '新鲜水果', img:'../../../images/kind_page/4.png'},
-      { type: '净菜蔬菜', img: '../../../images/kind_page/5.png' },
-      { type: '海鲜水产', img: '../../../images/kind_page/6.png' },
-      { type: '肉禽蛋类', img: '../../../images/kind_page/7.png' },
-      { type: '粮油副食', img: '../../../images/kind_page/8.png' },]
+    classify_array: [{ type: '新鲜水果', img:'http://59.110.218.60/kind_page/4.png'},
+      { type: '净菜蔬菜', img: 'http://59.110.218.60//kind_page/5.png' },
+      { type: '海鲜水产', img: 'http://59.110.218.60/kind_page/6.png' },
+      { type: '肉禽蛋类', img: 'http://59.110.218.60/kind_page/7.png' },
+      { type: '粮油副食', img: 'http://59.110.218.60/kind_page/8.png' },]
   },
 
   /**
