@@ -19,8 +19,9 @@
     "pages/goods_detail/goods_detail",
     "pages/pintuan_details/pintuan_details",
     "pages/search/search",
-    "pages/zaoshi/zaoshi"
-    
+    "pages/zaoshi/zaoshi",
+    "pages/allorder_zero/allorder_zero",
+    "pages/mycount/mycount"
   ],
   "window": {
     "backgroundTextStyle": "light",

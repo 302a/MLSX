@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -68,6 +68,18 @@
 					"id": -1,
 					"name": "kind",
 					"pathName": "pages/kind/kind",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "allorder_zero",
+					"pathName": "pages/allorder_zero/allorder_zero",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mycount",
+					"pathName": "pages/mycount/mycount",
 					"query": ""
 				}
 			]
