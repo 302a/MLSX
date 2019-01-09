@@ -48,7 +48,8 @@
 }
 
 .shop-list view {
-  padding: 20rpx 20rpx;
+  padding: 20rpx 0;
+  margin: 0 30rpx;
   text-align: center;
   color: #3d3d3d;
   font-size: 34rpx;
@@ -411,7 +412,7 @@
 
   width: 70%;
   height: 100rpx;
-  padding-top: 15rpx;
+  padding: 15rpx 0;
   float: left;
 }
 
@@ -424,10 +425,10 @@
 }
 
 .good-pic image {
-  padding-top: 60rpx;
+  padding-top: 50rpx;
   padding-left: 10rpx;
-  width: 60rpx;
-  height: 60rpx
+  width: 70rpx;
+  height: 70rpx
 }
 
 navigator {
