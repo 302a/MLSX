@@ -65,7 +65,7 @@
         促销   <text class='mycount'>满减</text> <text class='count_rule'>满88减10</text>
       </view>
       <view class="pt-rule-right flex-grow-0 flex-y-center">
-        详细规则
+        优惠券
       </view>
       <view class="pt-rule-more flex-grow-0 flex-y-center">
         <image src="http://59.110.218.60/pintuan_page/img-share-right.png"></image>
