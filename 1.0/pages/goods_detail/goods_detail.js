@@ -10,7 +10,7 @@ Page({
       number: 1
     },
     goods: {
-      attr_pic: "http://img12.360buyimg.com/n12/jfs/t4657/315/708008384/125858/dda16721/58d368c5N1e4e8f15.jpg",
+      attr_pic: "../../images/kind_page/5.png",
       price: 200,
       id: '1',
       original_price: 200
@@ -135,11 +135,11 @@ Page({
     }), !0;
     if (e.data.miaosha_data && e.data.miaosha_data.rest_num > 0 && e.data.form.number > e.data.miaosha_data.rest_num) return wx.showToast({
       title: "商品库存不足，请选择其它规格或数量",
-      image: "../../images/icon-warning.png"
+      image: "/images/icon-warning.png"
     }), !0;
     if (e.data.form.number > e.data.goods.num) return wx.showToast({
       title: "商品库存不足，请选择其它规格或数量",
-      image: "../../images/icon-warning.png"
+      image: "/images/icon-warning.png"
     }), !0;
     var i = e.data.attr_group_list, s = [];
     for (var r in i) {
@@ -288,12 +288,6 @@ Page({
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
-    })
-  },
-
-  gomycount: function(){
-    wx.navigateTo({
-      url: '/pages/mycount/mycount',
     })
   }
 })

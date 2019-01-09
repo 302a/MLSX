@@ -60,9 +60,9 @@
     </view>
   </view>
   <view class="friend-group">
-    <view bindtap="gomycount" class="pt-goods-rule flex-row flex-y-center">
+    <view bindtap="goArticle" class="pt-goods-rule flex-row flex-y-center">
       <view class="pt-rule-title flex-grow-1 flex-y-center">
-        促销   <text class='mycount'>满减</text> <text class='count_rule'>满88减10</text>
+        支付商品开团，邀请好友参与，成功发货失败退款
       </view>
       <view class="pt-rule-right flex-grow-0 flex-y-center">
         详细规则
@@ -169,7 +169,7 @@
           <view style="height: 0;border-bottom: 1rpx solid #e3e3e3;margin-bottom: 40rpx"></view>
           <view style="padding-bottom: 40rpx">
             <view class="flex-row flex-y-center mb-20">
-              <view class="flex-grow-1 count">数量</view>
+              <view class="flex-grow-1">数量</view>
               <view class="flex-grow-0">
                 <view class="flex-row number-input-box">
                   <view bindtap="numberSub" class="flex-grow-0 flex-x-center flex-y-center number-btn number-sub {{form.number<=1?'disabled':''}}">-
