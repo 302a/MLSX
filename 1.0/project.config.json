@@ -38,8 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
-			"current": 4,
+			"current": 8,
 			"list": [
 				{
 					"id": 0,
@@ -86,7 +85,13 @@
 				{
 					"id": -1,
 					"name": "a",
-					"pathName": "pages/zaoshi/zaoshi"
+					"pathName": "pages/zaoshi/zaoshi",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "send",
+					"pathName": "pages/send/send"
 				}
 			]
 		}

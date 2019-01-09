@@ -1,1 +1,6 @@
 /* pages/mycount/mycount.wxss */
+
+.count{
+  margin-top: 38.0rpx;
+  margin-left: 15rpx;
+}
