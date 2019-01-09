@@ -1,9 +1,5 @@
 // pages/orders/orders.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     currtab: 0,
     swipertab: [
@@ -14,12 +10,7 @@ Page({
       { name: '待评价', index: 4 }
     ],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    
   },
   getDeviceInfo: function () {
     let that = this
@@ -32,7 +23,11 @@ Page({
       }
     })
   },
-  // 选项卡切换
+  onShow: function () {
+    this.getDeviceInfo()
+    this.orderShow()
+  },
+  // 点击选项卡 判断是否切换
   tabSwitch: function (e) {
     var that = this
     if (this.data.currtab === e.target.dataset.current) {
@@ -43,12 +38,10 @@ Page({
       })
     }
   },
- 
   tabChange: function (e) {
     this.setData({ currtab: e.detail.current })
     this.orderShow()
   },
- 
   orderShow: function () {
     let that = this
     switch (this.data.currtab) {
@@ -131,53 +124,9 @@ Page({
       url: "/pages/receive-success/receive-success"
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    this.getDeviceInfo()
-    this.orderShow()
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  onReady: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onShareAppMessage: function () {}
 })

@@ -112,10 +112,11 @@
               <view class='price'>
                 <text class='price_left'>￥{{item.price}}</text>
                 <text class='price_right'>/个</text>
+                <image src='http://59.110.218.60/kind_page/55.png' style='width:65rpx;height:65rpx;' class='market'></image>
+
               </view>
             </view>
           </navigator>
-          <image src='http://59.110.218.60/kind_page/55.png' style='width:65rpx;height:65rpx;' class='market'></image>
         </view>
       </block>
     </view>

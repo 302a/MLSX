@@ -225,7 +225,6 @@
   position: absolute;
   right: 10rpx;
   margin-top: 150rpx;
-  z-index: 100;
 }
 
 .find-sort{

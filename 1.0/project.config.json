@@ -38,7 +38,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 6,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -85,25 +86,7 @@
 				{
 					"id": -1,
 					"name": "a",
-					"pathName": "pages/zaoshi/zaoshi",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "send",
-					"pathName": "pages/send/send",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pintuan",
-					"pathName": "pages/pintuan/pintuan",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pintuan_details",
-					"pathName": "pages/pintuan_details/pintuan_details"
+					"pathName": "pages/zaoshi/zaoshi"
 				}
 			]
 		}
