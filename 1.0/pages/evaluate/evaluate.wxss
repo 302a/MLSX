@@ -8,7 +8,34 @@ page {
   border-radius: 50rpx;
   margin: 40rpx auto;
 }
-
+.evaluate-top {
+  width: 100%;
+  height: 190rpx;
+}
+.evaluate-top>image {
+  width: 210rpx;
+  height: 210rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+.level {
+  float: left;
+  margin-top: 66rpx;
+}
+.level-list {
+  float: left;
+  margin: 0 40rpx;
+}
+.level-list>image {
+  width: 72rpx;
+  height: 72rpx;
+}
+.level-list>view {
+  font-size: 22rpx;
+  color: #ff7272;
+  text-align: center;
+  line-height: 60rpx;
+}
 .evaluate-list {
   width: 100%;
   height: 58rpx;
@@ -32,4 +59,16 @@ page {
 .star image{
   width: 50rpx;
   height: 58rpx;
+}
+
+.evaluate-btn {
+  width: 604rpx;
+  height: 80rpx;
+  background: #ff5414;
+  border-radius: 40rpx;
+  margin: 80rpx auto;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  text-align: center;
 }

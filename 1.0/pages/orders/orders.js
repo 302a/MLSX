@@ -113,9 +113,22 @@ Page({
       ]
     })
   },
+  // 去评价
   goEvaluate () {
     wx.navigateTo({
       url:"/pages/evaluate/evaluate"
+    })
+  },
+  // 去支付
+  goPay () {
+    wx.navigateTo({
+      url: "/pages/pay-success/pay-success"
+    })
+  },
+  // 去收货
+  goReceive () {
+    wx.navigateTo({
+      url: "/pages/receive-success/receive-success"
     })
   },
   /**

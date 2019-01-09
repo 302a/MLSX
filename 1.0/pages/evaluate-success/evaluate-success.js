@@ -1,4 +1,4 @@
-// pages/address/address.js
+// pages/evaluate-success/evaluate-success.js
 Page({
 
   /**

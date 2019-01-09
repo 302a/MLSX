@@ -1,4 +1,4 @@
-// pages/address/address.js
+// pages/receive-success/receive-success.js
 Page({
 
   /**
@@ -7,7 +7,18 @@ Page({
   data: {
 
   },
-
+  // 去首页
+  goHome () {
+    wx.switchTab({
+    	url: "/pages/home/home"
+    })
+  },
+  // 去评价
+  goEvaluate () {
+    wx.navigateTo({
+    	url: "/pages/evaluate/evaluate"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

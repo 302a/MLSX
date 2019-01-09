@@ -62,8 +62,14 @@ Page({
   		}
   	}
   	this.setData({
-  			userStars3: tempUserStars
+        userStars3: tempUserStars
   	})
+  },
+  // 点击发布 跳转
+  evaluateSuccess () {
+    wx.navigateTo({
+      url:"/pages/evaluate-success/evaluate-success"
+    })
   },
   
   /**
