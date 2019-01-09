@@ -32,8 +32,8 @@ Page({
       }]
     }],
     imgArr: [
-      'http://img.ivsky.com/img/tupian/t/201107/23/baicai-001.jpg',
-      'http://img.ivsky.com/img/tupian/t/201107/23/baicai-001.jpg'
+      'http://59.110.218.60/pintuan_page/8.png',
+      'http://59.110.218.60/pintuan_page/9.png',
     ]
   },
   // 购买弹出
@@ -270,7 +270,7 @@ Page({
     //   }
     }));
   },
-
+// 
   goToComment: function(){
     wx.navigateTo({
       url: "/pages/comment/comment?id=" + this.data.goods.id
@@ -278,10 +278,10 @@ Page({
   },
 
   previewImg: function (e) {
-    // console.log(e.currentTarget.dataset.index);
+    console.log(e.currentTarget);
     var index = e.currentTarget.dataset.index;
     var imgArr = this.data.imgArr;
-    // console.log(imgArr[0])
+    console.log(index)
     wx.previewImage({
       current: imgArr[index],     //当前图片地址
       urls: imgArr,               //所有要预览的图片的地址集合 数组形式

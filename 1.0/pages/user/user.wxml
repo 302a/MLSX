@@ -5,11 +5,11 @@
   <view class="msg-warp">
     <view class="msg">
       <view class="msg-top">
-        <image src="../../images/user_page/1.png"></image>
+        <image src="http://59.110.218.60/user_page/1.png"></image>
         <text>11111</text>
         <view class="msg-right">
-        	<image src="../../images/user_page/10.png"></image>
-        	<image src="../../images/user_page/9.png"></image>
+        	<image src="http://59.110.218.60/user_page/10.png"></image>
+        	<image src="http://59.110.218.60/user_page/9.png"></image>
         </view>
       </view>
       <view class="msg-center">

@@ -86,9 +86,9 @@
     <view class="pt-goods-content-title flex-y-center">
       商品详情
     </view>
-    <view class="pt-goods-details" bindtap='previewImg'>
-      <image src='http://59.110.218.60/pintuan_page/8.png' style='height: 800rpx;width: 100%' data-index='0'></image>
-      <image src='http://59.110.218.60/pintuan_page/9.png' style='height: 1450rpx;width: 100%' data-index='1'></image>
+    <view class="pt-goods-details">
+      <image src='http://59.110.218.60/pintuan_page/8.png' style='height: 800rpx;width: 100%' data-index='0' bindtap='previewImg'></image>
+      <image src='http://59.110.218.60/pintuan_page/9.png' style='height: 1450rpx;width: 100%' data-index='1' bindtap='previewImg'></image>
     </view>
   </view>
   <view class="pt-goods-footer flex-row">
