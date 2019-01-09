@@ -139,6 +139,7 @@
             </view>
             <view class="flex-grow-1" style="padding: 0 24rpx">
                 <view style="color:#ff4544;margin-bottom: 12rpx;font-weight: bold">￥{{goods.price}}</view>
+                <!-- <view style="color:#ff4544;margin-bottom: 12rpx;font-weight: bold">￥{{goods.price}}</view> -->
                 <view style="font-size:9pt">
                     库存{{goods.num}}件
                 </view>
