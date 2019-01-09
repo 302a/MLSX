@@ -17,6 +17,7 @@
     </view>
 </scroll-view>
 <scroll-view scrollY bindscrolltolower="pullDownLoading" class="after-navber" scrollIntoView="{{toView}}" scrollTop="{{scrollTop}}" style="height: 100%;">
+
     <swiper autoplay="true" circular="true" class="banner" duration="300" indicatorActiveColor="#ff5c5c" indicatorDots="true" interval="5000">
         <swiper-item wx:for="{{banner}}">
             <navigator openType="navigate" url="{{item.page_url}}">
@@ -25,7 +26,9 @@
             </navigator>
         </swiper-item>
     </swiper>
+    
     <view class='division'></view>
+    
     <navigator class="list-item flex-row" openType="navigate" url="/pages/pintuan_details/pintuan_details" wx:for="{{goods}}">
         <view class="flex-grow-0 corver-pic">
             <image lazyLoad="true" src="{{item.cover_pic}}"></image>
@@ -61,5 +64,11 @@
             </view>
         </view>
     </navigator>
+    <view class="loading-bar {{show_loading_bar?'active':''}}" style="text-align: center;{{emptyGoods==1?'display:none':''}}">
+        <image src="/images/loading.svg" style="width: 160rpx;height: 80rpx"></image>
+    </view>
+    <view class="empty-bar flex-row flex-x-center flex-y-center" style="{{emptyGoods!=1?'display:none':''}}">
+        没有更多商品了~
+    </view>
 </scroll-view>
 

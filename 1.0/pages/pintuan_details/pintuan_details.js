@@ -1,4 +1,12 @@
 // pages/pintuan_details/pintuan_details.js
+function t(t, a, e) {
+  return a in t ? Object.defineProperty(t, a, {
+    value: e,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : t[a] = e, t;
+}
 Page({
 
   /**
@@ -11,6 +19,10 @@ Page({
     },
     reduce_price: 0.30,
     comment_num: 0,
+    goods_url: {
+      url1: "http://59.110.218.60/pintuan_page/8.png",
+      url2: "http://59.110.218.60/pintuan_page/9.png" 
+    },
     goods: {
       name: "意大利生菜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;净重250g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;精选蔬菜",
       price: 9.90,
@@ -19,6 +31,7 @@ Page({
       original_price: 11.20,
       group_num: 21,
       virtual_sales: 11,
+      video_url: "http://59.110.218.60/pintuan_page/4.png",
     },
     attr_group_list: [{
       attr_group_id: 27,
@@ -107,18 +120,76 @@ Page({
     });
   },
   call_phone: function () {
-    wx
+    wx.makePhoneCall({
+      phoneNumber: '158********',
+    })
   },
   showAttrPicker: function () {
     this.setData({
       show_attr_picker: !0
     });
   },
+  previewImage1: function () {
+    wx.previewImage({
+      // 图片的http链接
+      current: 'http://59.110.218.60/pintuan_page/8.png', // 当前显示图片的http链接
+      urls: ["http://59.110.218.60/pintuan_page/8.png"],
+    })
+  },
+  previewImage2: function () {
+    wx.previewImage({
+      // 图片的http链接
+      current: 'http://59.110.218.60/pintuan_page/9.png', // 当前显示图片的http链接
+      urls: ["http://59.110.218.60/pintuan_page/9.png"],
+    })
+  },
   buyNow: function () {
     this.submit("GROUP_BUY");
   },
   onlyBuy: function () {
     this.submit("ONLY_BUY");
+  },
+  submit: function (t) {
+    var a = this;
+    if (!a.data.show_attr_picker) return a.setData({
+      show_attr_picker: !0
+    }), !0;
+    if (a.data.form.number > a.data.goods.num) return wx.showToast({
+      title: "商品库存不足，请选择其它规格或数量",
+      image: "/images/icon-warning.png"
+    }), !0;
+    var e = a.data.attr_group_list, o = [];
+    for (var i in e) {
+      var r = !1;
+      for (var n in e[i].attr_list) if (e[i].attr_list[n].checked) {
+        r = {
+          attr_id: e[i].attr_list[n].attr_id,
+          attr_name: e[i].attr_list[n].attr_name
+        };
+        break;
+      }
+      if (!r) return wx.showToast({
+        title: "请选择" + e[i].attr_group_name,
+        image: "/images/icon-warning.png"
+      }), !0;
+      o.push({
+        attr_group_id: e[i].attr_group_id,
+        attr_group_name: e[i].attr_group_name,
+        attr_id: r.attr_id,
+        attr_name: r.attr_name
+      });
+    }
+    a.setData({
+      show_attr_picker: !1
+    }), wx.redirectTo({
+      url: "/pages/pt/order-submit/order-submit?goods_info=" + JSON.stringify({
+        goods_id: a.data.goods.id,
+        attr: o,
+        num: a.data.form.number,
+        type: t,
+        deliver_type: a.data.goods.type
+      })
+    });
   },
   attrClick: function (t) {
     var a = this, o = t.target.dataset.groupId, r = t.target.dataset.id, n = a.data.attr_group_list;
@@ -158,6 +229,7 @@ Page({
       }
     }));
   },
+  
   numberSub: function () {
     var t = this, a = t.data.form.number;
     if (a <= 1) return !0;
