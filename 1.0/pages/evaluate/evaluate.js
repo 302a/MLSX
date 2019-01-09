@@ -5,11 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userStars1: ['/images/evaluate_page/07.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png'],
-    userStars2: ['/images/evaluate_page/07.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png'],
-    userStars3: ['/images/evaluate_page/07.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png', '/images/evaluate_page/03.png']
-
-
+    userStars1: ['http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png'],
+    userStars2: ['http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png'],
+    userStars3: ['http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png', 'http://59.110.218.60/evaluate_page/03.png'],
+    flag: true
   },
 
   /**
@@ -25,9 +24,9 @@ Page({
     var len = tempUserStars.length; // 获取花朵数组的长度
     for(var i = 0; i < len; i ++){
       if(i <= index){ // 小于等于index的是满心
-        tempUserStars[i] = '/images/evaluate_page/07.png'
+        tempUserStars[i] = 'http://59.110.218.60/evaluate_page/07.png'
       }else{ // 其他是空心
-        tempUserStars[i] = '/images/evaluate_page/03.png'
+        tempUserStars[i] = 'http://59.110.218.60/evaluate_page/03.png'
       }
     }
     // 重新赋值就可以显示了
@@ -41,9 +40,9 @@ Page({
   	var len = tempUserStars.length;
   	for(var i = 0; i < len; i ++){
   		if(i <= index){
-  			tempUserStars[i] = '/images/evaluate_page/07.png'
+  			tempUserStars[i] = 'http://59.110.218.60/evaluate_page/07.png'
   		}else{
-  			tempUserStars[i] = '/images/evaluate_page/03.png'
+  			tempUserStars[i] = 'http://59.110.218.60/evaluate_page/03.png'
   		}
   	}
   	this.setData({
@@ -56,9 +55,9 @@ Page({
   	var len = tempUserStars.length;
   	for(var i = 0; i < len; i ++){
   		if(i <= index){
-  			tempUserStars[i] = '/images/evaluate_page/07.png'
+  			tempUserStars[i] = 'http://59.110.218.60/evaluate_page/07.png'
   		}else{
-  			tempUserStars[i] = '/images/evaluate_page/03.png'
+  			tempUserStars[i] = 'http://59.110.218.60/evaluate_page/03.png'
   		}
   	}
   	this.setData({

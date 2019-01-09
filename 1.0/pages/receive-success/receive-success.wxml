@@ -1,6 +1,6 @@
 <view class="receive">
   <view class="receive-top">
-    <image src="../../images/user_page/对号.png" style="width: 48rpx;height: 50rpx; float: left;"></image>
+    <image src="http://59.110.218.60/user_page/对号.png" style="width: 48rpx;height: 50rpx; float: left;"></image>
     <text>交易成功</text>
   </view>
   <view class="msg">去评价一下本次的购物体验吧~</view>

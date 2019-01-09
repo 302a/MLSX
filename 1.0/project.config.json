@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
 	"appid": "wxac8536ba178dfe7d",
-	"projectname": "%E7%BE%8E%E6%9E%97%E7%94%9F%E9%B2%9C11",
+	"projectname": "%E7%BE%8E%E6%9E%97%E7%94%9F%E9%B2%9C",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -38,7 +38,6 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
 			"current": 4,
 			"list": [
 				{

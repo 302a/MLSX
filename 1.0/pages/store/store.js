@@ -6,9 +6,9 @@ Page({
    */
   data: {
     list: [
-      {topic: '丰产路店', img: '../../images/store_page/01.png', address: '丰产路与经五路交叉口向西100米路北银盛泰酒店旁边'},
-      {topic: '阳光城店', img: '../../images/store_page/02.png', address: '长江路岗东路交叉口东北角阳光城3号院车库出入口旁边门面房广场'},
-      {topic: '七里河店', img: '../../images/store_page/03.png', address: '美景鸿城七里河小区门口对面(尚义路原水浒烤肉)'}
+      {topic: '丰产路店', img: 'http://59.110.218.60/store_page/01.png', address: '丰产路与经五路交叉口向西100米路北银盛泰酒店旁边'},
+      {topic: '阳光城店', img: 'http://59.110.218.60/store_page/02.png', address: '长江路岗东路交叉口东北角阳光城3号院车库出入口旁边门面房广场'},
+      {topic: '七里河店', img: 'http://59.110.218.60/store_page/03.png', address: '美景鸿城七里河小区门口对面(尚义路原水浒烤肉)'}
     ]
   },
 

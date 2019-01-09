@@ -6,10 +6,10 @@ Page({
    */
   data: {
     list1: [
-      { type: '待付款', img: 'http://59.110.218.60/user_page/11.png', path: '/pages/orders/orders?status=1'},
-      { type: '待配送', img: 'http://59.110.218.60/user_page/14.png', path: '/pages/orders/orders?status=2'},
-      { type: '待收货', img: 'http://59.110.218.60/user_page/13.png', path: '/pages/orders/orders?status=3'},
-      { type: '待评价', img: 'http://59.110.218.60/user_page/12.png', path: '/pages/orders/orders?status=4'},
+      {type: '待付款', img: 'http://59.110.218.60/user_page/11.png', path: '/pages/orders/orders?status=1'},
+      {type: '待配送', img: 'http://59.110.218.60/user_page/14.png', path: '/pages/orders/orders?status=2'},
+      {type: '待收货', img: 'http://59.110.218.60/user_page/13.png', path: '/pages/orders/orders?status=3'},
+      {type: '待评价', img: 'http://59.110.218.60/user_page/12.png', path: '/pages/orders/orders?status=4'},
     ],
     list2: [
       {

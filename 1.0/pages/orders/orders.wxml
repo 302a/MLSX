@@ -3,7 +3,7 @@
     <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}</view>
   </block>
 </view>
- 
+
 <swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH-31}}px" bindchange="tabChange">
   <!-- 全部-->
   <swiper-item>
@@ -65,7 +65,7 @@
       </view>
     </scroll-view>
   </swiper-item>
-  
+
   <!-- 待配送 -->
   <swiper-item>
     <scroll-view class="hot-box" scroll-y="true">
