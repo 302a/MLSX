@@ -40,7 +40,7 @@
   <view id='school'><text style='position:relative;left:15px'>学校</text></view>
 </view>
 <view class='save'>
- <navigator class="goods-sub" url="/pages/submit/submit">
+ <navigator  url="/pages/address/address" style='display:inline-block; position:relative; left:58px'>
     <button class="button-red" bindtap="toBuy" formType="submit">保存
     </button>
   </navigator>

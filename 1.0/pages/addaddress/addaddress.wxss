@@ -90,7 +90,7 @@ left: 240px;
   border-radius: 25px;
   line-height: 70rpx;
   position: relative;
-  left: 58px;
+  
 }
 button {
   position: fixed;

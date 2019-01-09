@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    t_length:0,
+  
     sub: [{
       time:'9:30',
       name: "生菜",
@@ -27,9 +29,12 @@ Page({
     sum:[{
        sumprice:'8.8',
        peisong:3
-    }]
+    }],
+   
 
   },
+  
+  
   //勾选事件处理函数  
   switchSelect: function (e) {
     // 获取item项的id，和数组的下标值  
@@ -45,6 +50,14 @@ Page({
     else {
       this.data.totalMoney = this.data.totalMoney - this.data.carts[index].price;
     }
-  }
+  },
+
+  bindText: function (e) {
+    var t_text = e.detail.value.length;
+    // console.log(t_text)
+    this.setData({
+      length: t_text
+    })
+  },
 
 })
