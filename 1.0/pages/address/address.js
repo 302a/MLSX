@@ -4,8 +4,16 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-
+  data:{
+   address:[{
+    name:"明",
+    gender:"先生",
+    address:"河南省郑州市",
+    phone:"123456789",
+    type:"家"
+   }, 
+  
+  ]
   },
 
   /**

@@ -9,9 +9,11 @@ Page({
     // 商品详情介绍
     carts: [
       {
-        pic: "http://mz.djmall.xmisp.cn/files/product/20161201/148058328876.jpg",
-        name: "日本资生堂洗颜",
-        price: 200,
+        pic: "http://59.110.218.60/3.png",
+        name: "新鲜的大白菜",
+        introduce: '绿色健康，富含活力花青素',
+        weight:'600g',
+        price: 3,
         isSelect: false,
         // 数据设定
         count: {
@@ -21,9 +23,11 @@ Page({
         },
       },
       {
-        pic: 'http://mz.djmall.xmisp.cn/files/product/20161201/148058301941.jpg',
-        name: "倩碧焕妍活力精华露",
-        price: 340,
+        pic: 'http://59.110.218.60/3.png',
+        name: "新鲜的大白菜",
+        introduce: '绿色健康，富含活力花青素',
+        weight: '600g',
+        price: 3,
         isSelect: false,
         // 数据设定
         count: {
@@ -33,9 +37,11 @@ Page({
         },
       },
       {
-        pic: 'http://mz.djmall.xmisp.cn/files/product/20161201/14805828016.jpg',
-        name: "特效润肤露",
-        price: 390,
+        pic: 'http://59.110.218.60/3.png',
+        name: "新鲜的大白菜",
+        introduce:'绿色健康，富含活力花青素',
+        weight: '600g',
+        price: 3,
         isSelect: false,
         // 数据设定
         count: {
@@ -45,9 +51,11 @@ Page({
         },
       },
       {
-        pic: 'http://mz.djmall.xmisp.cn/files/product/20161201/148058228431.jpg',
-        name: "倩碧水嫩保湿精华面霜",
-        price: 490,
+        pic: 'http://59.110.218.60/3.png',
+        name: "新鲜的大白菜",
+        introduce: '绿色健康，富含活力花青素',
+        weight: '600g',
+        price: 3,
         isSelect: false,
         // 数据设定
         count: {
@@ -56,30 +64,8 @@ Page({
           max: 20
         },
       },
-      {
-        pic: 'http://mz.djmall.xmisp.cn/files/product/20161201/148057953326.jpg',
-        name: "兰蔻清莹柔肤爽肤水",
-        price: 289,
-        isSelect: false,
-        // 数据设定
-        count: {
-          quantity: 10,
-          min: 1,
-          max: 20
-        },
-      },
-      {
-        pic: "http://mz.djmall.xmisp.cn/files/product/20161201/148057921620_middle.jpg",
-        name: "LANCOME兰蔻小黑瓶精华",
-        price: 230,
-        isSelect: false,
-        // 数据设定
-        count: {
-          quantity: 1,
-          min: 1,
-          max: 20
-        },
-      },
+   
+      
     ],
   },
 
