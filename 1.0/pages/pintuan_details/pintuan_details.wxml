@@ -2,10 +2,12 @@
 <view class="{{show_attr_picker?'no-scroll':''}}">
     <swiper autoplay="{{autoplay}}" bindchange="hide" circular="true" class="goods-image-swiper" duration="300" indicatorActiveColor="#ff5c5c" indicatorDots="true" interval="5000">
         <swiper-item>
-            <image bindtap="onGoodsImageClick" class="goods-image" data-index="{{index}}" mode="aspectFill" src="/images/pintuan_page/4.png"></image>
+            <!-- <image bindtap="onGoodsImageClick" class="goods-image" data-index="{{index}}" mode="aspectFill" src="/images/pintuan_page/4.png"></image>
         </swiper-item>
         <swiper-item>
-            <image bindtap="onGoodsImageClick" class="goods-image" data-index="{{index}}" mode="aspectFill" src="/images/pintuan_page/5.png"></image>
+            <image bindtap="onGoodsImageClick" class="goods-image" data-index="{{index}}" mode="aspectFill" src="/images/pintuan_page/5.png"></image> -->
+            <!-- <image bindtap="play" class="play {{img_hide}}" data-url="{{goods.video_url}}" src="/images/video-play.png" wx:if="{{goods.video_url}}"></image> -->
+            <image bindtap="onGoodsImageClick" class="goods-image" data-index="{{index}}" mode="aspectFill" src="{{goods.video_url}}"></image>
         </swiper-item>
     </swiper> 
     <view class="flex-row goods-money">
@@ -56,20 +58,20 @@
             规格
         </view>
         <view class="goods-attr-more flex-grow-0 flex-y-center">
-            <image src="/images/pintuan_page/img-share-right.png"></image>
+            <image src="http://59.110.218.60/pintuan_page/img-share-right.png"></image>
         </view>
     </view>
     <view class="friend-group">
         <view bindtap="goArticle" class="pt-goods-rule flex-row flex-y-center">
             <view class="pt-rule-title flex-grow-1 flex-y-center">
-                促销   <text style='height: 40rpx;width: 80rpx;border: 1rpx solid #FFBD9D;background-color: #FFBD9D;text-align: center;margin-left: 50rpx;font-size: 9pt;color: white;'>满减</text>
+                支付商品开团，邀请好友参与，成功发货失败退款
             </view>
-            <view class="pt-rule-right flex-grow-0 flex-y-center">
+            <!-- <view class="pt-rule-right flex-grow-0 flex-y-center">
                 详细规则
             </view>
             <view class="pt-rule-more flex-grow-0 flex-y-center">
                 <image src="/images/pintuan_page/img-share-right.png"></image>
-            </view>
+            </view> -->
         </view>
     </view>
     <view class="goods-comment">
@@ -78,7 +80,7 @@
                 买家评论{{comment_num}} | 销量 {{goods.virtual_sales}}
             </view>
             <view class="comment-more flex-grow-0 flex-y-center">
-                <image src="/images/pintuan_page/img-share-right.png"></image>
+                <image src="http://59.110.218.60/pintuan_page/img-share-right.png"></image>
             </view>
         </view>
     </view>
@@ -87,14 +89,14 @@
             商品详情
         </view>
         <view class="pt-goods-details">
-          <image src='/images/pintuan_page/8.png' data-src='/images/pintuan_page/8.png' style='height: 800rpx;width: 100%' bindtap="previewImage"></image>
-          <image src='/images/pintuan_page/9.png' data-src='/images/pintuan_page/8.png' style='height: 1450rpx;width: 100%' bindtap="previewImage"></image>
+          <image style='height: 800rpx;width: 100%' bindtap="previewImage1" src='{{goods_url.url1}}'></image>
+          <image style='height: 1450rpx;width: 100%' bindtap="previewImage2" src='{{goods_url.url2}}'></image>
         </view>          
     </view>
     <view class="pt-goods-footer flex-row">
-        <!-- <view bindtap="goHome" class="flex-grow-0 flex-col flex-y-center flex-x-center goods-footer-icon">
+        <view bindtap="goHome" class="flex-grow-0 flex-col flex-y-center flex-x-center goods-footer-icon">
             <view class="flex-gorw-0 flex-x-center">
-                <image src="/images/pintuan_page/6.png"></image>
+                <image src="http://59.110.218.60/pintuan_page/6.png"></image>
             </view>
             <view class="flex-gorw-0 flex-x-center">
                 首页
@@ -102,12 +104,12 @@
         </view>
         <view bindtap="call_phone" class="flex-grow-0 flex-col flex-y-center flex-x-center goods-footer-icon1">
             <view class="flex-gorw-0 flex-x-center">
-                <image src="/images/pintuan_page/1.png"></image>
+                <image src="http://59.110.218.60/pintuan_page/1.png"></image>
             </view>
             <view class="flex-gorw-0 flex-x-center">
                 商家
             </view>
-        </view> -->
+        </view>
         <!-- <view class='buy-goods'> -->
           <view bindtap="onlyBuy" class="flex-grow-1 flex-col flex-y-center flex-x-center alone-buy">
               <view class="flex-gorw-0 money">
@@ -134,7 +136,7 @@
             <view class="flex-grow-0">
                 <view class="goods-pic-box">
                     <!-- <image mode="aspectFill" src="{{goods.attr_pic}}" wx:if="{{goods.attr_pic}}"></image> -->
-                    <image src="/images/pintuan_page/4.png"></image>
+                    <image src="{{goods.video_url}}"></image>
                 </view>
             </view>
             <view class="flex-grow-1" style="padding: 0 24rpx">
@@ -145,7 +147,7 @@
             </view>
             <view class="flex-grow-0">
                 <view bindtap="hideAttrPicker" class="flex-x-center flex-y-center" style="width: 100rpx;height: 100rpx">
-                    <image src="../../images/public_page/icon-close.png" style="width: 30rpx;height: 30rpx"></image>
+                    <image src="http://59.110.218.60/public_page/icon-close.png" style="width: 30rpx;height: 30rpx"></image>
                 </view>
             </view>
         </view>
@@ -155,7 +157,7 @@
                     <view class="attr-group" wx:if="{{attr_group.attr_list.length>0}}" wx:for="{{attr_group_list}}" wx:for-item="attr_group" style="font-size: 9pt;">
                         <view class="attr-group-name">{{attr_group.attr_group_name}}</view>
                         <view class="attr-list">
-                            <text bindtap="attrClick" class="attr-item {{item.checked?'active':''}}" data-group-id="{{attr_group.attr_group_id}}" data-id="{{item.attr_id}}" wx:for="{{attr_group.attr_list}}" sty>{{item.attr_name}}
+                            <text bindtap="attrClick" class="attr-item {{item.checked?'active':''}}" data-group-id="{{attr_group.attr_group_id}}" data-id="{{item.attr_id}}" wx:for="{{attr_group.attr_list}}">{{item.attr_name}}
                                 </text>
                         </view>
                     </view>

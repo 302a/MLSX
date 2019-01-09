@@ -1,4 +1,4 @@
-{
+{ 
   "pages": [
     "pages/home/home",
     "pages/kind/kind",
@@ -20,9 +20,9 @@
     "pages/pintuan_details/pintuan_details",
     "pages/search/search",
     "pages/zaoshi/zaoshi",
-    "pages/allorder_zero/allorder_zero",
     "pages/mycount/mycount",
-    "pages/send/send"
+    "pages/send/send",
+    "pages/pintuan_order_sumbb"
   ],
   "window": {
     "backgroundTextStyle": "light",
