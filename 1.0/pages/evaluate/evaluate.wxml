@@ -1,7 +1,7 @@
    <view class="evaluate">
   <view class="evaluate-box">
     <view class="evaluate-top">
-      <image src="/images/evaluate_page/01.png" ></image>
+      <image src="http://59.110.218.60/evaluate_page/01.png" ></image>
       <view class="level">
         <view class="level-list" bindtap="change">
           <image src="http://59.110.218.60/evaluate_page/04.png" style="width: 72rpx;height: 72rpx;"  wx:if="{{flag}}"></image>
