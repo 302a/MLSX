@@ -1,2 +1,9 @@
-<!--pages/mycount/mycount.wxml-->
-<text>pages/mycount/mycount.wxml</text>
+<view class='count'>
+  <image src='../../images/user_page/236985.png' style='width:710.9rpx;height:261.9rpx;'></image>
+</view>
+<view class='count'>
+  <image src='../../images/user_page/236985.png' style='width:710.9rpx;height:261.9rpx;'></image>
+</view>
+<view class='count'>
+  <image src='../../images/user_page/236985.png' style='width:710.9rpx;height:261.9rpx;'></image>
+</view>

@@ -1,0 +1,46 @@
+page {
+  background: #fbfbfb;
+}
+.receive {
+  width: 100%;
+  height: 400rpx;
+  background: #ff6600;
+  overflow: hidden;
+}
+.receive-top {
+  width: 254rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+.receive-top>text {
+  float: left;
+  font-size: 44rpx;
+  line-height: 50rpx;
+  color: #fff;
+  margin-left: 20rpx;
+}
+.msg {
+  font-size: 28rpx;
+  color: #FFCA70;
+  text-align: center;
+  margin-top: 16rpx;
+}
+.btn-box {
+  width: 400rpx;
+  height: 52rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-box> view{
+  width: 148rpx;
+  height: 52rpx;
+  border-radius: 26rpx;
+  border: 2rpx solid #FFca70;
+  font-size: 24rpx;
+  color: #ffca70;
+  line-height: 52rpx;
+  text-align: center;
+}

@@ -1,4 +1,4 @@
-// pages/address/address.js
+// pages/pay-success/pay-success.js
 Page({
 
   /**
@@ -7,7 +7,12 @@ Page({
   data: {
 
   },
-
+  // 去首页
+  goHome () {
+    wx.switchTab({
+      url: "/pages/home/home"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
