@@ -9,7 +9,7 @@ Page({
     // 商品详情介绍
     carts: [
       {
-        pic: "http://59.110.218.60/3.png",
+        pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
         introduce: '绿色健康，富含活力花青素',
         weight:'600g',
@@ -23,7 +23,7 @@ Page({
         },
       },
       {
-        pic: 'http://59.110.218.60/3.png',
+        pic: 'http://59.110.218.60/cart_page/submit/3.png',
         name: "新鲜的大白菜",
         introduce: '绿色健康，富含活力花青素',
         weight: '600g',
@@ -37,7 +37,7 @@ Page({
         },
       },
       {
-        pic: 'http://59.110.218.60/3.png',
+        pic: 'http://59.110.218.60/cart_page/submit/3.png',
         name: "新鲜的大白菜",
         introduce:'绿色健康，富含活力花青素',
         weight: '600g',
@@ -51,7 +51,7 @@ Page({
         },
       },
       {
-        pic: 'http://59.110.218.60/3.png',
+        pic: 'http://59.110.218.60/cart_page/submit/3.png',
         name: "新鲜的大白菜",
         introduce: '绿色健康，富含活力花青素',
         weight: '600g',

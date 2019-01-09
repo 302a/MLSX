@@ -156,7 +156,7 @@ Page({
     }), !0;
     if (a.data.form.number > a.data.goods.num) return wx.showToast({
       title: "商品库存不足，请选择其它规格或数量",
-      image: "http://59.110.218.60/pintuan_page/icon-warning.png"
+      image: "http://59.110.218.60/icon-warning.png"
     }), !0;
     var e = a.data.attr_group_list, o = [];
     for (var i in e) {
@@ -170,7 +170,7 @@ Page({
       }
       if (!r) return wx.showToast({
         title: "请选择" + e[i].attr_group_name,
-        image: "http://59.110.218.60/pintuan_page/icon-warning.png"
+        image: "http://59.110.218.60/icon-warning.png"
       }), !0;
       o.push({
         attr_group_id: e[i].attr_group_id,
