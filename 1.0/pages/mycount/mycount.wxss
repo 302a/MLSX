@@ -1,1 +1,29 @@
 /* pages/mycount/mycount.wxss */
+page {
+  background: #f5f5f5;
+}
+
+.count{
+  margin-top: 38.0rpx;
+  margin-left: 20rpx;
+}
+
+.useing{
+  background-color: #ff6600;
+  width: 121.rpx;
+  height: 47.6rpx;
+  font-size: 33rpx;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 47.6rpx; 
+  z-index: 100;
+  position: relative;
+  bottom: 190rpx;
+  left: 550rpx;
+}
+
+
+
+
+
+
