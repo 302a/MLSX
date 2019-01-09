@@ -1,0 +1,49 @@
+<!--pages/addaddress/addaddress.wxml-->
+<view style='background-color:#F5F5F5;'>
+<view class='name'>
+<text style='position:relative;left:14px;top:13px;right:14rpx'>姓名</text>
+
+<input type='text' placeholder='点击输入' class='xm'></input>
+</view>
+
+<!-- gender -->
+<view class='gender'>
+<text class='man'>先生</text>
+<text class='woman'>女士</text>
+  <image class="xiansheng" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'../../images/cart_page/existgoods/03.png'}}" />
+
+   <image class="nvshi" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'../../images/cart_page/existgoods/03.png'}}" />
+   </view>
+   <!-- phone -->
+   <view class='phone'>
+   <text style='position:relative;left:14px;top:13px;right:14rpx'>电话</text>
+
+<input type='text' placeholder='点击输入' class='xm'></input>
+   </view>
+   <!-- address -->
+   <view class='address'>
+   <text style='position:relative;left:14px;top:13px;right:14rpx'>地址</text>
+
+<input type='text' placeholder='点击输入' class='xm'></input>
+   </view>
+   <!-- pai -->
+   <view class='pai'>
+    <text style='position:relative;left:14px;top:13px;right:14rpx'>门牌</text>
+
+<input type='text' placeholder='例：16栋5层301' class='xm'></input>
+   </view>
+   <!-- tab -->
+<view class='tab'>
+  <text style='position:relative;left:14px;top:13px;right:14rpx'>标签</text>
+  <view id='home'><text style='position:relative;left:21px'>家</text></view>
+  <view id='company'><text style='position:relative;left:15px'>公司</text></view>
+  <view id='school'><text style='position:relative;left:15px'>学校</text></view>
+</view>
+<view class='save'>
+ <navigator class="goods-sub" url="/pages/submit/submit">
+    <button class="button-red" bindtap="toBuy" formType="submit">保存
+    </button>
+  </navigator>
+  </view>
+
+  </view>

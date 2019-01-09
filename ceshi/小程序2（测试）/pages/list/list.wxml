@@ -1,0 +1,78 @@
+<view class='find-sort'>
+  <view class="after-navber">
+    <view class="find-box">
+      <navigator class="flex-y-center flex-x-center search-block" url="/pages/search/search">
+        <view id='tip'>
+          <view id='img_box'>
+            <image src="../../images/kind_page/fangdajing.png" style="width:24rpx;height: 24rpx;margin-right:10rpx "></image>
+          </view>
+          <text>搜索</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 排序 -->
+  <view class='sort_box'>
+    <view class='sort_classify show_all' bindtap='allgoods'>全部</view>
+    <view class='sort_classify'>
+      <view class='small_classify composite'>
+        综合
+      </view>
+      <view class='small_classify price' bindtap='sort_price'>
+        价格
+        <view class='sort_img'>
+          <image src='{{priceimg[0]}}' style='width:20rpx;height:12rpx;' class='price_top'></image>
+          <image src='{{priceimg[1]}}' style='width:20rpx;height:12rpx;' class='price_down'></image>
+        </view>
+      </view>
+      <view class='small_classify filter'>
+        筛选
+        <image src='../../images/kind_page/06.png' class='filter_img'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style='height:161.9rpx;'></view>
+<!--主盒子-->
+<view class="container">
+  <!--左侧栏-->
+  <view class="nav_left">
+    <block wx:for="{{cateItems}}" wx:key="id">
+      <!--当前项的id等于item项的id，那个就是当前状态-->
+      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+      <view class="nav_left_items {{curNav == item.cate_id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
+    </block>
+  </view>
+  <!--右侧栏-->
+  <view class="nav_right">
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{cateItems[curIndex].ishaveChild}}">
+      <block wx:for="{{cateItems[curIndex].children}}" wx:key="id">
+        <view class="nav_right_items">
+          <!--界面跳转 -->
+          <navigator url="/pages/goods_detail/goods_detail">
+            <image src="{{item.image}}" class='goods_img'></image>
+            <view class='box'>
+              <view class='box_top'>
+                <text class='title'>{{item.name}}</text>
+                <text class='height'>{{item.height}}</text>
+              </view>
+              <text class='descripe'>{{item.descripe}}</text>
+              <text class='favorable'>满60减10</text>
+              <view class='price'>
+                <text class='price_left'>￥{{item.price}}</text>
+                <text class='price_right'>/个</text>
+                <image src='../../images/kind_page/55.png' style='width:65rpx;height:65rpx;' class='market'></image>
+
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <!--如果无数据，则显示数据-->
+    <view class="nodata_text" wx:else>该分类暂无数据</view>
+  </view>
+
+</view>

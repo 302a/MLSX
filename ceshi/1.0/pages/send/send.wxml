@@ -1,0 +1,28 @@
+<view class='progress_name'>
+  <view class='each_progress'>下单成功</view>
+  <view class='each_progress'>备货中</view>
+  <view class='each_progress'>已发货</view>
+  <view class='each_progress'>正在配送中</view>
+  <view class='each_progress'>已送达</view>
+</view>
+<view class='progress_line'>
+  <view class='progress_ball' style='margin-right:100rpx;margin-left:38rpx;'>
+    <image src='../../images/user_page/06.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+  <view class='progress_ball' style='margin-right:88rpx;'>
+    <image src='../../images/user_page/06.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+  <view class='progress_ball' style='margin-right:113rpx;'>
+    <image src='../../images/user_page/05.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+  <view class='progress_ball' style='margin-right:122rpx;'>
+    <image src='../../images/user_page/05.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+  <view class='progress_ball'>
+    <image src='../../images/user_page/05.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+</view>
+
+<view class='shop_img'>
+  <image src='../../images/user_page/015.png' style='width:252.8rpx;height:252.8rpx;'></image>
+</view>

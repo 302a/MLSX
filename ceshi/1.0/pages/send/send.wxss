@@ -1,0 +1,44 @@
+/* pages/send/send.wxss */
+.progress_line{
+  background-color: #ff6737;
+  width: 92%;
+  height: 21.4rpx;
+  margin: auto;
+  z-index: 10;
+}
+
+.progress_name{
+  margin-top: 128.5rpx;
+  margin-left: 28.5rpx;
+  margin-bottom: 20rpx;
+}
+
+.each_progress{
+  display: inline-block;
+  font-size: 30rpx;
+  color: #a5a5a5;
+  margin-right: 37rpx;
+}
+
+.progress_ball{
+  display: inline-block;
+  /* width: 36rpx;
+  height: 36rpx; */
+  background-color: #ff6737;
+  border-radius: 36rpx;
+  z-index: 100;
+  position: relative;
+  bottom: 13rpx;
+  border: 2rpx solid #ff6737;
+}
+
+.progress_img{
+  margin-left: 70rpx;
+  /* position: relative;
+  bottom: 40rpx; */
+}
+
+.shop_img{
+  margin-left: 230rpx;
+}
+

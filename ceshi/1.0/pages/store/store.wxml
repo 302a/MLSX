@@ -1,0 +1,7 @@
+<view class="store">
+  <view class="store-list" wx:for="{{list}}" wx:key="{{index}}">
+    <image src="{{item.img}}" style="width: 100%; height: 270rpx;"></image>
+    <view class="topic">{{item.topic}}</view>
+    <view class="address">{{item.address}}</view>
+  </view>
+</view>

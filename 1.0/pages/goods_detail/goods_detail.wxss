@@ -382,6 +382,7 @@ view {
 
 .attr-picker .attr-group-name {
     margin-bottom: 20rpx;
+    color: #b6b6b6;
 }
 
 .attr-picker .attr-item {
@@ -390,6 +391,7 @@ view {
     background: #f7f7f7;
     border-radius: 10rpx;
     padding: 15rpx 30rpx;
+    font-size: 30rpx;
 }
 
 .attr-picker .attr-item.active {
@@ -406,9 +408,9 @@ view {
     position: absolute;
     top: -90rpx;
     border: 5rpx solid #fff;
-    width: 200rpx;
-    height: 200rpx;
-    border-radius: 5rpx;
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 21.4rpx;
     box-shadow: 0 1rpx 2rpx rgba(0,0,0,.2);
 }
 
@@ -819,4 +821,22 @@ view {
     height: 40rpx;
     line-height: 40rpx;
     margin: 0 8rpx;
+}
+
+.count{
+  font-size: 35rpx;
+}
+
+.mycount{
+  text-align: center;
+  font-size: 25rpx;
+  background-color: #ff7913;
+  color: #ffffff;
+  width: 70rpx;
+  height: 35.7rpx;
+  margin-left: 50rpx;
+}
+
+.count_rule{
+  margin-left: 10rpx;
 }

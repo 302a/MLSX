@@ -1,0 +1,35 @@
+page {
+  background: #f5f5f5;
+}
+image {
+  display: block;
+}
+.coupon-box {
+  width: 100%;
+  height: 108rpx;
+  background: #fff;
+  margin-top: 36rpx;
+}
+.coupon-box image {
+  float: left;
+  margin: 38rpx 40rpx 26rpx 34rpx;
+}
+.coupon-box  input{
+  float: left;
+  height: 108rpx;
+  line-height: 108rpx;
+  font-size: 28rpx;
+  color: #bcbcbc;
+  width: 80%;
+}
+.coupon-btn {
+  width: 422rpx;
+  height: 72rpx;
+  background: #ff5414;
+  border-radius: 36rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 72rpx;
+  margin: 46rpx auto;
+}

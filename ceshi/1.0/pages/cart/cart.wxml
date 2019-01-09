@@ -1,0 +1,54 @@
+<!--pages/cart/cart.wxml-->
+<scroll-view class="scroll">
+  <view class="topnav">登陆后可同步您购物车中的商品</view>
+  <view wx:for="{{carts}}">
+    <view class="cart_container">
+      <image class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'../../images/cart_page/existgoods/03.png'}}" />
+
+      <image class="item-image" src="{{item.pic}}"></image>
+
+      <view class="column">
+        <text class="title">{{item.name}}</text>
+        <view class="row">
+          <text class="sku-price">￥</text>
+          <text class="sku-price">{{item.price}}</text>
+          <view class="sku">
+
+          <view class="stepper">
+             <image class='delete' class="delete" bindtap="bindMinus" src='../../images/cart_page/submit/4.png'></image>
+            <text class='num'>{{item.num}}</text>
+            <image class='increte' class="increte" bindtap="bindPlus" src='../../images/cart_page/submit/5.png'></image> 
+          </view>
+          
+          <!-- <view class="stepper">
+          
+	          <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+	          <input type="number" bindchange="bindManual" value="{{num}}" />
+	               <text class="normal" bindtap="bindPlus">+</text>
+                
+
+            </view> -->
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="separate"></view>
+  </view>
+</scroll-view>
+<view class="bottom_total">
+  <view class="bottom_line"></view>
+
+  <view class="row">
+    <image class="item-allselect" bindtap="allSelect" src="{{isAllSelect?'../../images/cart_page/existgoods/06.png':'../../images/cart_page/existgoods/03.png'}}" />
+    <text class="small_text">全选</text>
+    <text class='small_text'>共计:￥ </text>
+    <text class="price">{{totalMoney}}</text>
+
+    <navigator class="goods-sub" url="/pages/submit/submit">
+    <button class="button-red" bindtap="toBuy" formType="submit">结算
+    <text id='totalgoods'>({{totalgoods}})</text>
+    </button>
+  </navigator>
+  </view>
+</view>

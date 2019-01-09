@@ -1,0 +1,404 @@
+<view class="act-modal show" wx:for="{{shop_arr}}">
+  <view class="act-modal-bg"></view>
+  <view class="act-modal-pic flex-y-center flex-x-center">
+    <view class="shop-list">
+      <view style="color: #ff8c61;font-size: 38rpx; padding: 30rpx 30rpx">
+        请选择需要访问的店铺
+      </view>
+      <view bindtap="chooseShop" data-title="郑州丰产路店">
+        郑州丰产路店
+        <view>金水区丰产路与经五路交叉口向西100米</view>
+        <view>路北银盛泰酒店旁边</view>
+      </view>
+      <view bindtap="chooseShop" data-title="郑州长江路店">
+        郑州长江路店
+        <view>二七区长江路岗东路交叉口东北角阳光城</view>
+        <view>3号院车库出入口旁边门面房广场</view>
+      </view>
+      <view bindtap="chooseShop" data-title="郑州美景鸿城店">
+        郑州美景鸿城店
+        <view>管城区美景鸿城七里河小区门口</view>
+        <view>对面(尚义路原水浒烤肉)</view>
+      </view>
+      <view style="border: 0">
+        更多店铺敬请期待
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class="search flex-row" style="color:#ffffff;background-color:#ffffff">
+  <view class="flex-grow-0 flex-y-center " bindtap="showShops">
+    <image src="/images/home_page/z5.png" style="width:27rpx;height:32rpx;margin-right:14rpx; margin-left:14rpx">
+    </image>
+    <view style="font-size:23rpx; color:#888888">{{shop}}</view>
+  </view>
+  <view class="flex-grow-1 search-block">
+
+
+    <navigator url="/pages/search/search" class="navigator-hover">
+      <image src="/images/home_page/06.png"></image>
+      <view style="font-size:27rpx; color:#ffffff">
+        搜索
+      </view>
+    </navigator>
+
+
+  </view>
+</view>
+
+<view class="swiper_block">
+  <swiper autoplay="4000" circular="true" class="banner" duration="300" indicator-dots="true" interval="5000" current="0" current-item-id="">
+    <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+      <navigator url="/pages/home/home">
+        <view class="slide-title">1</view>
+        <image class="slide-image" mode="aspectFill" src='../../images/home_page/4.png'></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+      <navigator url="/pages/zaoshi/zaoshi">
+        <view class="slide-title">2</view>
+        <image class="slide-image" mode="aspectFill" src='../../images/home_page/5.png'></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+      <navigator url="/pages/home/home">
+        <view class="slide-title">3</view>
+        <image class="slide-image" mode="aspectFill" src='../../images/home_page/6.png'></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+</view>
+
+<view class="notice flex-row" style="color:#ffffff;background-color:#ff8c61">
+  <view class="flex-grow-0 flex-y-center notice-a">
+    <image src="https://malldemo.zjhejiang.com/web/statics/images/home-page/icon-notice.png" style="width:19px;height:19px;margin-right:13px;">
+    </image>
+    <view style="font-size: 28rpx">公告</view>
+  </view>
+  <view class="flex-grow-1 notice-box">
+    <view class="notice-content">
+      <view style="font-size: 28rpx;display: inline-block;">禾匠生鲜全场感恩大促，满百包邮！前100名送水果！</view>
+    </view>
+  </view>
+  <view class="flex-grow-0 flex-y-center notice-b">
+    <image src="../../images/home_page/9.png" style="width: 16rpx; height: 22rpx">
+    </image>
+  </view>
+</view>
+
+<view class="nav-icon-list flex-row">
+  <view class="flex-grow-0 nav-icon-1">
+    <navigator data-open_type="navigate" data-url="/pages/pt/index/index" open-type="navigate" url="/pages/list/list">
+      <image src="../../images/home_page/20.png"></image>
+      <view>新鲜水果</view>
+    </navigator>
+  </view>
+  <view class="flex-grow-0 nav-icon-1">
+    <navigator data-open_type="navigate" data-url="/pages/pt/index/index" open-type="navigate" url="/pages/list/list">
+      <image src="../../images/home_page/21.png"></image>
+      <view>净菜蔬菜</view>
+    </navigator>
+  </view>
+  <view class="flex-grow-0 nav-icon-1">
+    <navigator data-open_type="navigate" data-url="/pages/pt/index/index" open-type="navigate" url="/pages/list/list">
+      <image src="../../images/home_page/22.png"></image>
+      <view>海鲜水产</view>
+    </navigator>
+  </view>
+  <view class="flex-grow-0 nav-icon-1">
+    <navigator data-open_type="navigate" data-url="/pages/pt/index/index" open-type="navigate" url="/pages/list/list">
+      <image src="../../images/home_page/23.png"></image>
+      <view>肉禽蛋类</view>
+    </navigator>
+  </view>
+  <view class="flex-grow-0 nav-icon-1">
+    <navigator data-open_type="navigate" data-url="/pages/pt/index/index" open-type="navigate" url="/pages/pt/index/index">
+      <image src="../../images/home_page/24.png"></image>
+      <view>粮油副食</view>
+    </navigator>
+  </view>
+</view>
+
+<view class="goods">
+  <view class="flex-row" style="padding: 0 11px;height: 72rpx;background: #fff;margin-bottom: 2px">
+    <view class="flex-grow-1 flex-row flex-y-center">
+      <image src="/images/home_page/11.png"></image>
+      <view>人气优选</view>
+    </view>
+    <navigator class="flex-grow-0 flex-row flex-y-center" url="/pages/miaosha/miaosha">
+      <view style="font-size: 28rpx;margin-right: 7px;color: #666666">更多</view>
+      <image src="/images/home_page/9.png" style="width: 11rpx;height: 22rpx"></image>
+    </navigator>
+  </view>
+
+  <view class="flex-grow-1">
+    <scroll-view class="scroll-view-x" scroll-left="0" scroll-with-animation="true" scroll-x="true">
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+
+
+</view>
+
+<view class="user-block">
+  <view class="flex-row miaosha-header" style="padding: 0 11px;height: 72rpx;background: #fff;margin-bottom: 2px">
+    <view class="flex-grow-1 flex-row flex-y-center">
+      <image src="/images/home_page/icon-miaosha.png" style="width: 18px;height: 18px;margin-right: 6px"></image>
+      <view style="font-size: 30rpx;color: #ff8b57;margin-right: 30rpx">整点秒杀</view>
+      <view style="font-size: 30rpx;margin-right: 13px">暂无秒杀活动</view>
+      <view class="flex-y-center miaosha-time-item" style="width: 32rpx;height: 34rpx">
+        <image src="/images/home_page/icon-time-bg.png" style="width: 100%;height: 100%"></image>
+        <view class="flex-y-center flex-x-center">--</view>
+      </view>
+      <image class="miaosha-item-split" src="/images/home_page/icon-time-split.png" style="width: 22rpx;height: 34rpx"></image>
+      <view class="flex-y-center miaosha-time-item" style="width: 32rpx;height: 34rpx">
+        <image src="/images/home_page/icon-time-bg.png" style="width: 100%;height: 100%"></image>
+        <view class="flex-y-center flex-x-center">--</view>
+      </view>
+      <image class="miaosha-item-split" src="/images/home_page/icon-time-split.png" style="width: 22rpx;height: 34rpx"></image>
+      <view class="flex-y-center miaosha-time-item" style="width: 32rpx;height: 34rpx">
+        <image src="/images/home_page/icon-time-bg.png" style="width: 100%;height: 100%"></image>
+        <view class="flex-y-center flex-x-center">--</view>
+      </view>
+    </view>
+    <navigator class="flex-grow-0 flex-row flex-y-center" url="/pages/miaosha/miaosha">
+      <view style="font-size: 30rpx;margin-right: 7px">更多</view>
+      <image src="/images/home_page/9.png" style="width: 11rpx;height: 22rpx"></image>
+    </navigator>
+  </view>
+</view>
+
+<view class="goods" style="height: auto">
+  <view class="flex-row" style="padding: 0 11px;height: 72rpx;background: #fff;margin-bottom: 2px">
+    <view class="flex-grow-1 flex-row flex-y-center">
+      <image src="/images/home_page/16.png" style="height:30rpx"></image>
+      <view>为你推荐</view>
+    </view>
+    <navigator class="flex-grow-0 flex-row flex-y-center" url="/pages/miaosha/miaosha">
+      <view style="font-size: 28rpx;margin-right: 7px;color: #666666">更多</view>
+      <image src="/images/home_page/9.png" style="width: 11rpx;height: 22rpx"></image>
+    </navigator>
+  </view>
+  <navigator data-open_type="navigate" style="display:block;font-size: 0;width: 100%;height: auto;">
+    <image mode="widthFix" src="/images/home_page/8.png" style="width: 100%; height: 76.176px;"></image>
+  </navigator>
+  <view class="flex-grow-1">
+    <scroll-view class="scroll-view-x" scroll-left="0" scroll-with-animation="true" scroll-x="true">
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+      <view class="scroll-view-item" data-id="0">
+        <navigator>
+          <image src="/images/home_page/2.png"></image>
+          <view class="text-more-2">红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g</view>
+          <view class="price">
+            <view>￥28.8</view>
+            <image src="/images/home_page/00256.png"></image>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<view class="goods">
+  <view class="flex-row" style="padding: 0 11px;height: 72rpx;background: #fff;margin-bottom: 2px">
+    <view class="flex-grow-1 flex-row flex-y-center">
+      <image src="/images/home_page/17.png" style="height:30rpx"></image>
+      <view>猜你喜欢</view>
+    </view>
+    <navigator class="flex-grow-0 flex-row flex-y-center" url="/pages/miaosha/miaosha">
+      <view style="font-size: 28rpx;margin-right: 7px;color: #666666">更多</view>
+      <image src="/images/home_page/9.png" style="width: 11rpx;height: 22rpx"></image>
+    </navigator>
+  </view>
+
+</view>
+
+<view class="goods-list flex-row goods-bottom">
+  <view class="flex-grow-0">
+    <navigator class="goods-item" url="">
+      <image src="/images/home_page/3.png" mode="aspectFill"></image>
+      <view>
+        <view class="good-title">
+          <view class="text-more-2" style="font-size: 29rpx; color: #666666; height: 40rpx">精选西兰花嘻嘻嘻嘻嘻</view>
+          <view style="font-size: 19rpx; width: 50rpx; text-align: center; background: #FFA244; color: #fff; margin-top: 4rpx">特价</view>
+          <view style="font-size: 29rpx; color: red">￥4.9</view>
+        </view>
+        <view class="good-pic">
+          <image src="/images/home_page/00256.png"></image>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+  <view class="flex-grow-0">
+    <navigator class="goods-item" url="">
+      <image src="/images/home_page/3.png" mode="aspectFill"></image>
+      <view>
+        <view class="good-title">
+          <view class="text-more-2" style="font-size: 29rpx; color: #666666; height: 40rpx">精选西兰花嘻嘻嘻嘻嘻</view>
+          <view style="font-size: 19rpx; width: 50rpx; text-align: center; background: #FFA244; color: #fff; margin-top: 4rpx">特价</view>
+          <view style="font-size: 29rpx; color: red">￥4.9</view>
+        </view>
+        <view class="good-pic">
+          <image src="/images/home_page/00256.png"></image>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+  <view class="flex-grow-0">
+    <navigator class="goods-item" url="">
+      <image src="/images/home_page/3.png" mode="aspectFill"></image>
+      <view>
+        <view class="good-title">
+          <view class="text-more-2" style="font-size: 29rpx; color: #666666; height: 40rpx">精选西兰花嘻嘻嘻嘻嘻</view>
+          <view style="font-size: 19rpx; width: 50rpx; text-align: center; background: #FFA244; color: #fff; margin-top: 4rpx">特价</view>
+          <view style="font-size: 29rpx; color: red">￥4.9</view>
+        </view>
+        <view class="good-pic">
+          <image src="/images/home_page/00256.png"></image>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+  <view class="flex-grow-0">
+    <navigator class="goods-item" url="">
+      <image src="/images/home_page/3.png" mode="aspectFill"></image>
+      <view>
+        <view class="good-title">
+          <view class="text-more-2" style="font-size: 29rpx; color: #666666; height: 40rpx">精选西兰花嘻嘻嘻嘻嘻</view>
+          <view style="font-size: 19rpx; width: 50rpx; text-align: center; background: #FFA244; color: #fff; margin-top: 4rpx">特价</view>
+          <view style="font-size: 29rpx; color: red">￥4.9</view>
+        </view>
+        <view class="good-pic">
+          <image src="/images/home_page/00256.png"></image>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+  <view class="flex-grow-0">
+    <navigator class="goods-item" url="">
+      <image src="/images/home_page/3.png" mode="aspectFill"></image>
+      <view>
+        <view class="good-title">
+          <view class="text-more-2" style="font-size: 29rpx; color: #666666; height: 40rpx">精选西兰花嘻嘻嘻嘻嘻</view>
+          <view style="font-size: 19rpx; width: 50rpx; text-align: center; background: #FFA244; color: #fff; margin-top: 4rpx">特价</view>
+          <view style="font-size: 29rpx; color: red">￥4.9</view>
+        </view>
+        <view class="good-pic">
+          <image src="/images/home_page/00256.png"></image>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+  <view class="flex-grow-0">
+    <navigator class="goods-item" url="">
+      <image src="/images/home_page/3.png" mode="aspectFill"></image>
+      <view>
+        <view class="good-title">
+          <view class="text-more-2" style="font-size: 29rpx; color: #666666; height: 40rpx">精选西兰花嘻嘻嘻嘻嘻</view>
+          <view style="font-size: 19rpx; width: 50rpx; text-align: center; background: #FFA244; color: #fff; margin-top: 4rpx">特价</view>
+          <view style="font-size: 29rpx; color: red">￥4.9</view>
+        </view>
+        <view class="good-pic">
+          <image src="/images/home_page/00256.png"></image>
+        </view>
+      </view>
+
+    </navigator>
+  </view>
+</view>

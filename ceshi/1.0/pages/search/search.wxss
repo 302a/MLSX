@@ -1,0 +1,35 @@
+.search-block{
+  margin: auto;
+  background-color: #ffc5af;
+  color: white;
+  width: 700rpx;
+  height: 60rpx;
+  border: 1rpx solid #e3e3e3;
+  border-radius: 60rpx;
+  font-size: 9pt;
+  margin-top: 10rpx;
+}
+
+#tip{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+#tip{
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+}
+
+#img_box{
+  float: left;
+  margin-right: 6rpx;
+}
+
+.search-text{
+  padding-bottom: 15rpx;
+}
+
+.input-box{
+  position: relative;
+  bottom: 12rpx;
+}

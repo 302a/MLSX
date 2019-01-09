@@ -1,0 +1,81 @@
+<!--pages/submit/submit.wxml-->
+<scroll-view class="scroll" style='background-color:#F5F5F5'>
+ <navigator class="goods-sub" url="/pages/address/address" style='background-color:#FFFFFF'>
+<view  class='top'  >
+
+
+
+<view class='address' >新建收货地址
+<image class='pic' src='../../images/cart_page/submit/2.png'></image>
+</view>
+</view>
+</navigator>
+
+<view class='time' style='border-radius:20rpx;'>
+<view>
+
+
+<view style='font-size:24rpx;border-bottom:5rpx solid #F5F5F5;background-color:#FFFFFF'>
+<text style='margin-left:20rpx;margin-top:10rpx;margin-bottom:10rpx;'>送达时间</text>
+<view style='display:inline-block;margin-left:288rpx;color:#FF5414;margin-top:10rpx;margin-bottom:10rpx;'>立即配送（预计9:30送达)
+<image class='img' src='../../images/cart_page/submit/1.png'></image>
+
+</view>
+</view>
+</view>
+</view>
+
+<view wx:for="{{sub}}" class='msg' style='background-color:#FFFFFF;display:inline-block'>
+<image class="select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'../../images/cart_page/existgoods/03.png'}}" />
+
+<image class='shucai' src='../../images/cart_page/submit/3.png'></image>
+
+ <text class='name'>{{item.name}}约</text>
+   <text class='weight'>{{item.weight}}</text>
+   <text class='jieshao'>{{item.jieshao}}</text>
+   <text class='price'>￥{{item.price}}</text>
+   <view>
+   <image class='delete' src='../../images/cart_page/submit/4.png'></image>
+   <text class='num'>{{item.num}}</text>
+   <image class='increte' src='../../images/cart_page/submit/5.png'></image> 
+</view>
+</view>
+
+<view class='quan' style='background-color:#FFFFFF'>
+<text style='font-size:26rpx;color:#626262;margin-left:30rpx'> 优惠券</text>
+
+<text style='font-size:26rpx;color:#FF8C61;position:relative;left:400rpx'>暂无优惠券可用</text>
+<!-- 商品总额 -->
+</view>
+<view class='total' style='background-color:#FFFFFF'>
+<view style='font-size:26rpx;color:#626262;position:relative;left:20rpx;top:30rpx'> 商品总额</view>
+<text style='font-size:26rpx;color:#626262;position:relative;left:600rpx;top:-25rpx'>￥8.8</text>
+<text style='font-size:26rpx;color:#626262;position:relative;left:-50rpx;top:80rpx'> 配送费</text>
+<text style='font-size:26rpx;color:#626262;position:relative;left:460rpx;top:80rpx'>￥3</text>
+</view>
+
+
+<!-- 订单备注 -->
+<view class='bank' style='background-color:#FFFFFF'>
+<text style='font-size:26rpx;color:#717171;position:relative;left:30rpx'>订单备注
+
+</text>
+<!-- <form>
+<input type='text'></input>
+</form> -->
+
+</view>
+
+
+
+</scroll-view>
+<!-- 待支付 -->
+<view style='background-color:#FFFFFF;'>
+<text style='font-size:30rpx;position:relative;left:240rpx;top:18rpx'>待支付：</text>
+<text class='price'style='position:relative;left:240rpx;bottom:-10px'>￥8.8{{sum.sumprice}}</text>
+<navigator class="goods-sub" url="/pages/submit/submit">
+ <button class="button-red" bindtap="toBuy" formType="submit">立即支付
+ 
+    </button>
+    </navigator>
+</view>

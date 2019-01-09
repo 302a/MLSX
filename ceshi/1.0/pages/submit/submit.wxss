@@ -1,0 +1,154 @@
+/* pages/submit/submit.wxss */
+.top{
+  font-size:28rpx;
+  color:#FF8C61; 
+  line-height:100rpx;
+  boder-bottom:1rpx solid red;
+  margin-left:40rpx; 
+}
+.pic{
+  height:30rpx;
+  width:20rpx;
+  display:inline-block;
+  position: relative;
+  left: 480rpx;
+  bottom: -8rpx;
+}
+.time{
+  border-top: 25rpx solid #F5F5F5;
+  border-left: 20rpx solid #F5F5F5;
+  border-bottom: 2rpx solid #F5F5F5;
+  border-right: 25rpx solid #F5F5F5;
+  
+}
+.img{
+  height:20rpx;
+  width:15rpx;
+  display:inline-block;
+  position: relative;
+  left: -2rpx;
+  bottom: -3rpx;
+}
+.msg{
+
+  border-left: 20rpx solid #F5F5F5;
+  border-right: 25rpx solid #F5F5F5;
+  border-top: 25rpx solid #F5F5F5;
+  width: 94%;
+
+}
+.select{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  left: 20rpx;
+  top: 100rpx;
+  
+}
+.shucai{
+ height: 180rpx;
+ width: 180rpx; 
+ position: relative;
+left:60rpx ;
+ top:10rpx ;
+
+}
+.name{
+  position: relative;
+  left: 320rpx;
+  bottom:150rpx;
+  font-size:26rpx; 
+  
+}
+.weight{
+   position: relative;
+  left: 350rpx;
+  bottom:150rpx;
+  font-size:26rpx; 
+}
+.jieshao{
+    position: relative;
+  left: 180rpx;
+  bottom:110rpx;
+  font-size:22rpx; 
+  color: #B4B4B4;
+}
+.price{
+  position: relative;
+   left: -80rpx;
+  
+  bottom: 50rpx;
+  color: #FF7053;
+}
+.delete{
+  position: relative;
+  height: 55rpx;
+  width: 30rpx;
+  top:-100rpx;
+  left: 550rpx
+   
+  
+}
+.increte{
+  position: relative;
+  height: 50rpx;
+  width: 30rpx;
+  margin-top: -200rpx;
+  left: 620rpx
+  
+}
+.num{
+  position: relative;
+  left: 590rpx;
+  bottom: 156rpx;
+  color:#707070;
+  font-size: 30rpx;
+}
+.quan{
+  height: 80rpx;
+  line-height: 80rpx;
+   border-left: 20rpx solid #F5F5F5;
+  border-bottom: 20rpx solid #F5F5F5;
+  border-top: 20rpx solid #F5F5F5;
+  border-right: 25rpx solid #F5F5F5; 
+}
+.total{
+  height: 180rpx;
+   border-left: 20rpx solid #F5F5F5;
+  border-bottom: 20rpx solid #F5F5F5;
+  border-right: 25rpx solid #F5F5F5; 
+}
+.bank{
+height: 100rpx;
+ border-left: 20rpx solid #F5F5F5;
+  border-bottom: 20rpx solid #F5F5F5;
+  border-right: 25rpx solid #F5F5F5; 
+line-height: 100rpx;
+}
+.button-red {
+  background-color: #FF5414; /* 红色 */
+  height: 70rpx;
+  width: 200rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  line-height: 70rpx;
+ position:relative;
+ left: 510rpx;
+ top: -40rpx;
+}
+button {
+  position: fixed;
+  right: 0;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 30%;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.block{
+  position: relative;
+  top: -0rpx;
+}
