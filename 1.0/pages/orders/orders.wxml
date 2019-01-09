@@ -59,7 +59,7 @@
           </view>
         </view>
         <view class="productMore">
-        	<view>立即支付</view>
+        	<view bindtap="goPay">立即支付</view>
         	<view>取消订单</view>
         </view>
       </view>
@@ -120,7 +120,7 @@
           </view>
         </view>
         <view class="productMore">
-          <view>确认收货</view>
+          <view bindtap="goReceive">确认收货</view>
           <view>查看物流</view>
         </view>
       </view>

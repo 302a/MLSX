@@ -1,0 +1,11 @@
+<view class="receive">
+  <view class="receive-top">
+    <image src="../../images/user_page/对号.png" style="width: 48rpx;height: 50rpx; float: left;"></image>
+    <text>交易成功</text>
+  </view>
+  <view class="msg">去评价一下本次的购物体验吧~</view>
+  <view class="btn-box">
+    <view bindtap="goHome">返回首页</view>
+    <view bindtap="goEvaluate">去评价</view>
+  </view>
+</view>
