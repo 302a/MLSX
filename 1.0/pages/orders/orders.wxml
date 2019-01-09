@@ -13,7 +13,7 @@
           <text class="orderTime">{{item.time}}</text>
           <text class="orderStatus">{{item.state}}</text>
         </view>
-        <view class="orderListDetails">
+        <view class="orderListDetails"> 
           <view class="productImg">
             <image src="{{item.url}}" background-size="cover"></image>
           </view>

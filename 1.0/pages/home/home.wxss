@@ -43,7 +43,7 @@
 
 .shop-list {
   width: 500rpx;
-  border-radius: 15rpx;
+  border-radius: 20rpx;
   background: #fff;
 }
 
@@ -409,7 +409,6 @@
 }
 
 .good-title {
-
   width: 70%;
   height: 100rpx;
   padding: 15rpx 0;
@@ -425,8 +424,8 @@
 }
 
 .good-pic image {
-  padding-top: 50rpx;
-  padding-left: 10rpx;
+  padding-top: 45rpx;
+  padding-left: 20rpx;
   width: 70rpx;
   height: 70rpx
 }

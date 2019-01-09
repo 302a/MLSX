@@ -74,7 +74,7 @@
 
 <view class="notice flex-row" style="color:#ffffff;background-color:#ff8c61">
   <view class="flex-grow-0 flex-y-center notice-a">
-    <image src="https://malldemo.zjhejiang.com/web/staticshttp://59.110.218.60/home-page/icon-notice.png" style="width:19px;height:19px;margin-right:13px;">
+    <image src="http://59.110.218.60/home_page/icon-notice.png" style="width:19px;height:19px;margin-right:13px;">
     </image>
     <view style="font-size: 28rpx">公告</view>
   </view>

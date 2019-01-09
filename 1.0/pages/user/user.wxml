@@ -5,18 +5,18 @@
   <view class="msg-warp">
     <view class="msg">
       <view class="msg-top">
-        <image src="../../images/user_page/1.png"></image>
+        <image src="http://59.110.218.60/user_page/1.png"></image>
         <text>11111</text>
         <view class="msg-right">
-        	<image src="../../images/user_page/10.png"></image>
-        	<image src="../../images/user_page/9.png"></image>
+        	<image src="http://59.110.218.60/user_page/10.png"></image>
+        	<image src="http://59.110.218.60/user_page/9.png"></image>
         </view>
       </view>
       <view class="msg-center">
-        <view class="msg-box">
+        <navigator class="msg-box" url="/pages/mycount/mycount" hover-class="none">
           <text>1</text>
           <text>优惠券</text>
-        </view>
+        </navigator>
         <view class="msg-box">
         	<text>0.00</text>
         	<text>礼品卡/提货券</text>
