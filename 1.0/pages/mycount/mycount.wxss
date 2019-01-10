@@ -2,7 +2,6 @@
 page {
   background: #f5f5f5;
 }
-
 .count{
   margin-top: 38.0rpx;
   margin-left: 20rpx;

@@ -13,7 +13,11 @@ Page({
   onLoad: function (options) {
 
   },
-
+  pay_mumber () {
+    wx.navigateTo({
+    	url: "/pages/pay-mumber/pay-mumber"
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
