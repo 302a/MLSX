@@ -1,3 +1,5 @@
+
+
 .act-modal {
     position: fixed;
     left: 0;
@@ -300,8 +302,8 @@
 }
 
 .user-block {
-    border-top: 1rpx solid #e3e3e3;
-    border-bottom: 4rpx solid #e3e3e3;
+    /* border-top: 1rpx solid #e3e3e3; */
+    border-bottom: 20rpx solid #fff;
 }
 
 .miaosha-time-item {
@@ -340,24 +342,22 @@
 
 .goods .flex-row .flex-grow-1 view {
   margin-left: 10rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #741800;
 }
 
 .scroll-view-x {
     background-color: #fff;
     white-space: nowrap;
-    border-bottom: 1rpx solid #e2e2e2;
-    height: 100%;
-    padding-right: 140rpx;
+    /* border-bottom: 1rpx solid #e2e2e2; */
+    height: 320rpx;
 }
 
 .scroll-view-x .scroll-view-item {
     display: inline-block;
-    margin: 5rpx 10rpx 0 10rpx;
     font-size: 27rpx;
     color: #666666;
-    height: 270rpx;
+    height: 280rpx;
     line-height: 40rpx;
     white-space: nowrap;
     width: 200rpx;
@@ -371,7 +371,7 @@
 
 .scroll-view-x .scroll-view-item .price view{
   color: red;
-  float: left
+  float: left;
 }
 
 .scroll-view-x .scroll-view-item .price image {
@@ -382,6 +382,7 @@
 }
 
 .text-more-2 {
+    padding-left: 5rpx;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -439,6 +440,19 @@ navigator {
 }
 
 .scroll-view-item {
-  box-shadow: 4rpx 4rpx 2rpx 2rpx #F5F2F1
+  /* box-shadow: 4rpx 4rpx 2rpx 2rpx #F5F2F1; */
+  border: 1rpx solid #eeeeee;
+  border-right: 0;
+  margin-bottom: 100rpx
 }
 
+.scroll-first {
+  margin-left:30rpx;
+  border-radius: 20rpx 0 0 20rpx
+}
+
+.scroll-last {
+  margin-right: 30rpx;
+  border-right: 1rpx solid #eeeeee;
+  border-radius: 0 20rpx 20rpx 0; 
+}

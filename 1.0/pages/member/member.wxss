@@ -49,15 +49,8 @@ page {
   border-radius: 36rpx;
   margin: 0 auto;
   margin-top: 120rpx;
-}
-.pay view:nth-child(1) {
   font-size: 28rpx;
+  line-height: 72rpx;
   color: #fff;
-  text-align: center;
-  padding-top: 6rpx;
-}
-.pay view:nth-child(2) {
-  font-size: 20rpx;
-  color: #c2c2c2;
   text-align: center;
 }

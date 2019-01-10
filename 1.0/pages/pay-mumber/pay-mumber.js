@@ -1,4 +1,4 @@
-// pages/mycount/mycount.js
+// pages/pay-mumber/pay-mumber.js
 Page({
 
   /**
@@ -6,12 +6,6 @@ Page({
    */
   data: {
 
-  },
-  // 去使用
-  use () {
-    wx.switchTab({
-    	url: "/pages/home/home"
-    })
   },
 
   /**

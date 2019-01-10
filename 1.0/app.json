@@ -21,7 +21,8 @@
     "pages/search/search",
     "pages/zaoshi/zaoshi",
     "pages/allorder_zero/allorder_zero",
-    "pages/mycount/mycount"
+    "pages/mycount/mycount",
+    "pages/pay-mumber/pay-mumber"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -34,37 +35,37 @@
     "selectedColor": "#FF8C61",
     "position": "bottom",
     "borderStyle": "white",
-    "backgroundColor": "#eee",
+    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "/images/public_page/16.png",
-        "selectedIconPath": "/images/public_page/246.png"
+        "iconPath": "/images/public_page/033.png",
+        "selectedIconPath": "/images/public_page/03.png"
       },
       {
         "pagePath": "pages/kind/kind",
         "text": "分类",
-        "iconPath": "/images/public_page/3.png",
-        "selectedIconPath": "/images/public_page/77.png"
+        "iconPath": "/images/public_page/022.png",
+        "selectedIconPath": "/images/public_page/02.png"
       },
       {
         "pagePath": "pages/pintuan/pintuan",
         "text": "超值拼团",
-        "iconPath": "/images/public_page/777.png",
-        "selectedIconPath": "/images/public_page/4.png"
+        "iconPath": "/images/public_page/044.png",
+        "selectedIconPath": "/images/public_page/04.png"
       },
       {
         "pagePath": "pages/cart/cart",
         "text": "购物车",
-        "iconPath": "/images/public_page/55.png",
-        "selectedIconPath": "/images/public_page/5.png"
+        "iconPath": "/images/public_page/011.png",
+        "selectedIconPath": "/images/public_page/01.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "我的",
-        "iconPath": "/images/public_page/211.png",
-        "selectedIconPath": "/images/public_page/1.png"
+        "iconPath": "/images/public_page/055.png",
+        "selectedIconPath": "/images/public_page/05.png"
       }
     ]
   }

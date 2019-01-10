@@ -1,0 +1,24 @@
+<view class="msg-box">
+  <view class="user-icon">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="user">
+    <view class="user-msg">
+      <view class="username">
+        <open-data type="userNickName" lang="zh_CN"></open-data>
+      </view>
+      <view class="type">体验会员</view>
+    </view>
+    <view class="time">2019.01.15 会员到期</view>
+  </view>
+</view>
+<view class="topic">选择会员套餐</view>
+<view>
+  <scroll-view scroll-x >
+  	<view class="list">11</view>
+  	<view class="list">22</view>
+  	<view class="list">33</view>
+  	<view class="list">44</view>
+  </scroll-view>
+</view>
+   

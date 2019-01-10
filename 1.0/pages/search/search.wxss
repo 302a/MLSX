@@ -10,13 +10,13 @@
   margin-top: 10rpx;
 }
 
-#tip{
+/* #tip{
   margin-top: 10rpx;
   margin-left: 20rpx;
-}
+} */
 
 #tip{
-  margin-top: 15rpx;
+  margin-top: 20rpx;
   margin-left: 20rpx;
 }
 
@@ -31,5 +31,5 @@
 
 .input-box{
   position: relative;
-  bottom: 12rpx;
+  bottom: 18rpx;
 }

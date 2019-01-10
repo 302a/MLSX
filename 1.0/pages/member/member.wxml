@@ -25,8 +25,7 @@
     <view><image src="http://59.110.218.60/member_page/04.png" style="width: 16rpx;height: 16rpx;display: inline-block;margin: 0 20rpx 0 50rpx;"></image>线上可享积分换购水果</view>
     <view><image src="http://59.110.218.60/member_page/04.png" style="width: 16rpx;height: 16rpx;display: inline-block;margin: 0 20rpx 0 50rpx;"></image>每月可享4次免运费</view>
   </view>
-  <view class="pay">
-    <view>开通会员</view>
-    <view>188/年</view>
+  <view class="pay" bindtap="pay_mumber">
+    开通会员
   </view>
 </view>
