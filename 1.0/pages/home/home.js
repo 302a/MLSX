@@ -6,7 +6,36 @@ Page({
    */
   data: {
     shop_arr: [0],
-    shop: "郑州丰产路店"
+    shop: "丰产路店",
+    renqi:[
+      { 
+        img: "http://59.110.218.60/home_page/2.png",
+        title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
+        type: 'first',
+        price: "￥28.8"
+      },
+      {
+        img: "http://59.110.218.60/home_page/2.png",
+        title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
+        price: "￥28.8"
+      },
+      {
+        img: "http://59.110.218.60/home_page/2.png",
+        title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
+        price: "￥28.8"
+      },
+      {
+        img: "http://59.110.218.60/home_page/2.png",
+        title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
+        price: "￥28.8"
+      },
+      {
+        img: "http://59.110.218.60/home_page/2.png",
+        title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
+        price: "￥28.8",
+        type: 'last',
+      }
+    ]
   },
 
   showShops: function () {
