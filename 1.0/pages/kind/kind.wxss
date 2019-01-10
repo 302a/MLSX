@@ -32,3 +32,7 @@
 .cat-name{
   margin-top: 12rpx;
 }
+
+.find_box{
+  margin-top: 14.2rpx;
+}

@@ -111,7 +111,6 @@
               <text class='favorable'>满60减10</text>
               <view class='price'>
                 <text class='price_left'>￥{{item.price}}</text>
-                <text class='price_right'>/个</text>
               </view>
             </view>
           </navigator>
