@@ -1,4 +1,4 @@
- page{  
+page{  
   background: #f5f5f5;  
 }  
 /*总体主盒子*/  
@@ -26,7 +26,7 @@
   height: 95rpx;  
   line-height: 95rpx;  
   padding: 14rpx 0;  
-  border-bottom: 2rpx solid #dedede; 
+  /* border-bottom: 2rpx solid #dedede;  */
   font-size: 30rpx; 
 }  
 /*左侧栏list的item被选中时*/  
@@ -43,7 +43,7 @@
   flex: 1;  
   width: 75%;  
   height: 2381rpx;  
-  padding: 24rpx;  
+  /* padding: 0rpx;   */
   box-sizing: border-box;  
   background: #fff;
 }  
@@ -52,22 +52,25 @@
   /*浮动向左*/  
   /* float: left;   */
   /*每个item设置宽度是33.33%*/  
-  width: 100%;  
-  height: 286rpx;  
+  width: 105%;  
+  height: 260rpx;  
   text-align: center;
+  /* border-top: 1px solid #dedede; */
+  border-bottom: 1px solid #dedede;
 }  
+
 .goods_img{  
-  /*被图片设置宽高*/  
-  width: 143rpx;  
-  height: 143rpx;
   float: left;  
+  margin-left: 30rpx;
   margin-top: 42.8rpx;
+  margin-right: 30rpx;
   position: relative;
-  bottom: -30rpx;  
+  bottom: -30rpx; 
+  /* display: inline-block  */
 }  
 .box_top text{  
   /*给text设成块级元素*/  
-  display: inline-block;  
+  /* display: inline-block;   */
   margin-top: 35.7rpx;  
   font-size: 28.5rpx;  
   color: #787878;
@@ -75,7 +78,9 @@
   overflow: hidden;  
   white-space: nowrap;  
   text-overflow: ellipsis; 
-  margin-left: 20rpx;
+  /* margin-left: 40rpx; */
+  margin-right: 25rpx;
+  float: left;
 } 
 
 .nodata_text
@@ -90,11 +95,12 @@
   color: white;
   width: 720rpx;
   height: 60rpx;
-  border: 1rpx solid #e3e3e3;
+  border: 1rpx solid ;
   border-radius: 60rpx;
   font-size: 9pt;
   /* margin-top: 10rpx; */
   margin-left: 10rpx;
+  margin-top: 14.2rpx;
 }
 
 /* #tip{
@@ -105,16 +111,18 @@
 #tip{
   margin-top: 15rpx;
   margin-left: 20rpx;
+  text-align: center;
 }
 
 #img_box{
-  float: left;
+  display: inline-block;
   margin-right: 6rpx;
 }
 
 .search-text{
   padding-bottom: 15rpx;
 }
+
 
 .input-box{
   position: relative;
@@ -154,7 +162,9 @@
 }
 
 .price{
-  margin-right: 100rpx;
+  text-align: left;
+  float: left;
+  margin-left: -10rpx;
 }
 
 .sort_img{
@@ -189,49 +199,68 @@
   overflow: hidden;  
   white-space: nowrap;  
   text-overflow: ellipsis;
-  margin-left: 10rpx;
+  margin-left: -8rpx;
   width: 320rpx
 }
 
-.favorable{
-  margin-left: 21rpx;
+/* .favorable{
+  float: left;
+  margin-left: 40rpx;
   font-size: 25rpx;
   background-color: #ff7913;
   color: #ffffff;
   width: 130rpx;
   height: 35.7rpx;
-}
+} */
 
-.box text{
+.box{
+  /* margin-top: 10rpx; */
+  /* display: block; */
   float: left;
-  margin-top: 10rpx;
 }
 
-.price text{
-  margin-left: 13rpx
+
+.price_bottoms{
+  font-size: 36rpx;
+  color: #ff3006;
 }
 
-.price_left{
-  font-size: 47.6rpx;
-  color: #ff6606;
+.price_tops{
+  font-size: 30rpx;
+  color: #4d4d4d;
+  /* margin-left: -10rpx; */
 }
 
-.price_right{
-  font-size: 28.5rpx;
-  color: #c9c9c9;
+.iscount{
+  font-size: 19rpx;
+  margin-left: 15rpx;
+  height: 33.3rpx;
+  width: 88.0rpx;
+  border: 1px solid #ff9d8a;
+  background-color: #ffefec;
+  display: inline-block;
+  line-height: 33.3rpx;
+  text-align: center;
+  color: #ff3006;
+  border-radius: 16.6rpx;
+  position: relative;
+  bottom: 8rpx;
 }
 
 .market{
   position: absolute;
   right: 10rpx;
-  margin-top: 150rpx;
-  z-index: 100;
+  margin-top: 155rpx;
+  /* z-index: 100; */
 }
 
 .find-sort{
   position: fixed;
   top: 0;
   z-index: 100;
+  background-color: #ffffff;
+  width: 100%;
+  /* text-align: center */
 } 
 
 ::-webkit-scrollbar {
@@ -245,11 +274,11 @@
     top: 0;
     left: 0;
     right: 0; */
-    width: 100%;
+    width: 105%;
     overflow: hidden;
     background: #fff;
     z-index: 10;
-    border-top: 1rpx solid #E3E3E3;
+    /* border-top: 1rpx solid #E3E3E3; */
 }
 
 .cat-list {
@@ -435,4 +464,37 @@
     display: flex;
     -webkit-box-orient: horizontal;
     flex-direction: row;
+}
+
+.stepper image{
+  /* width: 35.7rpx;
+  height: 69rpx; */
+  display: inline-block;
+}
+
+/* .stepper{
+  position: absolute;
+  top: 1100rpx;
+} */
+
+.delete{
+  margin-right: 18rpx;
+  width: 35.7rpx;
+  height: 69.0rpx;
+  position: relative;
+  bottom: -4rpx;
+}
+
+.increse{
+  margin-left: 18rpx;
+  width: 35.7rpx;
+  height: 60.0rpx;
+  position: relative;
+  bottom: -2rpx;
+}
+
+.num{
+  position: relative;
+  bottom: 12rpx;
+  font-size: 28rpx;
 }
