@@ -13,11 +13,12 @@
 #tip{
   margin-top: 15rpx;
   margin-left: 20rpx;
+  text-align: center;
 }
 
 #img_box{
   display: inline-block;
-  margin-right: 30rpx;
+  margin-right: 10rpx;
 }
 
 .flex-grow-0{

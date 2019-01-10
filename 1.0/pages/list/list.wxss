@@ -26,7 +26,7 @@
   height: 95rpx;  
   line-height: 95rpx;  
   padding: 14rpx 0;  
-  border-bottom: 2rpx solid #dedede; 
+  /* border-bottom: 2rpx solid #dedede;  */
   font-size: 30rpx; 
 }  
 /*左侧栏list的item被选中时*/  
@@ -105,10 +105,11 @@
 #tip{
   margin-top: 15rpx;
   margin-left: 20rpx;
+  text-align: center;
 }
 
 #img_box{
-  float: left;
+  display: inline-block;
   margin-right: 6rpx;
 }
 
@@ -232,6 +233,10 @@
   position: fixed;
   top: 0;
   z-index: 100;
+  background-color: #ffffff;
+  width: 100%;
+  margin-top: 14.2rpx;
+  /* text-align: center */
 } 
 
 ::-webkit-scrollbar {
@@ -245,11 +250,11 @@
     top: 0;
     left: 0;
     right: 0; */
-    width: 100%;
+    width: 105%;
     overflow: hidden;
     background: #fff;
     z-index: 10;
-    border-top: 1rpx solid #E3E3E3;
+    /* border-top: 1rpx solid #E3E3E3; */
 }
 
 .cat-list {

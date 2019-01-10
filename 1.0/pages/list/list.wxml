@@ -4,7 +4,7 @@
       <navigator class="search-block" url="/pages/search/search">
         <view id='tip'>
           <view id='img_box'>
-            <image src="http://59.110.218.60/kind_page/fangdajing.png" style="width:24rpx;height: 24rpx;margin-right:10rpx "></image>
+            <image src="http://59.110.218.60/kind_page/fangdajing.png" style="width:28.5rpx;height: 21.4rpx;"></image>
           </view>
           <text>搜索</text>
         </view>
