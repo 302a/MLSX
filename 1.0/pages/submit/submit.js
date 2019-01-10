@@ -9,7 +9,7 @@ Page({
   
     sub: [{
       time:'9:30',
-      name: "生菜",
+      name: "大白菜",
       weight: "600g",
       jieshao: "营养粗粮，富含活力花青素",
       price: "6.7",
@@ -17,7 +17,7 @@ Page({
       isSelect: false,
     }, {
         time: '9:30',
-        name: "生菜",
+        name: "新鲜的大白菜",
         weight: "600g",
         jieshao: "营养粗粮，富含活力花青素",
         price: "6.7",

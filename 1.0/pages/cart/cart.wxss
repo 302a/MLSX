@@ -7,6 +7,7 @@
 .scroll {
   margin-bottom: 120rpx;
   top:0;
+  background-color: #F5F5F5
 
 }
 .column {
@@ -33,6 +34,7 @@
 .sku-price {
   color: red;
   position: relative;
+  top: 28rpx;
   
   
 }
@@ -45,7 +47,7 @@
 }
 
 .title {
-  font-size: 32rpx;
+  font-size: 28rpx;
   margin-top: 40rpx;
   color: #727272
 }
@@ -138,24 +140,21 @@ button {
   height: 55rpx;
   width: 30rpx;
   top: 0px;
-  
-  
- 
 
   
 }
 .num{
   position: relative;
-  left: 32px;
-  top: -30px;
+  left: 67rpx;
+  top: -60rpx;
   color: #999999
 }
 .increte{
   position: relative;
   height: 50rpx;
   width: 30rpx;
-  top: -28px;
-  left:50px;
+  top: -51rpx;
+  left:110rpx;
   display: inline-block;
   
  
@@ -163,11 +162,6 @@ button {
 }
 /*全局样式*/
 
-page {
-
-	padding: 20px 0;
-
-}
 
  
 
@@ -178,8 +172,8 @@ page {
 position: relative;
 	height: 26px;
   
-  top: -50px;
-  left: 280px;
+  top: -60rpx;
+  left: 450rpx;
 
 	/*给主容器设一个边框*/
 

@@ -9,64 +9,47 @@ Page({
     // 商品详情介绍
     carts: [
       {
-        pic: "http://59.110.218.60/3.png",
+        id:1,
+        minusStatus:'disabled',
+        pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
         introduce: '绿色健康，富含活力花青素',
         weight:'600g',
         price: 3,
         isSelect: false,
-        // 数据设定
-        count: {
-          quantity: 2,
-          min: 1,
-          max: 20
-        },
-      },
+            },
       {
-        pic: 'http://59.110.218.60/3.png',
+        id: 2,
+        minusStatus: 'disabled',
+        pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
         introduce: '绿色健康，富含活力花青素',
         weight: '600g',
         price: 3,
         isSelect: false,
-        // 数据设定
-        count: {
-          quantity: 1,
-          min: 1,
-          max: 20
-        },
       },
       {
-        pic: 'http://59.110.218.60/3.png',
-        name: "新鲜的大白菜",
-        introduce:'绿色健康，富含活力花青素',
-        weight: '600g',
-        price: 3,
-        isSelect: false,
-        // 数据设定
-        count: {
-          quantity: 3,
-          min: 1,
-          max: 20
-        },
-      },
-      {
-        pic: 'http://59.110.218.60/3.png',
+        id: 3,
+        minusStatus: 'disabled',
+        pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
         introduce: '绿色健康，富含活力花青素',
         weight: '600g',
         price: 3,
         isSelect: false,
-        // 数据设定
-        count: {
-          quantity: 1,
-          min: 1,
-          max: 20
-        },
       },
-   
+      {
+        id: 4,
+        minusStatus: 'disabled',
+        pic: "http://59.110.218.60/cart_page/submit/3.png",
+        name: "新鲜的大白菜",
+        introduce: '绿色健康，富含活力花青素',
+        weight: '600g',
+        price: 3,
+        isSelect: false,
+      },]
       
-    ],
+    
   },
 
   //勾选事件处理函数  
@@ -144,75 +127,42 @@ Page({
       carts: this.data.carts,
     });
   },
-   bindMinus: function () {
 
+  /* 点击减号 */
+  bindMinus: function () {
     var num = this.data.num;
-
     // 如果大于1时，才可以减
-
     if (num > 1) {
-
       num--;
-
     }
-
     // 只有大于一件的时候，才能normal状态，否则disable状态
-
     var minusStatus = num <= 1 ? 'disabled' : 'normal';
-
     // 将数值与状态写回
-
     this.setData({
-
       num: num,
-
       minusStatus: minusStatus
-
     });
-
   },
-
   /* 点击加号 */
-
   bindPlus: function () {
-
     var num = this.data.num;
-
     // 不作过多考虑自增1
-
     num++;
-
     // 只有大于一件的时候，才能normal状态，否则disable状态
-
     var minusStatus = num < 1 ? 'disabled' : 'normal';
-
     // 将数值与状态写回
-
+    console.log(num)
     this.setData({
-
       num: num,
-
       minusStatus: minusStatus
-
     });
-
   },
-  /* 输入框事件 */
 
-  bindManual: function (e) {
 
-    var num = e.detail.value;
-
-    // 将数值与状态写回
-
-    this.setData({
-
-      num: num
-
-    });
-
-  }
 })
+
+
+
 
 
 

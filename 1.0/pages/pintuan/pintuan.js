@@ -45,7 +45,7 @@ Page({
         	id: 14,
         	// 图片地址 
         	cover_pic: "http://59.110.218.60/pintuan_page/04.png",
-        	name: "意大利生菜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;净重250g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;精选蔬菜",
+          name: "东北糯玉米穗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;净重200g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;精选蔬菜",
         	virtual_sales: 568,
         	price: 5.90,
         	original_price: 7.50,

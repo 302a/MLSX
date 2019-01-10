@@ -66,7 +66,7 @@ Page({
     this.setData({
       allOrder: [
         {name: "草莓", state: "交易成功", time: "2018-09-30 14:00-16:00", status: "已结束", url: "http://59.110.218.60/user_page/01.png", money: "10.9" },
-        { name: "西瓜", state: "待付款", time: "2018-10-12 18:00-20:00", status: "未开始", url: "", money: "20.9" },
+        { name: "西瓜", state: "待付款", time: "2018-10-12 18:00-20:00", status: "未开始", url: "http://59.110.218.60/user_page/01.png", money: "20.9" },
       ]
     })
   },

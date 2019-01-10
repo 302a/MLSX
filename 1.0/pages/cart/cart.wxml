@@ -1,7 +1,9 @@
 <!--pages/cart/cart.wxml-->
+
 <scroll-view class="scroll">
+  
   <view class="topnav">登陆后可同步您购物车中的商品</view>
-  <view wx:for="{{carts}}" style='height:122px; border-top:2rpx solid #e2e2e2; border-left:20rpx solid #F5F5F5;border-right:20rpx solid #F5F5F5;'>
+  <view wx:for="{{carts}}" style='height:auto; border-top:2px solid #F5F5F5; border-left:20rpx solid #F5F5F5;border-right:20rpx solid #F5F5F5;background-color:#fff'>
  <image class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'http://59.110.218.60/cart_page/existgoods/06.png':'http://59.110.218.60/cart_page/existgoods/03.png'}}" /> 
   <navigator  url="/pages/goods_detail/goods_detail">
    
@@ -26,9 +28,9 @@
 
  
           <view class="stepper">
-             <image class='delete' class="delete" bindtap="bindMinus" src='http://59.110.218.60/cart_page/submit/4.png'></image>
-            <text class='num'>1{{item.num}}</text>
-            <image class='increte' class="increte" bindtap="bindPlus" src='http://59.110.218.60/cart_page/submit/5.png'></image> 
+             <image class='delete' bindtap='bindMinus'  src='http://59.110.218.60/cart_page/submit/4.png'></image>
+            <text class='num' bindchange="bindManual">{{num}}</text>
+            <image class='increte' class="increte" bindtap='bindPlus' src='http://59.110.218.60/cart_page/submit/5.png'></image> 
           </view>
           
  </view>  
@@ -39,8 +41,8 @@
 
   <view class="row">
     <image class="item-allselect" bindtap="allSelect" src="{{isAllSelect?'http://59.110.218.60/cart_page/existgoods/06.png':'http://59.110.218.60/cart_page/existgoods/03.png'}}" />
-    <text style='position:relative; left:20px; font-size:20px;color:#BCBCBC'>全选</text>
-    <text class='small_text' style='position:relative;left:60px;font-size:20px;color:#BCBCBC'>共计 </text>
+    <text style='position:relative; left:20px; font-size:30rpx;color:#BCBCBC'>全选</text>
+    <text class='small_text' style='position:relative;left:60px;font-size:30rpx;color:#BCBCBC'>共计 </text>
     <text class="price" style='position:relative;left:70px'>:￥{{totalMoney}}</text>
 
     <navigator class="goods-sub" url="/pages/submit/submit">

@@ -2,12 +2,21 @@
 page {
   background: #f5f5f5;
 }
+
 .top{
   font-size:28rpx;
   color:#FF8C61; 
   line-height:100rpx;
   boder-bottom:1rpx solid red;
   margin-left:40rpx; 
+}
+.huiyuan{
+  height: 30rpx;
+  width: 30rpx;
+  display:inline-block;
+  position: relative;
+  margin-left: 10rpx;
+  bottom: -4rpx;
 }
 .pic{
   height:30rpx;
@@ -19,18 +28,19 @@ page {
 }
 .time{
   border-top: 25rpx solid #F5F5F5;
-  border-left: 20rpx solid #F5F5F5;
+
   border-bottom: 2rpx solid #F5F5F5;
+    border-left: 20rpx solid #F5F5F5;
   border-right: 25rpx solid #F5F5F5;
   
 }
 .img{
-  height:20rpx;
+  height:25rpx;
   width:15rpx;
   display:inline-block;
   position: relative;
-  left: -2rpx;
-  bottom: -3rpx;
+  left: 300rpx;
+  bottom: -4rpx;
 }
 .msg{
 
@@ -58,28 +68,26 @@ left:60rpx ;
 }
 .name{
   position: relative;
-  left: 320rpx;
-  bottom:150rpx;
-  font-size:26rpx; 
+  left: -160rpx;
+  bottom:100rpx;
+  font-size:28rpx; 
+  display: inline-block;
   
 }
-.weight{
-   position: relative;
-  left: 350rpx;
-  bottom:150rpx;
-  font-size:26rpx; 
-}
+
 .jieshao{
+  width: auto;
     position: relative;
-  left: 180rpx;
-  bottom:110rpx;
-  font-size:22rpx; 
+  left: -160rpx;
+  bottom:100rpx;
+  font-size:24rpx; 
   color: #B4B4B4;
 }
 .price{
+  display:inline-block;
   position: relative;
-   left: -80rpx;
-  
+   left: -460rpx;
+   width: auto;
   bottom: 50rpx;
   color: #FF7053;
 }
@@ -87,25 +95,31 @@ left:60rpx ;
   position: relative;
   height: 55rpx;
   width: 30rpx;
-  top:-100rpx;
-  left: 550rpx
-   
+  top: -50px;
+
   
 }
 .increte{
   position: relative;
   height: 50rpx;
   width: 30rpx;
-  margin-top: -200rpx;
-  left: 620rpx
-  
+  top: -151rpx;
+  left:110rpx;
+  display: inline-block;
 }
 .num{
   position: relative;
-  left: 590rpx;
-  bottom: 156rpx;
-  color:#707070;
-  font-size: 30rpx;
+  left: 67rpx;
+  top: -160rpx;
+  color: #999999
+}
+.step{
+  width:100%;
+position:relative;
+height:26px;
+top:-60rpx;
+left:450rpx;
+
 }
 .quan{
   width: 712rpx;
@@ -115,9 +129,17 @@ left:60rpx ;
 }
 .total{
   width: 712rpx;
-  height: 180rpx;
+  height: 100%;
   margin: 10rpx auto; 
 }
+.notice {
+    width: 100%;
+    height: 72rpx;
+    background-color: #f67f79;
+    color: #fff;
+    font-size: 14px;
+}
+
 .bank{
 height: 100rpx;
  border-left: 20rpx solid #F5F5F5;
@@ -134,7 +156,8 @@ line-height: 100rpx;
   line-height: 70rpx;
  position:relative;
  
- 
+ color: white;
+
 }
 button {
   position: relative;
@@ -165,13 +188,101 @@ button {
   top: 15rpx;
   display: inline-block;
   background-color: #eee;
-  width: 395px;
-  height: 170px;
+  width: 715rpx;
+  height: 160px;
+  border-right: 10px;
 }
 .goods-sub{
+  position: relative;
+  left: 100rpx;
+  bottom: 52rpx;
   float: left;
-  margin-top: 25rpx;
-  margin-left: 20rpx;
+  margin-top: 0rpx;
+
+
+}
+.flex-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+}
+.flex-grow-0 {
+    min-width: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+.flex-grow-1 {
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+.notice-content {
+    z-index: 5;
+    animation: 20s 0s run infinite linear;
+    transform: translateX(0%);
+    display: inline-block;
+}
+@-webkit-keyframes run {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.flex-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+}
+.notice-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+    line-height: 72rpx;
+}
+.notice-b {
+    position: relative;
+    z-index: 10;
+    padding-right: 20rpx;
+}
+.flex-y-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+}
+.notice-a {
+    position: relative;
+    z-index: 10;
+    padding: 0 20rpx;
 }
 .sug_p{
   position: relative;
@@ -183,7 +294,7 @@ button {
   background: #fff;
   position: fixed;
   top:90%;
-  left: 0;
+  left: 0rpx;
   z-index: 100;
 }
 .footer view:nth-of-type(1) {
