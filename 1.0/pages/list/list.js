@@ -14,6 +14,8 @@ Page({
           [
             {
               child_id: 1,
+              is_buy: 0,
+              buynum: 1,
               name: '樱桃',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg",
               price: '12.5',
@@ -22,6 +24,8 @@ Page({
             },
             {
               child_id: 2,
+              is_buy: 0,
+              buynum: 1,
               name: '樱桃',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg",
               price: '12.5',
@@ -30,6 +34,8 @@ Page({
             },
             {
               child_id: 3,
+              is_buy: 0,
+              buynum: 1,
               name: '樱桃',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg",
               price: '12.5',
@@ -38,6 +44,8 @@ Page({
             },
             {
               child_id: 4,
+              is_buy: 0,
+              buynum: 1,
               name: '樱桃',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg",
               price: '12.5',
@@ -54,6 +62,8 @@ Page({
           [
             {
               child_id: 1,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -62,6 +72,8 @@ Page({
             },
             {
               child_id: 2,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -70,6 +82,8 @@ Page({
             },
             {
               child_id: 3,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -78,6 +92,8 @@ Page({
             },
             {
               child_id: 4,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -86,6 +102,8 @@ Page({
             },
             {
               child_id: 5,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -94,6 +112,8 @@ Page({
             },
             {
               child_id: 6,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -102,6 +122,8 @@ Page({
             },
             {
               child_id: 7,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -110,6 +132,8 @@ Page({
             },
             {
               child_id: 8,
+              is_buy: 0,
+              buynum: 1,
               name: '夏威夷果',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t18901/57/1522219067/198105/1f4ad39/5acaccb2Nf4a6792b.jpg!q50.jpg",
               price: '12.5',
@@ -126,21 +150,29 @@ Page({
           [
             {
               child_id: 1,
+              is_buy: 0,
+              buynum: 1,
               name: '有机上海青',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t2827/290/2563889921/292001/bf218791/576b843eN1f7e4b44.jpg!q50.jpg"
             },
             {
               child_id: 2,
+              is_buy: 0,
+              buynum: 1,
               name: '有机上海青',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t2827/290/2563889921/292001/bf218791/576b843eN1f7e4b44.jpg!q50.jpg"
             },
             {
               child_id: 3,
+              is_buy: 0,
+              buynum: 1,
               name: '有机上海青',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t2827/290/2563889921/292001/bf218791/576b843eN1f7e4b44.jpg!q50.jpg"
             },
             {
-              child_id: 4,
+              child_id: 4, 
+              is_buy: 0,
+              buynum: 1,
               name: '有机上海青',
               image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t2827/290/2563889921/292001/bf218791/576b843eN1f7e4b44.jpg!q50.jpg"
             }
@@ -148,6 +180,7 @@ Page({
       },
       {
         cate_id: 4,
+        is_buy: 0,
         cate_name: "海鲜",
         ishaveChild: false,
         children: []
@@ -270,5 +303,69 @@ Page({
       },
       complete: function () { }
     });
+  },
+
+  addTocart: function(t){
+    var type = this.data.curIndex
+    // console.log(type)
+    var goodid = t.currentTarget.dataset.id
+    var ids = parseInt(goodid) - 1
+    var array = this.data.cateItems
+    var sItem = "cateItems[" + type + "].children[" + ids + "].is_buy";
+
+    // array.forEach((item, index, arr) => {
+    //   var sItem = "cateItems[" + index + "].children["+index+"]";
+    //   this.setData({
+    //     [sItem]: " "
+    //   })
+    //   console.log([sItem]);
+    // })
+
+    this.setData({
+      [sItem]: 1,
+    })
+
+  },
+
+  subgoods: function(t){
+    var type = this.data.curIndex
+    var goodid = t.currentTarget.dataset.id
+    var ids = parseInt(goodid) - 1
+    var buynum = this.data.cateItems[type].children[ids].buynum
+    // console.log(typeof(buynum))
+
+    if (buynum == 1) {
+      var sItem = "cateItems[" + type + "].children[" + ids + "].is_buy";
+      this.setData({
+        [sItem]: 0,
+      })
+    }else{
+      var buynums = "cateItems[" + type + "].children[" + ids + "].buynum";
+
+      this.setData({
+        [buynums]: buynum - 1,
+      })
+    }  
+  },
+
+  addgoods: function(t){
+    var type = this.data.curIndex
+    var goodid = t.currentTarget.dataset.id
+    var ids = parseInt(goodid) - 1
+    var buynum = this.data.cateItems[type].children[ids].buynum
+    // console.log(typeof(buynum))
+
+    // if (buynum == 1) {
+    //   var sItem = "cateItems[" + type + "].children[" + ids + "].is_buy";
+    //   this.setData({
+    //     [sItem]: 0,
+    //   })
+    // } else {
+      var buynums = "cateItems[" + type + "].children[" + ids + "].buynum";
+
+      this.setData({
+        [buynums]: buynum + 1,
+      })
+    // }  
   },
 })

@@ -72,7 +72,7 @@
       </view>
     </view>
   </view>
-  <view class="goods-comment">
+  <!-- <view class="goods-comment">
     <view bindtap="goToComment" class="goods-comment-title flex-row flex-y-center">
       <view class="comment-left-text flex-grow-1 flex-y-center">
         买家评论{{comment_num}} | 销量 {{goods.virtual_sales}}
@@ -81,7 +81,7 @@
         <image src="http://59.110.218.60/pintuan_page/img-share-right.png"></image>
       </view>
     </view>
-  </view>
+  </view> -->
   <view class="pt-goods-content">
     <view class="pt-goods-content-title flex-y-center">
       商品详情
