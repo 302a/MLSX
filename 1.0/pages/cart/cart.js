@@ -89,9 +89,9 @@ Page({
     this.data.carts[index].isSelect = !this.data.carts[index].isSelect;
     //价钱统计
     if (this.data.carts[index].isSelect) {
-      this.data.totalMoney = this.data.totalMoney + this.data.carts[index].price;
+      this.data.totalMoney = this.data.totalMoney + this.data.carts[index].price * this.data.carts[index].buynum;
     } else {
-      this.data.totalMoney = this.data.totalMoney - this.data.carts[index].price;
+      this.data.totalMoney = this.data.totalMoney - this.data.carts[index].price * this.data.carts[index].buynum;
     }
 
 
@@ -117,7 +117,9 @@ Page({
     if (!this.data.isAllSelect) {
       for (i = 0; i < this.data.carts.length; i++) {
         this.data.carts[i].isSelect = true;
-        this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price;
+        if(this.data.carts[i].is_buy==1){
+          this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price * this.data.carts[i].buynum;
+        }
       }
     } else {
       for (i = 0; i < this.data.carts.length; i++) {
@@ -204,6 +206,12 @@ Page({
     var ids = parseInt(goodid) - 1
     var buynum = this.data.carts[ids].buynum
     var buynums = "carts[" + ids + "].buynum";
+    var totalMoney = this.data.totalMoney
+    if(this.data.carts[ids].isSelect==true){
+      this.setData({
+        totalMoney: totalMoney + this.data.carts[ids].price
+      })
+    }
 
     this.setData({
       [buynums]: buynum + 1,
