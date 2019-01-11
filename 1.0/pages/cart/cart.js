@@ -11,7 +11,7 @@ Page({
     carts: [
       {
         id:1,
-        is_buy: 0,
+        is_buy: 1,
         buynum: 1,
         minusStatus:'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
@@ -23,7 +23,7 @@ Page({
             },
       {
         id: 2,
-        is_buy: 0,
+        is_buy: 1,
         buynum: 1,
         minusStatus: 'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
@@ -35,7 +35,7 @@ Page({
       },
       {
         id: 3,
-        is_buy: 0,
+        is_buy: 1,
         buynum: 1,
         minusStatus: 'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
@@ -47,7 +47,7 @@ Page({
       },
       {
         id: 4,
-        is_buy: 0,
+        is_buy: 1,
         buynum: 1,
         minusStatus: 'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
@@ -145,11 +145,13 @@ Page({
     // console.log(typeof(buynum))
 
     if (buynum == 1) {
+      console.log(111)
       var sItem = "carts[" + ids + "].is_buy";
       this.setData({
         [sItem]: 0,
       })
     } else {
+      console.log(222)
       var buynums = "carts[" + ids + "].buynum";
 
       this.setData({
@@ -161,9 +163,9 @@ Page({
   addgoods: function (t) {
     // var type = this.data.curIndex
     var goodid = t.currentTarget.dataset.id
-    var buynum = this.data.carts[type].buynum
-   
-    var buynums = "carts[" + type + "].buynum";
+    var ids = parseInt(goodid) - 1
+    var buynum = this.data.carts[ids].buynum
+    var buynums = "carts[" + ids + "].buynum";
 
     this.setData({
       [buynums]: buynum + 1,
