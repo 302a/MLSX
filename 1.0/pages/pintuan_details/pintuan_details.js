@@ -14,24 +14,26 @@ Page({
    */
   data: {
     show_attr_picker: !1,
+    isScroll: true,
+    modalHidden: false,
     form: {
       number: 1
     },
     reduce_price: 1.30,
     comment_num: 0,
     goods_url: {
-      url1: "http://59.110.218.60/pintuan_page/8.png",
-      url2: "http://59.110.218.60/pintuan_page/9.png" 
+      url1: "http://59.110.218.60/images/pintuan_page/8.png",
+      url2: "http://59.110.218.60/images/pintuan_page/9.png" 
     },
     goods: {
-      name: "意大利生菜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;净重250g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;精选蔬菜",
+      name: "密云卸甲山村生菜350g—400g",
       price: 9.90,
       num: 120,
       id: '1',
       original_price: 11.20,
       group_num: 21,
       virtual_sales: 11,
-      video_url: "http://59.110.218.60/pintuan_page/4.png",
+      video_url: "http://59.110.218.60/images/pintuan_page/4.png",
     },
     attr_group_list: [{
       attr_group_id: 27,
@@ -114,6 +116,18 @@ Page({
       content: '暂无评价',
     });
   },
+  regular: function () {
+    this.setData({
+      modalHidden: true,
+      isScroll: false
+    })
+  },
+  regular_close: function () {
+    this.setData({
+      modalHidden: false,
+      isScroll:true
+    })
+  },
   hideAttrPicker: function () {
     this.setData({
       show_attr_picker: !1
@@ -132,15 +146,15 @@ Page({
   previewImage1: function () {
     wx.previewImage({
       // 图片的http链接
-      current: 'http://59.110.218.60/pintuan_page/8.png', // 当前显示图片的http链接
-      urls: ["http://59.110.218.60/pintuan_page/8.png"],
+      current: 'http://59.110.218.60/images/pintuan_page/8.png', // 当前显示图片的http链接
+      urls: ["http://59.110.218.60/images/pintuan_page/8.png"],
     })
   },
   previewImage2: function () {
     wx.previewImage({
       // 图片的http链接
-      current: 'http://59.110.218.60/pintuan_page/9.png', // 当前显示图片的http链接
-      urls: ["http://59.110.218.60/pintuan_page/9.png"],
+      current: 'http://59.110.218.60/images/pintuan_page/9.png', // 当前显示图片的http链接
+      urls: ["http://59.110.218.60/images/pintuan_page/9.png"],
     })
   },
   buyNow: function () {
@@ -156,7 +170,7 @@ Page({
     }), !0;
     if (a.data.form.number > a.data.goods.num) return wx.showToast({
       title: "商品库存不足，请选择其它规格或数量",
-      image: "http://59.110.218.60/icon-warning.png"
+      image: "http://59.110.218.60/pintuan_page/icon-warning.png"
     }), !0;
     var e = a.data.attr_group_list, o = [];
     for (var i in e) {
@@ -170,7 +184,7 @@ Page({
       }
       if (!r) return wx.showToast({
         title: "请选择" + e[i].attr_group_name,
-        image: "http://59.110.218.60/icon-warning.png"
+        image: "http://59.110.218.60/pintuan_page/icon-warning.png"
       }), !0;
       o.push({
         attr_group_id: e[i].attr_group_id,

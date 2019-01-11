@@ -138,6 +138,7 @@ Page({
       icon: 'success',
       duration: 3000
     });
+    
     this.setData({
       showDialog: !this.data.showDialog
     });

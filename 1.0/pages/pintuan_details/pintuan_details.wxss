@@ -1,4 +1,13 @@
 /* pages/pintuan_details/pintuan_details.wxss */
+page {
+  position: absolute;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+}
+scroll-view {
+  height: 100%;
+} 
 
 page,block,view,scroll-view,swiper,movable-view,icon,text,progress,button,checkbox,form,input,label,picker,picker-view,radio,slider,switch,textarea,navigator,audio,image,video,map,canvas,contact-button {
     box-sizing: border-box;
@@ -14,10 +23,10 @@ page,block,view,scroll-view,swiper,movable-view,icon,text,progress,button,checkb
 
 .flex-row {
     display: -webkit-box;
-    display: -webkit-flex;
+    /* display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
-    flex-direction: row;
+    flex-direction: row; */
 }
 
 .flex-grow-0 {
@@ -30,6 +39,15 @@ page,block,view,scroll-view,swiper,movable-view,icon,text,progress,button,checkb
 }
 
 .flex-grow-1 {
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    /* flex-grow: 1; */
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+
+.flex-grow-new {
     min-width: 0;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -82,36 +100,43 @@ page,block,view,scroll-view,swiper,movable-view,icon,text,progress,button,checkb
 }
 
 .goods-money {
-    padding: 0 24rpx;
-    font-size: 10pt;
-    color: #ff5c5c;
-    background-color: #ffffff;
+    height: 110rpx;
+    padding-left: 24rpx;
+    font-size: 35rpx;
+    color: #ffffff;
+    /* background-color: #ffffff; */
+    background: -webkit-gradient(linear,left top,right bottom,color-stop(0%,#FF8B57),color-stop(140%,#FE5D76));
+    background-image: linear-gradient(140deg,#FF8B57,#FE5D76);
 }
 
 .goods-money-num {
-    font-size: 23pt;
-    line-height: 1;
-    font-weight: bold;
+    font-size: 60rpx;
+    line-height: 110rpx;
+    font-weight: 500;
     margin: 30rpx 20rpx 0 6rpx;
 }
 
 .original-price {
-    padding-top: 26rpx;
+    padding-top: 20rpx;
 }
 
 .original-price {
-    font-size: 8pt;
-    color: #707070;
+    font-size: 9pt;
+    color: #ffffff;
     text-decoration: line-through;
 }
 
 .group-descount {
+    color: #ff4600;
+    height: 30rpx;
     font-size: 7pt;
+    margin-top: 10rpx;
 }
 
 .group-descount-one {
     padding: 0 12rpx;
-    background-color: #feeeee;
+    background-color: #ffffff;
+    border-radius: 5rpx;
 }
 
 .group-descount-center {
@@ -119,8 +144,33 @@ page,block,view,scroll-view,swiper,movable-view,icon,text,progress,button,checkb
 }
 
 .group-descount-tow {
-    padding: 0 12rpx;
-    background-color: #feeeee;
+    width: 155rpx;
+    font-size: 35rpx;
+    margin-left: 10rpx;
+    margin-top: 35rpx;
+
+    /* padding: 0 12rpx; */
+    /* background-color: #feeeee; */
+}
+
+.group-descount-right {
+  background-color: #ffdbdb;
+  margin-right: 0rpx;
+  width: 220rpx;
+}
+
+.group-descount-right-end1 {
+  color: #ff4600;
+  font-size: 23rpx;
+  margin-top: 15rpx;
+  margin-left: 63rpx;
+}
+
+.group-descount-right-end2 {
+  color: #ff4600;
+  font-size: 36rpx;
+  margin-left: 78rpx;
+  font-weight: bold;
 }
 
 .group-share {
@@ -140,11 +190,28 @@ button::after {
 }
 
 .goods-name {
-    font-size: 13pt;
-    color: #353535;
+    height: 142rpx;
+    font-size: 32rpx;
+    color: #616161;
     padding: 24rpx;
     background-color: #ffffff;
     line-height: 1.5;
+}
+
+.goods-name-bottom {
+  font-size: 23rpx;
+  margin-top: 18rpx;
+}
+
+.goods-name-bottom-1 {
+  margin-left: 28rpx;
+}
+
+.goods-name-bottom-image {
+  float: left;
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 7rpx;
 }
 
 .goods-attr {
@@ -170,7 +237,8 @@ button::after {
 }
 
 .friend-group {
-    padding: 0 24rpx;
+    padding: 0 0 24 0rpx;
+    height: 287rpx;
     /* margin-top: 16rpx; */
     background-color: #ffffff;
     border-top: 18rpx solid #f7f7f7;
@@ -228,13 +296,14 @@ button::after {
 
 .pt-goods-footer {
     position: fixed;
-    bottom: 0;
+    bottom: 0rpx;
     left: 0;
-    height: 110rpx;
+    height: 150rpx;
     z-index: 999;
     font-size: 7pt;
     color: #666666;
     width: 100%;
+    background-color: white;
 }
 
 .pt-goods-footer image {
@@ -260,16 +329,20 @@ button::after {
 }
 
 .alone-buy {
-    background-color: rgb(253, 158, 123);
+    background-color: #ffbea5;
     font-size: 9pt;
-    color: white; 
-    width: 45%;
-    /* height: 110rpx;  */
-    /* border-radius: 30rpx; */
+    color: #ff5414; 
+    width: 30%;
+    height: 110rpx; 
+    border-top-left-radius: 50rpx;
+    border-bottom-left-radius: 50rpx;
+    margin-top: 20rpx;
+    margin-left: 20px;
+    
 }
 
 .alone-buy>.money,.group-buy>.money {
-    font-size: 12pt;
+    font-size: 16pt;
 }
 
 .group-buy {
@@ -278,14 +351,18 @@ button::after {
     background-color: #ff5414;
     /* background: -webkit-gradient(linear,left top,right bottom,color-stop(0%,#ffa360),color-stop(140%,#ff5414)); */
     /* background-image: linear-gradient(140deg,#ffa360,#FF5414); */
-    width: 50%;
-    /* height: 110rpx;
-    float: right; */
+    border-top-right-radius: 50rpx;
+    border-bottom-right-radius: 50rpx;
+    width: 30%;
+    height: 110rpx;
+    margin-top: 20rpx;
+    margin-right: 20px;
+    /* float: right; */
 }
 
 .attr-picker {
     position: fixed;
-    bottom: 110rpx;
+    bottom: 130rpx;
     left: 0;
     z-index: 999;
     width: 100%;
@@ -297,7 +374,7 @@ button::after {
     width: 100%;
     background: #fff;
     position: fixed;
-    bottom: 110rpx;
+    bottom: 130rpx;
 }
 
 .attr-picker .attr-group {
@@ -358,4 +435,41 @@ button::after {
 .number-input-box .number-btn.disabled {
     background: #f6f6f6;
     color: #aaa;
+}
+.rule-warp {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: hidden;
+}
+
+.rule-info {
+  font-size: 25rpx;
+  color: #aeaeae;
+  background-color: white;
+  height: 730rpx;
+  width: 600rpx;
+  margin: 20% auto 0 auto;
+  border-radius: 16rpx;
+  padding: 45rpx;
+}
+
+.rule-info-comment {
+  margin-top: 40rpx;
+}
+
+.rule-info-comment view {
+  line-height: 50rpx;
+}
+
+.rule-warp image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60rpx;
 }
