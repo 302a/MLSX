@@ -1,7 +1,7 @@
 <view>
   <view class="evaluate-success">
     <view class="msg">谢谢您的用心评价，这会帮助到更多想买它们的人哦~</view>
-    <image src="http://59.110.218.60/evaluate_page/08.png" style="width: 146rpx;height: 128rpx;"></image>
+    <image src="http://59.110.218.60/images/evaluate_page/08.png" style="width: 146rpx;height: 128rpx;"></image>
     <view class="msg1">评价成功</view>
     <view class="all-evaluate-btn">查看全部评价</view>
   </view>

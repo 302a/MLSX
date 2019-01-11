@@ -32,8 +32,8 @@ Page({
       }]
     }],
     imgArr: [
-      'http://59.110.218.60/pintuan_page/8.png',
-      'http://59.110.218.60/pintuan_page/9.png',
+      'http://59.110.218.60/images/pintuan_page/8.png',
+      'http://59.110.218.60/images/pintuan_page/9.png',
     ]
   },
   // 购买弹出

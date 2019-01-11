@@ -6,47 +6,47 @@ Page({
   data: {
     cid: 1,
     list1: [
-      { type: '待付款', img: 'http://59.110.218.60/user_page/123.png', path: '/pages/orders/orders?status=1'},
-      { type: '待配送', img: 'http://59.110.218.60/user_page/456.png', path: '/pages/orders/orders?status=2'},
-      { type: '待收货', img: 'http://59.110.218.60/user_page/789.png', path: '/pages/orders/orders?status=3'},
-      { type: '待评价', img: 'http://59.110.218.60/user_page/0012.png', path: '/pages/orders/orders?status=4'},
+      { type: '待付款', img: 'http://59.110.218.60/images/user_page/123.png', path: '/pages/orders/orders?status=1'},
+      { type: '待配送', img: 'http://59.110.218.60/images/user_page/456.png', path: '/pages/orders/orders?status=2'},
+      { type: '待收货', img: 'http://59.110.218.60/images/user_page/789.png', path: '/pages/orders/orders?status=3'},
+      { type: '待评价', img: 'http://59.110.218.60/images/user_page/0012.png', path: '/pages/orders/orders?status=4'},
     ],
     list2: [
       {
         type: '美林门店',
-        img: 'http://59.110.218.60/user_page/11111.png',
+        img: 'http://59.110.218.60/images/user_page/11111.png',
         path: '/pages/store/store',
       },
       {
         type: '美林会员',
-        img: 'http://59.110.218.60/user_page/222222.png',
+        img: 'http://59.110.218.60/images/user_page/222222.png',
         path: '/pages/member/member',
       },
       {
         type: '兑换优惠券',
-        img: 'http://59.110.218.60/user_page/33333.png',
+        img: 'http://59.110.218.60/images/user_page/33333.png',
         path: '/pages/coupon/coupon',
       }
     ],
     list3: [
       {
         type: '我的评价',
-        img: 'http://59.110.218.60/user_page/365287.png',
+        img: 'http://59.110.218.60/images/user_page/365287.png',
         path: '/pages/evaluate/evaluate'
       },
       {
         type: '邀请好友',
-        img: 'http://59.110.218.60/user_page/896547.png',
+        img: 'http://59.110.218.60/images/user_page/896547.png',
         path: '/pages/invite/invite'
       },
       {
         type: '预约',
-        img: 'http://59.110.218.60/user_page/56982.png',
+        img: 'http://59.110.218.60/images/user_page/56982.png',
         path: '/pages/subscribe/subscribe'
       },
       {
         type: '分销中心',
-        img: 'http://59.110.218.60/user_page/2356987.png',
+        img: 'http://59.110.218.60/images/user_page/2356987.png',
         path: '/pages/distributor/distributor'
       }
     ]

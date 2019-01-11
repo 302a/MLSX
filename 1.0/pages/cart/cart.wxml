@@ -4,7 +4,7 @@
   
   <view class="topnav">登陆后可同步您购物车中的商品</view>
   <view wx:for="{{carts}}" style='height:auto; border-top:2px solid #F5F5F5; border-left:20rpx solid #F5F5F5;border-right:20rpx solid #F5F5F5;background-color:#fff' wx:if="{{item.is_buy}}">
- <image class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'http://59.110.218.60/cart_page/existgoods/06.png':'http://59.110.218.60/cart_page/existgoods/03.png'}}" /> 
+ <image class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'http://59.110.218.60/images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}" /> 
   <navigator  url="/pages/goods_detail/goods_detail">
    
     <view class="cart_container">
@@ -28,9 +28,9 @@
 
  
           <view class="stepper">
-             <image class='delete' bindtap='subgoods' data-id='{{item.id}}'  src='http://59.110.218.60/cart_page/existgoods/12.png'></image>
+             <image class='delete' bindtap='subgoods' data-id='{{item.id}}'  src='http://59.110.218.60/images/cart_page/existgoods/12.png'></image>
             <text class='num'>{{item.buynum}}</text>
-            <image class='increte' data-id='{{item.id}}' bindtap='addgoods' src='http://59.110.218.60/cart_page/existgoods/11.png'></image> 
+            <image class='increte' data-id='{{item.id}}' bindtap='addgoods' src='http://59.110.218.60/images/cart_page/existgoods/11.png'></image> 
           </view>
           
  </view>  
@@ -40,7 +40,7 @@
   <view class="bottom_line"></view>
 
   <view class="row">
-    <image class="item-allselect" bindtap="allSelect" src="{{isAllSelect?'http://59.110.218.60/cart_page/existgoods/06.png':'http://59.110.218.60/cart_page/existgoods/03.png'}}" />
+    <image class="item-allselect" bindtap="allSelect" src="{{isAllSelect?'http://59.110.218.60/images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}" />
     <text style='position:relative; left:20px; font-size:30rpx;color:#BCBCBC'>全选</text>
     <text class='small_text' style='position:relative;left:60px;font-size:30rpx;color:#BCBCBC'>共计 </text>
     <text class="price" style='position:relative;left:70px'>:￥{{totalMoney}}</text>

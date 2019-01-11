@@ -24,7 +24,7 @@
   <!-- 代付款-->
   <swiper-item>
     <view class='loseimg'>
-      <image src='../../images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
+      <image src='http://59.110.218.60/images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
     </view>
     <view class='tip'>
       <view class='word1'>您还没有订单</view>
@@ -40,7 +40,7 @@
   <!-- 代配送-->
   <swiper-item>
     <view class='loseimg'>
-      <image src='../../images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
+      <image src='http://59.110.218.60/images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
     </view>
     <view class='tip'>
       <view class='word1'>您还没有订单</view>
@@ -56,7 +56,7 @@
   <!-- 待收货-->
   <swiper-item>
     <view class='loseimg'>
-      <image src='../../images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
+      <image src='http://59.110.218.60/images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
     </view>
     <view class='tip'>
       <view class='word1'>您还没有订单</view>
@@ -72,7 +72,7 @@
   <!-- 待评价-->
   <swiper-item>
     <view class='loseimg'>
-      <image src='../../images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
+      <image src='http://59.110.218.60/images/images/user_page/112.png' style='width:500rpx;height:500rpx;'></image>
     </view>
     <view class='tip'>
       <view class='word1'>您还没有订单</view>

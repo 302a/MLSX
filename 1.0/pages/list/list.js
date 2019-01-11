@@ -2,8 +2,8 @@ Page({
   data: {
     priceclick: 0,
     priceimg: [
-      'http://59.110.218.60/kind_page/icon-sort-up.png',
-      'http://59.110.218.60/kind_page/icon-sort-down.png',
+      'http://59.110.218.60/images/kind_page/icon-sort-up.png',
+      'http://59.110.218.60/images/kind_page/icon-sort-down.png',
     ],
     cateItems: [
       {
@@ -209,16 +209,16 @@ Page({
       e.setData({
         priceclick: !priceclick,
         priceimg: [
-          '../../images/kind_page/icon-sort-up-active.png',
-          '../../images/kind_page/icon-sort-down.png',
+          'http://59.110.218.60/images/kind_page/icon-sort-up-active.png',
+          'http://59.110.218.60/images/kind_page/icon-sort-down.png',
         ]
       });
     }if(priceclick=='1'){
       e.setData({
         priceclick: !priceclick,
         priceimg: [
-          '../../images/kind_page/icon-sort-up.png',
-          '../../images/kind_page/icon-sort-down-active.png',
+          'http://59.110.218.60/images/kind_page/icon-sort-up.png',
+          'http://59.110.218.60/images/kind_page/icon-sort-down-active.png',
         ]
       });
     }

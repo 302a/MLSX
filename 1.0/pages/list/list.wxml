@@ -4,7 +4,7 @@
       <navigator class="search-block" url="/pages/search/search">
         <view id='tip'>
           <view id='img_box'>
-            <image src="http://59.110.218.60/kind_page/fangdajing.png" style="width:28.5rpx;height: 21.4rpx;"></image>
+            <image src="http://59.110.218.60/images/kind_page/fangdajing.png" style="width:28.5rpx;height: 21.4rpx;"></image>
           </view>
           <text>搜索</text>
         </view>
@@ -66,12 +66,12 @@
         <view class="flex-y-center sort-icon-box">
           <view>
             <view>
-              <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-up-active.png" wx:if="{{sort==2&&sort_type==0}}"></image>
-              <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-up.png" wx:else></image>
+              <image class="sort-icon-up" src="http://59.110.218.60/images/kind_page/icon-sort-up-active.png" wx:if="{{sort==2&&sort_type==0}}"></image>
+              <image class="sort-icon-up" src="http://59.110.218.60/images/kind_page/icon-sort-up.png" wx:else></image>
             </view>
             <view>
-              <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-down-active.png" wx:if="{{sort==2&&sort_type==1}}"></image>
-              <image class="sort-icon-up" src="http://59.110.218.60/kind_page/icon-sort-down.png" wx:else></image>
+              <image class="sort-icon-up" src="http://59.110.218.60/images/kind_page/icon-sort-down-active.png" wx:if="{{sort==2&&sort_type==1}}"></image>
+              <image class="sort-icon-up" src="http://59.110.218.60/images/kind_page/icon-sort-down.png" wx:else></image>
             </view>
           </view>
         </view>
@@ -128,7 +128,7 @@
           </navigator>
           <block>
             <view class='market' wx:if="{{!item.is_buy}}" bindtap='addTocart' data-id="{{item.child_id}}">
-              <image src='http://59.110.218.60/kind_page/55.png' style='width:58rpx;height:58rpx;'></image>
+              <image src='http://59.110.218.60/images/kind_page/55.png' style='width:58rpx;height:58rpx;'></image>
             </view>
             <view class="stepper market" wx:elif="{{item.is_buy}}">
                 <image class='delete' bindtap="subgoods" src='../../images/sub.png' data-id="{{item.child_id}}"></image>

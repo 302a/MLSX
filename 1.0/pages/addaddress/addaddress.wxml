@@ -10,9 +10,9 @@
 <view class='gender'>
 <text class='man'>先生</text>
 <text class='woman'>女士</text>
-  <image class="xiansheng" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'../../images/cart_page/existgoods/03.png'}}" />
+  <image class="xiansheng" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}" />
 
-   <image class="nvshi" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'../../images/cart_page/existgoods/03.png'}}" />
+   <image class="nvshi" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../../images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}" />
    </view>
    <!-- phone -->
    <view class='phone'>

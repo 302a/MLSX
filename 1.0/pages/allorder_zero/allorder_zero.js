@@ -81,8 +81,8 @@ Page({
   waitPayShow: function () {
     this.setData({
       waitPayOrder: [
-        { name: "草莓", state: "待付款", time: "2018-10-14 14:00-16:00", url: "/images/user_page/01.png", money: "10.9" },
-        { name: "西瓜", state: "待付款", time: "2018-10-14 14:00-16:00", url: "/images/user_page/01.png", money: "10.9" }
+        { name: "草莓", state: "待付款", time: "2018-10-14 14:00-16:00", url: "http://59.110.218.60/images/user_page/01.png", money: "10.9" },
+        { name: "西瓜", state: "待付款", time: "2018-10-14 14:00-16:00", url: "http://59.110.218.60/images/user_page/01.png", money: "10.9" }
       ],
     })
   },
@@ -90,8 +90,8 @@ Page({
   waitdeliveryShow: function () {
     this.setData({
       waitDeliveryOrder: [
-        { name: "草莓", state: "待配送", time: "2018-10-14 14:00-16:00", url: "/images/user_page/01.png", money: "10.9" },
-        { name: "草莓", state: "待收货", time: "2018-10-14 14:00-16:00", url: "/images/user_page/01.png", money: "10.9" },
+        { name: "草莓", state: "待配送", time: "2018-10-14 14:00-16:00", url: "http://59.110.218.60/images/user_page/01.png", money: "10.9" },
+        { name: "草莓", state: "待收货", time: "2018-10-14 14:00-16:00", url: "http://59.110.218.60/images/user_page/01.png", money: "10.9" },
       ]
     })
   },
@@ -99,8 +99,8 @@ Page({
   waitreceiveShow: function () {
     this.setData({
       waitReceiveOrder: [
-        { name: "草莓", state: "待收货", time: "2018-10-14 14:00-16:00", url: "/images/user_page/01.png", money: "10.9" },
-        { name: "草莓", state: "待收货", time: "2018-10-14 14:00-16:00", url: "/images/user_page/01.png", money: "10.9" }
+        { name: "草莓", state: "待收货", time: "2018-10-14 14:00-16:00", url: "http://59.110.218.60/images/user_page/01.png", money: "10.9" },
+        { name: "草莓", state: "待收货", time: "2018-10-14 14:00-16:00", url: "http://59.110.218.60/images/user_page/01.png", money: "10.9" }
       ],
     })
   },
@@ -108,8 +108,8 @@ Page({
   waitevaluateShow: function () {
     this.setData({
       waitEvaluateOrder: [
-        { name: "草莓", state: "待评价", time: "2018-10-4 10:00-12:00", url: "/images/user_page/01.png", money: "8.8" },
-        { name: "草莓", state: "待评价", time: "2018-10-4 10:00-12:00", url: "/images/user_page/01.png", money: "8.8" }
+        { name: "草莓", state: "待评价", time: "2018-10-4 10:00-12:00", url: "http://59.110.218.60/images/user_page/01.png", money: "8.8" },
+        { name: "草莓", state: "待评价", time: "2018-10-4 10:00-12:00", url: "http://59.110.218.60/images/user_page/01.png", money: "8.8" }
       ]
     })
   },

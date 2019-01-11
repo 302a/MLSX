@@ -10,28 +10,28 @@ Page({
     // hasMask: false,
     renqi:[
       { 
-        img: "http://59.110.218.60/home_page/2.png",
+        img: "http://59.110.218.60/images/home_page/2.png",
         title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
         type: 'first',
         price: "￥28.8"
       },
       {
-        img: "http://59.110.218.60/home_page/2.png",
+        img: "http://59.110.218.60/images/home_page/2.png",
         title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
         price: "￥28.8"
       },
       {
-        img: "http://59.110.218.60/home_page/2.png",
+        img: "http://59.110.218.60/images/home_page/2.png",
         title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
         price: "￥28.8"
       },
       {
-        img: "http://59.110.218.60/home_page/2.png",
+        img: "http://59.110.218.60/images/home_page/2.png",
         title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
         price: "￥28.8"
       },
       {
-        img: "http://59.110.218.60/home_page/2.png",
+        img: "http://59.110.218.60/images/home_page/2.png",
         title: "红颜草莓300g红颜草莓300g红颜草莓300g红颜草莓300g",
         price: "￥28.8",
         type: 'last',
