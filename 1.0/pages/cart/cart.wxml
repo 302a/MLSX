@@ -28,9 +28,9 @@
 
  
           <view class="stepper">
-             <image class='delete' bindtap='bindMinus'  src='http://59.110.218.60/cart_page/submit/4.png'></image>
-            <text class='num' bindchange="bindManual">{{num}}</text>
-            <image class='increte' class="increte" bindtap='bindPlus' src='http://59.110.218.60/cart_page/submit/5.png'></image> 
+             <image class='delete' bindtap='subgoods' data-id='{{item.id}}'  src='http://59.110.218.60/cart_page/existgoods/12.png'></image>
+            <text class='num'>{{item.buynum}}</text>
+            <image class='increte' data-id='{{item.id}}' bindtap='addgoods' src='http://59.110.218.60/cart_page/existgoods/11.png'></image> 
           </view>
           
  </view>  
