@@ -5,22 +5,21 @@ Page({
   data: {
     isAllSelect: false,
     totalMoney: 0,
-    num:0,
-    cart_id:1,
+    num: 0,
+    cart_id: 1,
     // 商品详情介绍
-    carts: [
-      {
-        id:1,
+    carts: [{
+        id: 1,
         is_buy: 1,
         buynum: 1,
-        minusStatus:'disabled',
+        minusStatus: 'disabled',
         pic: "http://59.110.218.60/images/cart_page/submit/3.png",
         name: "新鲜的大白菜",
         introduce: '绿色健康，富含活力花青素',
-        weight:'600g',
+        weight: '600g',
         price: 3,
         isSelect: false,
-            },
+      },
       {
         id: 2,
         is_buy: 1,
@@ -56,15 +55,34 @@ Page({
         weight: '600g',
         price: 3,
         isSelect: false,
-      },],
+      },
+    ],
     curNav: 1,
+    goods: 4,
     // curIndex: 0
   },
 
+  // onShow: function(options) {
+  //   console.log('页面加载')
+  //   var goods = this.data.goods
+  //   console.log(goods)
+  //   if (goods <= 0) {
+  //     wx.navigateTo({
+  //       url: '/pages/emptycart/emptycart',
+  //       success: function(res) {},
+  //       fail: function(res) {},
+  //       complete: function(res) {},
+  //     })
+  //   } else {
+
+  //   }
+  // },
+
   //勾选事件处理函数  
-  switchSelect: function (e) {
+  switchSelect: function(e) {
     // 获取item项的id，和数组的下标值  
-    var Allprice = 0, i = 0;
+    var Allprice = 0,
+      i = 0;
     let id = e.target.dataset.id,
 
       index = parseInt(e.target.dataset.index);
@@ -72,11 +90,10 @@ Page({
     //价钱统计
     if (this.data.carts[index].isSelect) {
       this.data.totalMoney = this.data.totalMoney + this.data.carts[index].price;
-    }
-    else {
+    } else {
       this.data.totalMoney = this.data.totalMoney - this.data.carts[index].price;
     }
- 
+
 
     //是否全选判断
     for (i = 0; i < this.data.carts.length; i++) {
@@ -84,8 +101,7 @@ Page({
     }
     if (Allprice == this.data.totalMoney) {
       this.data.isAllSelect = true;
-    }
-    else {
+    } else {
       this.data.isAllSelect = false;
     }
     this.setData({
@@ -95,7 +111,7 @@ Page({
     })
   },
   //全选
-  allSelect: function (e) {
+  allSelect: function(e) {
     //处理全选逻辑
     let i = 0;
     if (!this.data.isAllSelect) {
@@ -103,8 +119,7 @@ Page({
         this.data.carts[i].isSelect = true;
         this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price;
       }
-    }
-    else {
+    } else {
       for (i = 0; i < this.data.carts.length; i++) {
         this.data.carts[i].isSelect = false;
       }
@@ -137,30 +152,52 @@ Page({
     });
   },
 
-  subgoods: function (t) {
+  subgoods: function(t) {
     // var type = this.data.curIndex
     var goodid = t.currentTarget.dataset.id
     var ids = parseInt(goodid) - 1
     var buynum = this.data.carts[ids].buynum
+    var e = this
+    var goods = this.data.goods
     // console.log(typeof(buynum))
+    // console.log(goods)
 
-    if (buynum == 1) {
-      console.log(111)
-      var sItem = "carts[" + ids + "].is_buy";
-      this.setData({
-        [sItem]: 0,
-      })
-    } else {
-      console.log(222)
-      var buynums = "carts[" + ids + "].buynum";
+      if (buynum == 1) {
+        // console.log(111)
+        wx.showModal({
+          title: '您确定删除该商品吗?',
+          // content: '模态弹窗',
+          success: function(res) {
+            if (res.confirm) {
+              var sItem = "carts[" + ids + "].is_buy";
+              e.setData({
+                [sItem]: 0,
+                goods: goods - 1
+              })
+              // if (goods <= 1) {
+              //   wx.navigateTo({
+              //     url: '/pages/emptycart/emptycart',
+              //     success: function (res) { },
+              //     fail: function (res) { },
+              //     complete: function (res) { },
+              //   })
+              // }
+            } else {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      } else {
+        var buynums = "carts[" + ids + "].buynum";
 
-      this.setData({
-        [buynums]: buynum - 1,
-      })
-    }
+        this.setData({
+          [buynums]: buynum - 1,
+        })
+      }
+
   },
 
-  addgoods: function (t) {
+  addgoods: function(t) {
     // var type = this.data.curIndex
     var goodid = t.currentTarget.dataset.id
     var ids = parseInt(goodid) - 1
@@ -174,9 +211,3 @@ Page({
   },
 
 })
-
-
-
-
-
-

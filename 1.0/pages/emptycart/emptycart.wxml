@@ -1,6 +1,6 @@
 <!--pages/emptycart/emptycart.wxml-->
 <scroll-view class="scroll">
- <view class="topnav">登陆后可同步您购物车中的商品</view>
+ <!-- <view class="topnav">登陆后可同步您购物车中的商品</view> -->
  <view id='blank'>
 
   <image  id='aunt' src="http://59.110.218.60/images/cart_page/nogoods/08.png"></image>
