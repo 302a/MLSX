@@ -34,7 +34,7 @@
 .sku-price {
   color: red;
   position: relative;
-  top: 28rpx;
+  top:  60rpx;
   
   
 }

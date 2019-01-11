@@ -114,6 +114,7 @@ Page({
   allSelect: function(e) {
     //处理全选逻辑
     let i = 0;
+    this.data.totalMoney = 0
     if (!this.data.isAllSelect) {
       for (i = 0; i < this.data.carts.length; i++) {
         this.data.carts[i].isSelect = true;
