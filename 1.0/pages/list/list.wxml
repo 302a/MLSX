@@ -1,4 +1,4 @@
-<view class='find-sort'>
+<view class='find-sort' catchtouchmove="myCatchTouch">
   <view class="after-navber">
     <view class="find-box">
       <navigator class="search-block" url="/pages/search/search">
@@ -86,7 +86,7 @@
 <!--主盒子-->
 <view class="container">
   <!--左侧栏-->
-  <view class="nav_left">
+  <view class="nav_left" catchtouchmove="myCatchTouch">
     <block wx:for="{{cateItems}}" wx:key="id">
       <!--当前项的id等于item项的id，那个就是当前状态-->
       <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
@@ -142,5 +142,9 @@
     <!--如果无数据，则显示数据-->
     <view class="nodata_text" wx:else>该分类暂无数据</view>
   </view>
+
+  <!-- <view class='mymarket'>
+    <image src='../../images/public_page/55.png' style='width:35rpx;height:35rpx;'></image>
+  </view> -->
 
 </view>

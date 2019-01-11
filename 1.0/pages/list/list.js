@@ -368,4 +368,9 @@ Page({
       })
     // }  
   },
+
+  myCatchTouch: function () {
+    console.log('stop user scroll it!');
+    return;
+  },
 })

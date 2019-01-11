@@ -7,6 +7,7 @@ Page({
   data: {
     shop_arr: [0],
     shop: "丰产路店",
+    // hasMask: false,
     renqi:[
       { 
         img: "http://59.110.218.60/home_page/2.png",
@@ -56,6 +57,25 @@ Page({
       shop: shop
     })
   },
+
+  myCatchTouch: function () {
+    console.log('stop user scroll it!');
+    return;
+  },
+
+  // showMask(e) {
+  //   //显示遮罩
+  //   this.setData({
+  //     hasMask: true
+  //   })
+  // },
+
+  // hideMask(e) {
+  //   //隐藏遮罩
+  //   this.setData({
+  //     hasMask: false
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面加载

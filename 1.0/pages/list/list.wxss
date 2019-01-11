@@ -42,10 +42,11 @@ page{
   right: 0;  
   flex: 1;  
   width: 75%;  
-  height: 2381rpx;  
+  /* height: 2381rpx;   */
   /* padding: 0rpx;   */
   box-sizing: border-box;  
   background: #fff;
+  /* overflow: auto; */
 }  
 /*右侧栏list的item*/  
 .nav_right .nav_right_items{  
@@ -498,3 +499,10 @@ page{
   bottom: 12rpx;
   font-size: 28rpx;
 }
+
+/* .mymarket{
+  position: fixed;
+  right: 10rpx;
+  top: 50%;
+  z-index: 10;
+} */
