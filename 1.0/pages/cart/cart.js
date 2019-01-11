@@ -6,10 +6,13 @@ Page({
     isAllSelect: false,
     totalMoney: 0,
     num:0,
+    cart_id:1,
     // 商品详情介绍
     carts: [
       {
         id:1,
+        is_buy: 0,
+        buynum: 1,
         minusStatus:'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
@@ -20,6 +23,8 @@ Page({
             },
       {
         id: 2,
+        is_buy: 0,
+        buynum: 1,
         minusStatus: 'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
@@ -30,6 +35,8 @@ Page({
       },
       {
         id: 3,
+        is_buy: 0,
+        buynum: 1,
         minusStatus: 'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
@@ -40,6 +47,8 @@ Page({
       },
       {
         id: 4,
+        is_buy: 0,
+        buynum: 1,
         minusStatus: 'disabled',
         pic: "http://59.110.218.60/cart_page/submit/3.png",
         name: "新鲜的大白菜",
@@ -47,9 +56,9 @@ Page({
         weight: '600g',
         price: 3,
         isSelect: false,
-      },]
-      
-    
+      },],
+    curNav: 1,
+    // curIndex: 0
   },
 
   //勾选事件处理函数  
@@ -128,36 +137,39 @@ Page({
     });
   },
 
-  /* 点击减号 */
-  bindMinus: function () {
-    var num = this.data.num;
-    // 如果大于1时，才可以减
-    if (num > 1) {
-      num--;
+  subgoods: function (t) {
+    // var type = this.data.curIndex
+    var goodid = t.currentTarget.dataset.id
+    var ids = parseInt(goodid) - 1
+    var buynum = this.data.carts[ids].buynum
+    // console.log(typeof(buynum))
+
+    if (buynum == 1) {
+      var sItem = "carts[" + ids + "].is_buy";
+      this.setData({
+        [sItem]: 0,
+      })
+    } else {
+      var buynums = "carts[" + ids + "].buynum";
+
+      this.setData({
+        [buynums]: buynum - 1,
+      })
     }
-    // 只有大于一件的时候，才能normal状态，否则disable状态
-    var minusStatus = num <= 1 ? 'disabled' : 'normal';
-    // 将数值与状态写回
-    this.setData({
-      num: num,
-      minusStatus: minusStatus
-    });
-  },
-  /* 点击加号 */
-  bindPlus: function () {
-    var num = this.data.num;
-    // 不作过多考虑自增1
-    num++;
-    // 只有大于一件的时候，才能normal状态，否则disable状态
-    var minusStatus = num < 1 ? 'disabled' : 'normal';
-    // 将数值与状态写回
-    console.log(num)
-    this.setData({
-      num: num,
-      minusStatus: minusStatus
-    });
   },
 
+  addgoods: function (t) {
+    // var type = this.data.curIndex
+    var goodid = t.currentTarget.dataset.id
+    var buynum = this.data.carts[type].buynum
+   
+    var buynums = "carts[" + type + "].buynum";
+
+    this.setData({
+      [buynums]: buynum + 1,
+    })
+    // }  
+  },
 
 })
 
