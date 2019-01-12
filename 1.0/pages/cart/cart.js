@@ -179,8 +179,12 @@ Page({
               e.setData({
                 [sItem]: 0,
                 goods: goods - 1,
-                totalMoney: totalMoney - price,
               })
+              if (e.data.carts[ids].isSelect == true) {
+                e.setData({
+                  totalMoney: totalMoney - price,
+                })
+              }
               // if (goods <= 1) {
               //   wx.navigateTo({
               //     url: '/pages/emptycart/emptycart',
@@ -199,8 +203,12 @@ Page({
 
         this.setData({
           [buynums]: buynum - 1,
-          totalMoney: totalMoney - price,
         })
+        if (e.data.carts[ids].isSelect == true) {
+          e.setData({
+            totalMoney: totalMoney - price,
+          })
+        }
       }
 
   },
