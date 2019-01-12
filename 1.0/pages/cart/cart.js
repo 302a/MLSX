@@ -163,6 +163,8 @@ Page({
     var buynum = this.data.carts[ids].buynum
     var e = this
     var goods = this.data.goods
+    var totalMoney = this.data.totalMoney
+    var price = this.data.carts[ids].price
     // console.log(typeof(buynum))
     // console.log(goods)
 
@@ -176,7 +178,8 @@ Page({
               var sItem = "carts[" + ids + "].is_buy";
               e.setData({
                 [sItem]: 0,
-                goods: goods - 1
+                goods: goods - 1,
+                totalMoney: totalMoney - price,
               })
               // if (goods <= 1) {
               //   wx.navigateTo({
@@ -196,6 +199,7 @@ Page({
 
         this.setData({
           [buynums]: buynum - 1,
+          totalMoney: totalMoney - price,
         })
       }
 

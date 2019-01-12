@@ -6,6 +6,7 @@ Page({
    */
   data: {
     show_attr_picker: !1,
+    totalMoney: 0,
     form: {
       number: 1
     },
@@ -78,7 +79,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var count = this.data.form.number
+    var price = this.data.miaosha_data.miaosha_price * count
+    this.setData({
+      totalMoney: price,
+    })
   },
 
   /**
@@ -206,29 +211,35 @@ Page({
 
   numberSub: function () {
     var t = this, a = t.data.form.number;
+    var totalMoney = t.data.miaosha_data.miaosha_price
     if (a <= 1) return !0;
     a-- , t.setData({
       form: {
-        number: a
-      }
+        number: a,
+      },
+      totalMoney: totalMoney * a
     });
   },
 
   numberAdd: function () {
     var t = this, a = t.data.form.number;
+    var totalMoney = t.data.miaosha_data.miaosha_price
     a++ , t.setData({
       form: {
         number: a
-      }
+      },
+      totalMoney: totalMoney * a
     });
   },
 
   numberBlur: function (t) {
     var a = this, o = t.detail.value;
+    var totalMoney = a.data.miaosha_data.miaosha_price
     o = parseInt(o), isNaN(o) && (o = 1), o <= 0 && (o = 1), a.setData({
       form: {
         number: o
-      }
+      },
+      totalMoney: totalMoney * o
     });
   },
 

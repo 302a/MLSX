@@ -10,11 +10,11 @@
   </swiper>
   <view class="flex-row goods-money">
     <view class="flex-grow-0 flex-row flex-y-bottom">
-      <view class="flex-grow-0 flex-y-bottom">
+      <view class="price_img">
         ¥
       </view>
       <view class="flex-grow-1flex-y-bottom goods-money-num">
-        9.90
+        {{miaosha_data.miaosha_price}}
       </view>
     </view>
     <view class="flex-col flex-grow-1">
@@ -23,7 +23,7 @@
           ¥
         </view>
         <view class="flex-grow-1">
-          11.20
+          {{goods.price}}
         </view>
       </view>
       <view class="flex-row flex-grow-0 group-descount">
@@ -110,7 +110,7 @@
     </view>
     <view bindtap="addCart" class="flex-grow-1 flex-col flex-y-center flex-x-center alone-buy">
       <view class="flex-gorw-0 money">
-        ¥{{goods.original_price}}
+        ¥{{totalMoney}}
       </view>
       <view class="flex-grow-0">
         加入购物车
@@ -118,7 +118,7 @@
     </view>
     <view bindtap="buyNow" class="flex-grow-1 flex-col flex-y-center flex-x-center group-buy">
       <view class="flex-gorw-0 money">
-        ¥{{goods.price}}
+        ¥{{totalMoney}}
       </view>
       <view class="flex-grow-0">
         立即购买

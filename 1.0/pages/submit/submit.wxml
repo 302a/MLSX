@@ -1,111 +1,97 @@
-<!--pages/submit/submit.wxml-->
-<scroll-view class="scroll" style='background-color:#F5F5F5'>
- <navigator  url="/pages/address/address" style='background-color:#FFFFFF;'>
-    <view  class='top'  >
-      <view class='address' >新建收货地址
-      <image class='pic' src='http://59.110.218.60/images/cart_page/submit/2.png'></image>
-      </view>
+<scroll-view class="scroll">
+  
+<!-- 收货地址 -->
+  <view  class='top' bindtap="address"  wx:if="{{flag}}">
+    <view>新建收货地址</view>
+    <image src='http://59.110.218.60/images/cart_page/submit/2.png'></image>
+  </view>
+  <view class="address" wx:if="{{!flag}}" bindtap="address">
+    <view class="add-msg">
+      <view>{{addressInfo.cityName}} {{addressInfo.countyName}} {{addressInfo.detailInfo}}</view>
+      <text>{{addressInfo.userName}}  </text>
+      <text>  {{addressInfo.telNumber}}</text>
     </view>
-  </navigator>
-
-
+    <image src='http://59.110.218.60/images/cart_page/submit/2.png'></image>
+  </view>
 
 <!-- 公告 -->
-<view class="notice flex-row" style="color:#ffffff;background-color:#ff8c61;">
-  <view class="flex-grow-0 flex-y-center notice-a">
-    <image src="http://59.110.218.60/images/home_page/icon-notice.png" style="width:19px;height:19px;margin-right:13px;">
-    </image>
-    <view style="font-size: 28rpx">公告</view>
-  </view>
-  <view class="flex-grow-1 notice-box">
-    <view class="notice-content">
-      <view style="font-size: 28rpx;display: inline-block; margin-top:1rpx">优惠来了！！！美林生鲜会员大酬谢，前100名注册会员，首单半价，以后每单立减0.8！</view>
+  <view class="notice flex-row" style="color:#ffffff;background-color:#ff8c61;">
+    <view class="flex-grow-0 flex-y-center notice-a">
+      <image src="http://59.110.218.60/images/home_page/icon-notice.png" style="width:19px;height:19px;margin-right:13px;"></image>
+      <view style="font-size: 28rpx">公告</view>
     </view>
-  </view>
-  <view class="flex-grow-0 flex-y-center notice-b">
-  
-    
-  </view>
-</view>
-  <view class='time' style='border-radius:20rpx;'>
- <view style='font-size:24rpx;border-bottom:5rpx solid #F5F5F5;background-color:#FFFFFF'>
-    
-      <view style='display:inline-block;margin-left:20rpx;color:#FF5414;margin-top:10rpx;margin-bottom:10rpx;color:#FF7053'>开通会员，每单立减1.8元      
-      <text style='margin-left:210rpx;'>8/月立即开通</text>
-        <image class='huiyuan' src='http://59.110.218.60/images/cart_page/existgoods/03.png'></image>
+    <view class="flex-grow-1 notice-box">
+      <view class="notice-content">
+        <view style="font-size: 28rpx;display: inline-block; margin-top:1rpx">优惠来了！！！美林生鲜会员大酬谢，前100名注册会员，首单半价，以后每单立减0.8！</view>
       </view>
     </view>
+    <view class="flex-grow-0 flex-y-center notice-b"></view>
   </view>
 
-
-<view wx:for="{{sub}}" class='msg' style='background-color:#FFFFFF;'>
-  <image class="select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'http://59.110.218.60/images/cart_page/existgoods/03.png':'http://59.110.218.60/images/cart_page/existgoods/06.png'}}" />
-
-<view>
-  <navigator url='/pages/goods_detail/goods_detail'>
-    <image class='shucai' src='http://59.110.218.60/images/cart_page/submit/3.png'></image>
-    
-  </navigator>
-</view>
-
-  <view class='step'>
-    <view class='name'>{{item.name}} {{item.weight}}</view>
-    <view class='weight'></view>
-    <text class='jieshao'>{{item.jieshao}}</text>
-    <view class='price'>￥{{item.price}}</view>
-    <image class='delete' src='http://59.110.218.60/images/cart_page/submit/4.png'></image>
-    <text class='num'>{{item.num}}</text>
-    <image class='increte' src='http://59.110.218.60/images/cart_page/submit/5.png'></image> 
-  </view>
-</view>
-
-<view class='quan' style='background-color:#FFFFFF;border-top:solid #F5F5F5 20rpx;'>
-  <text style='font-size:26rpx;color:#626262;float:left;margin-left:30rpx;'> 优惠券</text>
-  <text style='font-size:26rpx;color:#FF8C61;float:right;margin-right:40rpx'>暂无优惠券可用</text>
-<!-- 商品总额 -->
-</view>
-<view class='total' style='background-color:#FFFFFF;'>
-  <view style='width:100%;height:90rpx;font-size:26rpx;color:#626262;line-height:80rpx;'>
-    <text style='float:left;margin-left:30rpx;'>商品总额</text>
-    <text style='float:right;margin-right:40rpx'>￥13.4</text>
+  <view class='time'>
+    <view>开通会员，每单立减1.8元</view>
+    <view>
+      <text style="float: left;">8元/月立即开通 </text>
+      <image class='huiyuan' src='http://59.110.218.60/images/cart_page/existgoods/03.png'></image>
+    </view>
   </view>
 
-  <view style='width:100%;height:90rpx;font-size:26rpx;color:#626262;line-height:80rpx;'>
-    <text style="float:left;margin-left:30rpx;">配送费</text>
-    <text style='float:right;margin-right:40rpx'>￥3</text>
+  <view wx:for="{{carts}}" class='msg' wx:key="{{index}}" wx:if="{{item.is_buy}}">
+    <image class="select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'http://59.110.218.60/images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}"></image>
+    <view class="product">
+      <image class='shucai' src='http://59.110.218.60/images/cart_page/submit/3.png'></image>
+      <view class="productInfo">
+        <view class='name'>{{item.name}} {{item.weight}}</view>
+        <text class='jieshao'>{{item.jieshao}}</text>
+        <view class='price'>￥{{item.price}}</view>
+      </view>
+    </view>
+    <view class="step">
+          <image class='delete' bindtap='subgoods' data-id='{{item.id}}' src='http://59.110.218.60/images/cart_page/existgoods/12.png'></image>
+          <text class='num'>{{item.buynum}}</text>
+          <image class='increte' data-id='{{item.id}}' bindtap='addgoods' src='http://59.110.218.60/images/cart_page/existgoods/11.png'></image>
+        </view>
   </view>
-  <view style='width:100%;height:90rpx;font-size:26rpx;color:#626262;line-height:80rpx;'>
-    <text style="float:left;margin-left:30rpx;">商品实付</text>
-    <text style='float:right;margin-right:40rpx'>￥16.4</text>
-  </view>
-</view>
 
+  <view class='quan'>
+    <text style='color:#626262;float:left;margin-left:30rpx;'> 优惠券</text>
+    <text style='color:#FF8C61;float:right;margin-right:40rpx'>暂无优惠券可用</text>
+  </view>
+  <view class='total'>
+    <view>
+      <text style='float:left;margin-left:30rpx;'>商品总额</text>
+      <text style='float:right;margin-right:40rpx'>{{totalMoney}}</text>
+    </view>
+    <view>
+      <text style="float:left;margin-left:30rpx;">配送费</text>
+      <text style='float:right;margin-right:40rpx'>￥3</text>
+    </view>
+    <view>
+      <text style="float:left;margin-left:30rpx;">商品实付</text>
+      <text style='float:right;margin-right:40rpx'>{{paymoney}}</text>
+    </view>
+  </view>
 
 <!-- 订单备注 -->
- 
-   <!-- pai -->
-   <view class='pai'>
+  <view class='pai'>
     <view style='font-size:26rpx; color:#626262;line-height:60rpx;margin-left:20rpx;margin-top:5rpx;'>订单备注</view>
-    <textarea type='text' maxlength='200' class='xm'></textarea>
+    <textarea type='text' maxlength='200' class='xm' style="background: #fff;margin-top: 10rpx;"></textarea>
     <text style='position:relative;left:320px;color:#626262;font-size:26rpx;bottom:20px'>{{t_length}}/200</text> 
-   </view>
-   
-<!-- <form>
-<input type='text'></input>
-</form> -->
-<view class="footer">
-<image class="select" style='top:50rpx; left:30rpx;'  bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'http://59.110.218.60/images/cart_page/existgoods/03.png':'http://59.110.218.60/images/cart_page/existgoods/06.png'}}" />
-<text style='font-size:30rpx; position:relative; right:315rpx; top:8rpx; color:#707070;'>全选</text>
-  <text style='font-size:30rpx; position:relative; right:200rpx; top:-15rpx; color:#707070;'>合计：{{item.sum}}</text>
-  <view style='position:relative; font-size:30rpx; margin-top:0rpx'>配送费￥3{{item.peisong}}</view>
-
-  <text style='position:relative; right:5rpx;color:#FF5414; top:-15rpx;font-size:30rpx; position:relative; right:215rpx'>￥16.4{{sum.sumprice}}</text>
+  </view>
   
-  <navigator class="goods-sub" url="/pages/pay-success/pay-success">
-    <button class="button-red" bindtap="toBuy" formType="submit">立即支付
-    </button>
-  </navigator>
-</view>
+  <view class="footer">
+    <view style="margin-left: 10rpx;">
+      <image class="item-allselect select" bindtap="allSelect" style='float: left;margin-top:7rpx;' src="{{isAllSelect?'http://59.110.218.60/images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}" />
+      <text style='font-size:30rpx;color:#707070;float: left; margin-left: 20rpx;'>全选</text>
+    </view>
+    <view>
+      <text style='font-size:30rpx;color:#707070;'>合计：</text>
+      <text style='color:#FF5414;font-size:30rpx;'>{{totalMoney}}</text>
+      <view style='font-size:30rpx;'>配送费￥{{sendmoney}}</view>
+    </view>
+    <navigator class="goods-sub" url="/pages/pay-success/pay-success">
+      <button class="button-red" bindtap="toBuy" formType="submit">立即支付</button>
+    </navigator>
+  </view>
 
 </scroll-view>
-<!-- 待支付 -->

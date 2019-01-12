@@ -840,3 +840,7 @@ view {
 .count_rule{
   margin-left: 10rpx;
 }
+
+.price_img{
+  font-size: 20pt;
+}
