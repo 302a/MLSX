@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id: 0,
+    payPrice: 8,
+    list: [
+      {time: 1, price: 8, select: false},
+      {time: 3, price: 18, select: true},
+      {time: 6, price: 30, select: true},
+      {time: 12, price: 48, select: true}
+    ]
   },
 
   /**
@@ -14,7 +21,23 @@ Page({
   onLoad: function (options) {
 
   },
-
+  // 切换
+  isSelect (e) {
+    // console.log(e.currentTarget.dataset.price)
+    var index = e.currentTarget.dataset.index
+    var price = 
+    this.setData({
+      id: index,
+      payPrice: e.currentTarget.dataset.price
+    })
+  },
+  pay () {
+    wx.showToast({
+      title: '支付成功',
+    	icon: 'success',
+      duration: 1000
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

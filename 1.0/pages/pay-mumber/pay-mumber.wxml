@@ -1,7 +1,9 @@
 <view class="msg-box">
+  
   <view class="user-icon">
     <open-data type="userAvatarUrl"></open-data>
   </view>
+  
   <view class="user">
     <view class="user-msg">
       <view class="username">
@@ -13,12 +15,18 @@
   </view>
 </view>
 <view class="topic">选择会员套餐</view>
-<view>
-  <scroll-view scroll-x >
-  	<view class="list">11</view>
-  	<view class="list">22</view>
-  	<view class="list">33</view>
-  	<view class="list">44</view>
+
+<view class="member-warp">
+  <scroll-view class="member" scroll-x="true">
+    <view class="list" style="{{index === id?'background:#ffa68f':'background: #fff'}}" wx:for="{{list}}" wx:key = "{{index}}" bindtap = "isSelect" data-index="{{index}}" data-price="{{item.price}}">
+      <image src="{{index === id?'http://59.110.218.60/images/user_page/11.png':'http://59.110.218.60/images/user_page/09.png'}}"></image>
+      <view style="{{index === id?'color: #fff;':'color: #6b6b6b'}}">{{item.time}}个月</view>
+      <view style="{{index === id?'color: #fff;':'color: #6b6b6b'}}">￥{{item.price}}</view>
+    </view>
   </scroll-view>
+</view>
+<view class="pay-btn" bindtap="pay">
+  <view>立即支付</view>
+  <view>￥{{ payPrice }}</view>
 </view>
    

@@ -78,61 +78,43 @@ page {
   background: #fff;
   margin: 5rpx auto;
   padding: 30rpx 40rpx 30rpx 20rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.select{
-  width: 30rpx;
-  height: 30rpx;
-}
-
-.shucai{
-  height: 180rpx;
-  width: 180rpx;
+.productImg {
+  width: 30%;
   float: left;
 }
+.productImg .shucai{
+  height: 180rpx;
+  width: 180rpx;
+}
 .productInfo {
+  width: 70%;
   float: left;
 }
 .productInfo .name{
   font-size:28rpx;
   color: #333333;
-  margin-top: 10rpx;
 }
-
 .productInfo .jieshao{
   width: 280rpx;
   font-size:22rpx;
   color: #787878;
-}
-.productInfo .price{
-  color: #ff3006;
-  font-size: 40rpx;
   margin-top: 10rpx;
 }
-
-.delete{
-  height: 50rpx;
-  width: 30rpx;
-}
-.increte{
-  height: 50rpx;
-  width: 30rpx;
-}
-.num{
-  font-size: 32rpx;
-  color: #707070;
-}
-.step{
-  width: 140rpx;
-  height: 50rpx;
-  margin-top: 90rpx;
+.compute {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 10rpx;
 }
-
+.compute .num{
+  font-size: 32rpx;
+  color: #787878;
+}
+.compute .price{
+  color: #ff3006;
+  font-size: 40rpx;
+}
 .quan{
   width: 720rpx;
   height: 80rpx;
@@ -182,21 +164,18 @@ button {
   top: -0rpx;
 }
 .pai{
-  width: 712rpx;
-  height: 550rpx;
+  width: 720rpx;
+  height: 320rpx;
   margin: 0 auto;
-  background-color: white;
   font-size:30rpx;
-  color: black
+  background: #fff;
 }
 .xm{
-  position: relative;
-  top: 15rpx;
-  display: inline-block;
-  background-color: #eee;
-  width: 715rpx;
-  height: 160px;
-  border-right: 10px;
+  background-color: #fff;
+  width: 680rpx;
+  height: 50px;
+  padding: 10rpx 20rpx 10rpx 20rpx;
+  font-size: 24rpx;
 }
 
 .flex-row {
@@ -288,18 +267,13 @@ button {
   height: 120rpx;
   background: #fff;
   position: fixed;
-  top:90%;
+  top:91%;
   left: 0rpx;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .goods-sub{
   margin-right: 10rpx;
-}
-
-.item-allselect {
-  margin-left: 20rpx;
 }

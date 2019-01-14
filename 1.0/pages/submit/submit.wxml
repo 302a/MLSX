@@ -1,6 +1,4 @@
 <scroll-view class="scroll">
-  
-<!-- 收货地址 -->
   <view  class='top' bindtap="address"  wx:if="{{flag}}">
     <view>新建收货地址</view>
     <image src='http://59.110.218.60/images/cart_page/submit/2.png'></image>
@@ -32,25 +30,25 @@
     <view>开通会员，每单立减1.8元</view>
     <view>
       <text style="float: left;">8元/月立即开通 </text>
-      <image class='huiyuan' src='http://59.110.218.60/images/cart_page/existgoods/03.png'></image>
+      <image class='huiyuan' src="{{Select?'http://59.110.218.60/images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}" bindtap = "isSelect"></image>
+      
+      
     </view>
   </view>
 
-  <view wx:for="{{carts}}" class='msg' wx:key="{{index}}" wx:if="{{item.is_buy}}">
-    <image class="select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'http://59.110.218.60/images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}"></image>
-    <view class="product">
+  <view wx:for="{{carts}}" class='msg' wx:key="{{index}}">
+    <view class="productImg">
       <image class='shucai' src='http://59.110.218.60/images/cart_page/submit/3.png'></image>
-      <view class="productInfo">
-        <view class='name'>{{item.name}} {{item.weight}}</view>
-        <text class='jieshao'>{{item.jieshao}}</text>
-        <view class='price'>￥{{item.price}}</view>
+    </view>
+    
+    <view class="productInfo">
+      <view class='name'>{{item.name}} {{item.weight}}</view>
+      <text class='jieshao'>{{item.introduce}}</text>
+      <view class="compute">
+        <view class='num'>x{{item.buynum}}</view>
+        <view class='price'>￥{{item.price * item.buynum}}</view>
       </view>
     </view>
-    <view class="step">
-          <image class='delete' bindtap='subgoods' data-id='{{item.id}}' src='http://59.110.218.60/images/cart_page/existgoods/12.png'></image>
-          <text class='num'>{{item.buynum}}</text>
-          <image class='increte' data-id='{{item.id}}' bindtap='addgoods' src='http://59.110.218.60/images/cart_page/existgoods/11.png'></image>
-        </view>
   </view>
 
   <view class='quan'>
@@ -64,7 +62,7 @@
     </view>
     <view>
       <text style="float:left;margin-left:30rpx;">配送费</text>
-      <text style='float:right;margin-right:40rpx'>￥3</text>
+      <text style='float:right;margin-right:40rpx'>￥{{sendmoney}}</text>
     </view>
     <view>
       <text style="float:left;margin-left:30rpx;">商品实付</text>
@@ -75,23 +73,17 @@
 <!-- 订单备注 -->
   <view class='pai'>
     <view style='font-size:26rpx; color:#626262;line-height:60rpx;margin-left:20rpx;margin-top:5rpx;'>订单备注</view>
-    <textarea type='text' maxlength='200' class='xm' style="background: #fff;margin-top: 10rpx;"></textarea>
-    <text style='position:relative;left:320px;color:#626262;font-size:26rpx;bottom:20px'>{{t_length}}/200</text> 
+    <textarea type='text' maxlength='50' class='xm' bindinput="inputs" placeholder="请填写备注"></textarea>
+    <text style='position:relative;left:600rpx;bottom:20rpx;color:#626262;font-size:26rpx;'>{{currentWordNumber|0}}/50</text> 
   </view>
-  
   <view class="footer">
-    <view style="margin-left: 10rpx;">
-      <image class="item-allselect select" bindtap="allSelect" style='float: left;margin-top:7rpx;' src="{{isAllSelect?'http://59.110.218.60/images/cart_page/existgoods/06.png':'http://59.110.218.60/images/cart_page/existgoods/03.png'}}" />
-      <text style='font-size:30rpx;color:#707070;float: left; margin-left: 20rpx;'>全选</text>
+    <view style="margin-left: 30rpx;">
+      <text style='font-size:30rpx;color:#707070;'>付款</text>
+      <text style='color:#FF5414;font-size:30rpx;'>￥{{paymoney}}</text>
     </view>
-    <view>
-      <text style='font-size:30rpx;color:#707070;'>合计：</text>
-      <text style='color:#FF5414;font-size:30rpx;'>{{totalMoney}}</text>
-      <view style='font-size:30rpx;'>配送费￥{{sendmoney}}</view>
-    </view>
-    <navigator class="goods-sub" url="/pages/pay-success/pay-success">
+    <view class="goods-sub">
       <button class="button-red" bindtap="toBuy" formType="submit">立即支付</button>
-    </navigator>
+    </view>
   </view>
 
 </scroll-view>

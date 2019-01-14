@@ -190,7 +190,7 @@ Page({
               //     url: '/pages/emptycart/emptycart',
               //     success: function (res) { },
               //     fail: function (res) { },
-              //     complete: function (res) { },
+              //     complete: function (res) { },   
               //   })
               // }
             } else {
