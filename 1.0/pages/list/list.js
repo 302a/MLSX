@@ -1,3 +1,5 @@
+var a = getApp();
+
 Page({
   data: {
     priceclick: 0,
@@ -190,6 +192,11 @@ Page({
     curIndex: 0
   },
 
+  onShow:function(e){
+    var t = this
+    t.getgoods();
+  },
+
   //事件处理函数  
   switchRightTab: function (e) {
     // 获取item项的id，和数组的下标值  
@@ -373,4 +380,25 @@ Page({
     console.log('stop user scroll it!');
     return;
   },
+
+  getgoods: function () {
+    var e = this
+    wx.request({
+      url: 'http://localhost:8000/mlsx/send_goods/',
+      method: 'GET',
+      header: {
+        "content-type": "application/json;charset=UTF-8"
+      },
+      success: function (t) {
+        // console.log(t.data.content)
+        e.setData({
+          cateItems: [
+            t.data.content
+          ]
+        })
+        var cateItems = e.data.cateItems
+        console.log(cateItems)
+      }
+    })
+  }
 })
