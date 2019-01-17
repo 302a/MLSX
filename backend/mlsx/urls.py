@@ -19,7 +19,22 @@ from mlsx import views
 
 urlpatterns = [
     url(r'^send_goods/', views.send_goods),
+    url(r'^goods_info/', views.goods_info),
     url(r'^first_classify/', views.first_classify),
     url(r'^test/', views.test),
     url(r'^findbyname/', views.findbyname),
+    url(r'^addtocart/', views.addtocart),
+    url(r'^check_market/', views.check_market),
+    url(r'^addcart/', views.addcart),
+    url(r'^subcart/', views.subcart),
+    url(r'^sort_goods/', views.sort_goods),
+    url(r'^addUser/', views.addUser),
+    url(r'^dredge_vip/', views.dredge_vip),
+    url(r'^check_vip_time/', views.check_vip_time),
+    url(r'^query_vip/', views.query_vip),
+    url(r'^promotion_goods/', views.promotion_goods),
+    url(r'^query_promotion_goods/', views.query_promotion_goods),
+    url(r'^send_count_goods/', views.send_count_goods),
+    url(r'^goods_select/', views.goods_select),
+
 ]
