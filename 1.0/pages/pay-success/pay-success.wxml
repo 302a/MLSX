@@ -1,5 +1,0 @@
-<view class="pay">
-  <image src="http://59.110.218.60/images/evaluate_page/08.png" style="width: 146rpx;height: 128rpx;"></image>
-  <view class="msg">支付成功</view>
-  <view class="goHome" bindtap="goHome">返回首页</view>
-</view>

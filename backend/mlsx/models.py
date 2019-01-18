@@ -378,6 +378,7 @@ class vip(models.Model):
     days = models.TextField()
     viptype = models.TextField()
 
+
     class Meta:
         db_table = 'vip'
 
@@ -393,8 +394,8 @@ class order_list(models.Model):
     is_receipt = models.TextField()
     receipt_time = models.TextField()
     status = models.TextField()
-    create_time = models.DateTimeField()
-    update_time = models.DateTimeField()
+    create_time = models.DateTimeField(auto_now_add=True)
+    update_time = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = 'order_list'
@@ -403,13 +404,12 @@ class order_list(models.Model):
 class order_goods_list (models.Model):
     order_number = models.CharField(max_length=128)
     goodsid = models.TextField()
+    goodstype = models.TextField()
     userid = models.TextField()
     goods_num = models.TextField()
     goodsprice = models.TextField()
-    status = models.TextField()
-    create_time = models.TextField()
-    update_time = models.TextField()
-    pay_time = models.TextField()
+    create_time = models.DateTimeField(auto_now_add=True)
+    update_time = models.DateTimeField(auto_now=True)
 
 # 早市表
 class morning_market(models.Model):
@@ -425,6 +425,33 @@ class morning_market(models.Model):
 
     class Meta:
         db_table = 'morning_market'
+
+# 商品评价表
+class goods_estimate(models.Model):
+    goodsid = models.TextField()
+    userid = models.TextField()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

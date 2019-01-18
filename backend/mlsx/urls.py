@@ -36,5 +36,9 @@ urlpatterns = [
     url(r'^query_promotion_goods/', views.query_promotion_goods),
     url(r'^send_count_goods/', views.send_count_goods),
     url(r'^goods_select/', views.goods_select),
+    url(r'^give_endtime_vip/', views.give_endtime_vip),
+    url(r'^renew_vip/', views.renew_vip),
+    url(r'^order/', views.order),
+    url(r'^submit_order/', views.submit_order),
 
 ]

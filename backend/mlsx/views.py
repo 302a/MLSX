@@ -9,7 +9,7 @@ from django.shortcuts import render
 from django.utils.timezone import utc
 
 from mlsx.models import food_goods, nofood_goods, fresh_goods, out_window_goods, fruit_goods, vegetable_goods, \
-    dry_fruit_goods, meat_goods, Market, User, vip, morning_market
+    dry_fruit_goods, meat_goods, Market, User, vip, morning_market, order_goods_list
 
 
 def first_classify(request):
@@ -250,6 +250,10 @@ def addtocart(request):
 
     return JsonResponse(data)
 
+# 合并商品数据库信息
+def merge_info(goodlist):
+    pass
+
 # 购物车逻辑
 def check_market(request):
     userid = request.GET.get('userid')
@@ -400,6 +404,29 @@ def sort_goods(request):
 
     return JsonResponse(data)
 
+# 购物车商品选中,取消接口
+def goods_select(request):
+    select = request.GET.get('select')
+    goodid = request.GET.get('id')
+    data = {}
+
+    marketlist = Market.objects.filter(goodsid=goodid)
+
+    if marketlist.exists():
+        market = marketlist.first()
+        if select == 'true':
+            market.isselect = 'true'
+            market.save()
+            data['status'] = '200'
+            data['msg'] = 'ok'
+        elif select == 'false':
+            market.isselect = 'false'
+            market.save()
+            data['status'] = '200'
+            data['msg'] = 'ok'
+
+    return JsonResponse(data)
+
 def addUser(request):
     userid = request.GET.get('userid')
     data = {}
@@ -423,15 +450,24 @@ def addUser(request):
 
 # 将开通时间转换成天数
 def change_day(time):
+    if time == '1':
+        time = '一个月'
+    elif time == '3':
+        time = '三个月'
+    elif time == '6':
+        time = '六个月'
+    elif time == '一年':
+        time = '一年'
+
     # 从数据库中查询vip天数
     viplist = vip.objects.filter(viptime=time)
 
     if viplist.exists():
         vips = viplist.first()
         vipdays = vips.days
-        viptypes = vip.viptype
+        viptypes = vips.viptype
 
-        return vipdays,viptypes
+    return vipdays,viptypes
 
 # 开通会员
 def dredge_vip(request):
@@ -441,15 +477,17 @@ def dredge_vip(request):
     data = {}
     # 获取会员开通时间
     viptime = request.GET.get('viptime')
-    vipdays,viptypes = change_day(viptime)
 
+    vipdays,viptypes = change_day(viptime)
+    # print(vipdays,viptypes)
     if userlist.exists():
         users = userlist.first()
         from datetime import datetime
         timenow = datetime.now().replace(tzinfo=utc)
         users.vip_start_time = timenow
         import datetime
-        users.vip_end_time = timenow + datetime.timedelta(days=vipdays)
+        # print(timenow + datetime.timedelta(days=90),type(timenow + datetime.timedelta(days=90)))
+        users.vip_end_time = timenow + datetime.timedelta(days=int(vipdays))
         users.vipid = users.id
         users.userType = viptypes
 
@@ -463,7 +501,7 @@ def dredge_vip(request):
         timenow = datetime.now().replace(tzinfo=utc)
         users.vip_start_time = timenow
         import datetime
-        users.vip_end_time = timenow + datetime.timedelta(days=vipdays)
+        users.vip_end_time = timenow + datetime.timedelta(days=int(vipdays))
         # 获取最后一个用户id并加一
         userss = User.objects.all()
         finuser = userss.last()
@@ -477,6 +515,57 @@ def dredge_vip(request):
 
     return JsonResponse(data)
 
+# 返回会员到期时间
+def give_endtime_vip(request):
+    userid = request.GET.get('userid')
+
+    data = {}
+
+    userlist = User.objects.filter(openid=userid)
+    if userlist.exists():
+        user = userlist.first()
+        data['status'] = '200'
+        data['msg'] = 'ok'
+        time = str(user.vip_end_time)
+
+        data['expire'] = time[:10]
+        # print('发送成功')
+
+    else:
+        data['status'] = '300'
+        data['msg'] = '用户未登录'
+        # print('用户未登录')
+
+    return JsonResponse(data)
+
+# 续费会员
+def renew_vip(request):
+    userid = request.GET.get("userid")
+
+    userlist = User.objects.filter(openid=userid)
+    data = {}
+    # 获取会员开通时间
+    viptime = request.GET.get('viptime')
+
+    vipdays, viptypes = change_day(viptime)
+
+    try:
+        user = userlist.first()
+        after_endtime = user.vip_end_time
+        import datetime
+        user.vip_end_time = after_endtime + datetime.timedelta(days=int(vipdays))
+
+        user.save()
+        data['status'] = '200'
+        data['msg'] = '续费成功'
+
+        return JsonResponse(data)
+    except Exception as e:
+        print(e)
+        data['status'] = '300'
+        data['msg'] = '发生未知错误'
+        return JsonResponse(data)
+
 # 查询会员对应规则
 def query_vip(request):
     viplist = vip.objects.all()
@@ -485,11 +574,11 @@ def query_vip(request):
 
     vip_type_list = []
     for info in viplist:
-        if info.goodsType not in vip_type_list:
-            vip_type_list.append(info.viptype)
+        if info.viptime not in vip_type_list:
+            vip_type_list.append(info.viptime)
 
     for vip_type in vip_type_list:
-        vip_object = vip.objects.filter(viptype=1)
+        vip_object = vip.objects.filter(viptime=vip_type)
         viplist.append({
             'type': vip_type,
             'content': list(vip_object.values())
@@ -617,45 +706,99 @@ def send_count_goods(request):
 
     return JsonResponse(data)
 
-# 订单接口
+# 订单页面接口
 def order(request):
     userid = request.GET.get("userid")
     # 获取前端计算出来的总价
     total_price = request.GET.get('total_price')
     data = {}
+    marketlist = []
 
     # 从购物车中找出已选中的商品
     market_list = Market.objects.filter(userid=userid).filter(isselect='true')
     if market_list.exists():
-        pass
+        for n in range(len(market_list)):
+            id = market_list[n].goodsid
+            gtype = market_list[n].goodstype
+
+            market = list(market_list.values())
+
+            goodss = query_good('portion',gtype,find='pk',findpara=id)
+            if goodss.exists():
+                goodsinfo = list(goodss.values())[0]
+                goods_info = dict(goodsinfo,**market[n])
+
+                marketlist.append(goods_info)
+
+            else:
+                data['status'] = '404'
+                data['msg'] = '出现未知错误'
+
+        data['status'] = '200'
+        data['msg'] = 'ok'
+        data['content'] = marketlist
 
     else:
         data['status'] = '300'
         data['msg'] = '未选择任何商品'
 
-# 购物车商品选中,取消接口
-def goods_select(request):
-    select = request.GET.get('select')
-    goodid = request.GET.get('id')
+# 将时间戳转换为字符串加上id作为ordernum
+def exchange_time(time,id):
+    time_str = str(time)
+    time_list = time_str.split('.')
+    times = ''
+    for i in time_list:
+        times += i
+
+    order_num = times + id
+
+    return order_num
+
+# 提交订单接口
+def submit_order(request):
     data = {}
 
-    marketlist = Market.objects.filter(goodsid=goodid)
+    userid = request.GET.get('userid')
+    goodsinfo = request.GET.get('goodsinfo')
 
-    if marketlist.exists():
-        market = marketlist.first()
-        if select == 'true':
-            market.isselect = 'true'
-            market.save()
+    # 获取id
+    users = User.objects.filter(openid=userid)
+    user = users.first()
+    id = user.id
+
+    timenow = time.time()
+
+    # 生成订单号
+    order_num = exchange_time(timenow,id)
+
+    try:
+        for goods in goodsinfo:
+            order = order_goods_list()
+            order.goodsid = goods[0]
+            order.goodstype = goods[1]
+            order.goods_num = goods[2]
+            order.goodsprice = goods[3]
+            order.userid = userid
+            order.order_number = order_num
+
+            order.save()
             data['status'] = '200'
-            data['msg'] = 'ok'
-        elif select == 'false':
-            market.isselect = 'false'
-            market.save()
-            data['status'] = '200'
-            data['msg'] = 'ok'
+            data['msg'] = '订单保存成功'
 
-    return JsonResponse(data)
+            return JsonResponse(data)
 
+    except Exception as e:
+        data['status'] = '300'
+        data['msg'] = '出现异常错误'
+
+        return JsonResponse(data)
+
+# 支付后访问接口(更改支付状态)
+def pay_goods(request):
+    pass
+
+# if __name__ == '__main__':
+#     print(exchange_time(time.time(),'1'))
 
 
 
