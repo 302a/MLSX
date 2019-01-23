@@ -3,10 +3,11 @@ from django.db import models
 # Create your models here.
 class User(models.Model):
     openid = models.TextField()
+    nickname = models.TextField(null=True)
     userType = models.TextField(default='普通会员')
     vipid = models.TextField(null=True)
     enquiry = models.TextField(default=0)
-    vip_start_time = models.DateTimeField(null=True,auto_now_add=True)
+    vip_start_time = models.DateTimeField(null=True)
     vip_end_time = models.DateTimeField(null=True)
     phone_num = models.TextField(null=True)
     update_time = models.DateTimeField(auto_now=True)
@@ -348,15 +349,7 @@ class Market(models.Model):
     class Meta:
         db_table = 'market'
 
-class pintuan(models.Model):
-    goodid = models.TextField()
-    userid = models.TextField()
-    pintuan_code = models.TextField()
-
-    class Meta:
-        db_table = 'pintuan'
-
-# 拼团表
+# 拼团商品表
 class pt_good(models.Model):
     goodname = models.TextField()
     unit = models.TextField()
@@ -364,20 +357,34 @@ class pt_good(models.Model):
     pt_price = models.TextField()
     price = models.TextField()
     standard = models.TextField()
-    pt_start_time = models.DateTimeField(auto_now_add=True)
+    goods_img = models.ImageField(upload_to='img',null=True)
+    goods_img1 = models.ImageField(upload_to='img',null=True)
+    pt_start_time = models.DateTimeField()
     pt_end_time = models.DateTimeField()
-    update_time = models.DateTimeField(auto_now=True)
+    update_time = models.DateTimeField(auto_now=True,null=True)
+    storage = models.TextField()
     pt_people = models.TextField()
 
     class Meta:
         db_table = 'pt_good'
+
+# 拼团列表
+class pt_list(models.Model):
+    userid = models.TextField()
+    nickname = models.TextField(null=True)
+    order_number = models.TextField()
+    goodsid = models.TextField()
+    nowpeople = models.TextField()
+    status = models.TextField()
+
+    class Meta:
+        db_table = 'pt_list'
 
 class vip(models.Model):
     viptime = models.TextField()
     price = models.TextField()
     days = models.TextField()
     viptype = models.TextField()
-
 
     class Meta:
         db_table = 'vip'
@@ -386,16 +393,21 @@ class vip(models.Model):
 class order_list(models.Model):
     order_number = models.CharField(max_length=128)
     userid = models.TextField()
-    pay_price = models.TextField()
+    need_pay_price = models.TextField(null=True)
+    pay_price = models.TextField(null=True)
     is_pay = models.TextField()
-    pay_time = models.DateTimeField()
+    pay_time = models.DateTimeField(null=True)
     is_ship = models.TextField()
-    ship_time = models.DateTimeField()
+    ship_time = models.DateTimeField(null=True)
     is_receipt = models.TextField()
-    receipt_time = models.TextField()
+    receipt_time = models.TextField(null=True)
     status = models.TextField()
-    create_time = models.DateTimeField(auto_now_add=True)
+    receive_addr = models.TextField()
+    remark = models.TextField(null=True)
+    create_time = models.DateTimeField()
     update_time = models.DateTimeField(auto_now=True)
+    is_pt = models.TextField(default='false')
+    is_complish = models.TextField(default='false')
 
     class Meta:
         db_table = 'order_list'
@@ -408,8 +420,12 @@ class order_goods_list (models.Model):
     userid = models.TextField()
     goods_num = models.TextField()
     goodsprice = models.TextField()
-    create_time = models.DateTimeField(auto_now_add=True)
+    is_estimate = models.TextField(default='false')
+    create_time = models.DateTimeField()
     update_time = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'order_goods_list'
 
 # 早市表
 class morning_market(models.Model):
@@ -419,17 +435,27 @@ class morning_market(models.Model):
     promotion_price = models.TextField()
     price = models.TextField()
     standard = models.TextField()
-    pt_start_time = models.DateTimeField(auto_now_add=True)
-    pt_end_time = models.DateTimeField()
-    update_time = models.DateTimeField(auto_now=True)
+    goods_img = models.ImageField(upload_to='zaoshi',null=True)
+    goods_img1 = models.ImageField(upload_to='zaoshi',null=True)
+    storage = models.TextField()
+    zx_start_time = models.DateTimeField()
+    zx_end_time = models.DateTimeField()
+    update_time = models.DateTimeField(auto_now=True,null=True)
 
     class Meta:
         db_table = 'morning_market'
 
 # 商品评价表
 class goods_estimate(models.Model):
-    goodsid = models.TextField()
+    order_number = models.TextField()
     userid = models.TextField()
+    estimate_type = models.TextField()
+    goods_descripe = models.TextField(null=True)
+    send_server = models.TextField(null=True)
+    server_attitute = models.TextField(null=True)
+
+    class Meta:
+        db_table = 'goods_estimate'
 
 
 
